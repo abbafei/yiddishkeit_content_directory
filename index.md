@@ -1,7 +1,7 @@
 B"H
 
 
-There is much existing content for both adults and children online that can bring good, happy use of our time while maintaining requisite social distancing.
+There is much existing content for both adults and children online that can bring good, happy use of our time.
   - Video
     - There is a lot of Torah entertainment for free, including:
       - [Mitzvah Island](https://www.chabad.org/kids/article_cdo/aid/1847177/jewish/Mitzvah-Island.htm) for young children
