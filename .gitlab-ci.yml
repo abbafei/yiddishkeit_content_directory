@@ -2,6 +2,7 @@
 image: node
 
 pages:
+  stage: deploy
   script:
     - npm install @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
     - npm run eleventy --
