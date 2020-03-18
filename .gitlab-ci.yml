@@ -1,0 +1,16 @@
+# B"H.
+image: node:10
+
+pages:
+  script:
+    - npm install @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
+    - eleventy
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+    key: project
+  only:
+    - master
