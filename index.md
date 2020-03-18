@@ -24,3 +24,6 @@ There is much existing content for both adults and children online that can brin
   - Music
     - Chabad.org’s [Jewish Music section](https://www.chabad.org/multimedia/music_cdo/aid/254237/jewish/Jewish-Music.htm)
     - Chabad.org’s 24/6 [Jewish Music app](https://www.chabad.org/multimedia/music_cdo/aid/3963654/jewish/Jewish-Music-App.htm)
+
+
+Source code at <https://gitlab.com/abbafei/abbafei.gitlab.io/>.
