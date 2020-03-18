@@ -15,6 +15,7 @@ There is much existing content for both adults and children online that can brin
       - the [videos](https://drive.google.com/drive/folders/0B_WSU737WJ1ffmpRZHpRaGQ2ZzJFeUdkSEtJYTIzcHE5Njdkb0hpTnZmRW1iLVMzMnZsOHc) at [RebbeDrive](https://www.rebbedrive.com/)
       - ...and of course the [Living Torah Archive](https://www.chabad.org/therebbe/livingtorah/default_cdo/aid/42106/jewish/Archives.htm)
     - There is also much good [kids video at Torah Treasure](https://torahtreasure.com/videos) which can be watched online for a fee
+	- ...and more kids video by the [Small Wonder Puppet Theater](https://www.unclepinchey.com/)
   - Reading
     - JEM’s [Here’s My Story](https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm) (also [here](http://myencounterblog.com/))
     - Chabad.org’s [Inspiration and Entertainment](https://www.chabad.org/library/article_cdo/aid/1675890/jewish/Inspiration-Entertainment.htm) section (also has multimedia)
