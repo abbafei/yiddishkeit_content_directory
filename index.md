@@ -1,4 +1,5 @@
-<!-- B"H. -->
+B"H
+
 
 There is much existing content for both adults and children online that can bring good, happy use of our time while maintaining requisite social distancing.
   - Video
