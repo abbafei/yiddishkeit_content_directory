@@ -1,10 +1,10 @@
 # B"H.
-image: node:10
+image: node
 
 pages:
   script:
     - npm install @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
-    - npm run 11ty --
+    - npm run @11ty/eleventy --
   artifacts:
     paths:
       - public
