@@ -4,7 +4,7 @@ image: node
 pages:
   script:
     - npm install @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
-    - npm run @11ty/eleventy --
+    - npm run eleventy --
   artifacts:
     paths:
       - public
