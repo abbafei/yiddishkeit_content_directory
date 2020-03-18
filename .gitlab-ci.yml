@@ -4,8 +4,10 @@ image: node
 pages:
   stage: deploy
   script:
-    - npm install @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss --save-dev
-    - npm run eleventy --
+    # via https://www.11ty.dev/docs/getting-started/
+    - npm init -y
+    - npm install --save-dev @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
+    - npx @11ty/eleventy
   artifacts:
     paths:
       - public
