@@ -1,0 +1,49 @@
+bH
+
+- entity types:
+	- endpoint (e.g. android app, pdf file, web site link, rss feed)
+	- resource (e.g. app, book, video series/podcast)
+	- site/organization/group
+
+- preprocessor/uniformeralach processor types:
+	- input types:
+		- endpoint: a string, or a map with ref key and optional label
+		- endpoints:
+			- can be string, output one web endpoint
+			- can be map, in which case each value in it...
+				- can be a string, which is output as one endpoint with key type, and a ref with no label
+				- can be an array, in which each entry is an endpoint
+		- type (content only) - media type
+			- can be a string
+			- can be a list of strings (type, subtype, sub-subtype, vechulu, kind of like mime type)
+		- title
+			- can be a string, if so output just main title
+			- can be a map with main (title) and subtitle
+		- fee - can be boolean or map
+			- if map, key called "value" with bool value, and optional description with more detail about fee value
+	- output types:
+		- languages (content only?) - optional list of language code strings
+		- site_id - id of a site
+		- name - human-readable name
+		- description (content only?) - describes the content
+		- categories (content only) - list of strings
+		- target_audience (content only) - optional, list of audience types (strings) that content seems tailored to
+		- endpoint: a map, with keys ref (the input itself, if it was a string) and label
+		- endpoints: a map
+			- keys representing the endpoint type
+			- values should be lists, with each item an endpoint
+				- if we want to get only one endpoint and no more, prefer ones without a label, and prefer ones earlier in list to later ones
+		- type - list of strings (type hierarchy kind of like mime type)
+		- title - a map
+			- main - title
+			- subtitle - optional subtitle
+		- fee - map
+			- value - boolean
+			- description - optional string
+
+TODO
+	- make a schema for content and site objectsalach (for both unprocessed objects and preprocessed ones)?
+		- if so, lint (i.e. check) against those schemas when running preprocessor?
+	- make contents able to have content_id, the way sites can have site_id? (i.e. hierarchy for contents)
+	- language codes - which system/standard do these follow?
+	- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
