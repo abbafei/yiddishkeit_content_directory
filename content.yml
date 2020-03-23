@@ -133,7 +133,7 @@ small_wonder_puppet_videos:
     target_audience: [children]
     fee:
         value: false
-        description: fee suspended during Coronavirus pandemic
+        description: fee suspended during coronavirus
     endpoints: https://www.unclepinchey.com/
     description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
     categories: [entertainment]

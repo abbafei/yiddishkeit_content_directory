@@ -20,7 +20,7 @@ bH
 			- can be a string, if so output just main title
 			- can be a map with main (title) and subtitle
 		- fee - can be boolean or map
-			- if map, key called "value" with bool value, and optional description with more detail about fee value
+			- if map, key called "has_fee" with bool value, and optional description with more detail about fee
 	- output types:
 		- languages (content only?) - optional list of language code strings
 		- site_id - id of a site
@@ -38,7 +38,7 @@ bH
 			- main - title
 			- subtitle - optional subtitle
 		- fee - map
-			- value - boolean
+			- has_fee - boolean
 			- description - optional string
 
 TODO
@@ -47,3 +47,4 @@ TODO
 	- make contents able to have content_id, the way sites can have site_id? (i.e. hierarchy for contents)
 	- language codes - which system/standard do these follow?
 	- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
+
