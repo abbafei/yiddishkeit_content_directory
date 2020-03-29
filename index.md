@@ -18,7 +18,6 @@ There is much existing content for both adults and children online that can brin
       - the [videos](https://drive.google.com/drive/folders/0B_WSU737WJ1ffmpRZHpRaGQ2ZzJFeUdkSEtJYTIzcHE5Njdkb0hpTnZmRW1iLVMzMnZsOHc) at [RebbeDrive](https://www.rebbedrive.com/)
       - ...and of course the [Living Torah Archive](https://www.chabad.org/therebbe/livingtorah/default_cdo/aid/42106/jewish/Archives.htm)
     - There is also much good [kids video at Torah Treasure](https://torahtreasure.com/videos) which can be watched online for a fee
-	  - [Mitzvah Boulevard - Shabbos](https://torahtreasure.com/videos?zype_type=video_single&zype_video_id=5cae538af273a3125e6cfb4a&playlist_id=5cf504d3c7e83b68d351e7fd) can be [watched](https://collive.com/watch-mitzvah-boulevard-shabbos-for-free/)  for free until Rosh Chodesh Nissan 5780 (26 March 2020)
 	- ...and more kids video by the [Small Wonder Puppet Theater](https://www.unclepinchey.com/) (free during coronavirus pandemic)
   - Reading
     - JEM’s [Here’s My Story](https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm) (also [here](http://myencounterblog.com/))
