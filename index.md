@@ -18,7 +18,7 @@ There is much existing content for both adults and children online that can brin
       - the [videos](https://drive.google.com/drive/folders/0B_WSU737WJ1ffmpRZHpRaGQ2ZzJFeUdkSEtJYTIzcHE5Njdkb0hpTnZmRW1iLVMzMnZsOHc) at [RebbeDrive](https://www.rebbedrive.com/)
       - ...and of course the [Living Torah Archive](https://www.chabad.org/therebbe/livingtorah/default_cdo/aid/42106/jewish/Archives.htm)
     - There is also much good [kids video at Torah Treasure](https://torahtreasure.com/videos) which can be watched online for a fee
-	  - [The Rebbe's Niggunim #2](https://torahtreasure.com/videos?zype_type=video_single&zype_video_id=5d1d67203e527f583c11e650&playlist_id=5cf47bd0c7e83b68f3b5e178) [can be watched](https://collive.com/watch-the-rebbes-niggunim/) [for free](https://crownheights.info/chabad-news/702569/torah-treasures-makes-the-rebbes-niggunim-vol-2-available-free-for-one-day/) during 11 Nissan 5770 / 4-5-20.
+	  - [The Rebbe's Niggunim #2](https://torahtreasure.com/videos?zype_type=video_single&zype_video_id=5d1d67203e527f583c11e650&playlist_id=5cf47bd0c7e83b68f3b5e178) can [be watched](https://collive.com/watch-the-rebbes-niggunim/) for [free](https://crownheights.info/chabad-news/702569/torah-treasures-makes-the-rebbes-niggunim-vol-2-available-free-for-one-day/) during Sunday, 11 Nissan 5770 / 4-5-20.
 	- ...and more kids video by the [Small Wonder Puppet Theater](https://www.unclepinchey.com/) (free during coronavirus pandemic)
   - Reading
     - JEM’s [Here’s My Story](https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm) (also [here](http://myencounterblog.com/))
