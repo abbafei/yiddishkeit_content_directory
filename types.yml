@@ -9,13 +9,28 @@ categories:
     doing:
         title: Doing
         description: Things to assist with learning Torah and doing Mitzvos
+    more:
+        title: More
 content_types:
     video:
         title: Video
     text:
-        title: Text
+        title: Reading
     audio:
         title: Audio
+    more:
+        title: More
+target_audiences:
+    children:
+        title: children
+    children-at-heart:
+        title: children-at-heart
+    adults:
+        title: adults
+    older children:
+        title: older children
+    young children:
+        title: young children
 # TODO: pull from wikidata properties? example https://www.wikidata.org/wiki/Property:P3418 formatter url for play store
 endpoints:
     youtube_playlist:

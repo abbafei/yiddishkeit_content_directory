@@ -47,6 +47,7 @@ chabad_org:
         youtube_channel: UCc0y_E87EUnOW2m2mGJU9Gg
 chabad_org_inspiration_entertainment:
     site_id: chabad_org
+    content_type: more
     title: Chabad.org - Inspiration and Entertainment section
     item_type: group
     endpoints: https://www.chabad.org/library/article_cdo/aid/1675890/jewish/Inspiration-Entertainment.htm
@@ -109,6 +110,9 @@ hebrewbooks_english:
     content_type: text
     item_type: group
     endpoints: https://hebrewbooks.org/english
+    category:
+        main: more
+        tags: [Rebbe, entertainment]
 heres_my_story_english:
     site_id: my_encounter
     title: Here's My Story
@@ -163,7 +167,7 @@ jem_70_years:
     site_id: jem
     content_type: video
     item_type: series
-    name: 70 Years
+    title: 70 Years
     endpoints:
         web: https://70years.com/
         youtube_playlist: PLkXcDdOrqRiqD_jiJDhIRfywJ_FT9XLHi
@@ -215,6 +219,21 @@ living_torah_web:
     category:
         main: Rebbe
         tags: [Rebbe]
+mafteiach_app:
+    site_id: Rebbedrive
+    title: Mafteiach
+    accessed_with: app
+    item_type: group
+    endpoints:
+        web: https://www.mafteiach.app/
+        android: app.mafteiach.app
+        ios: "1455806077"
+    announcements:
+        - https://www.rebbedrive.com/single-post/2018/12/13/The-interactive-Mafteiach-is-now-available-for-download
+        - https://chabadinfo.com/news/rebbedrive-interactive-mafteiach-now-available/
+    category:
+        main: Rebbe
+        tags: [Rebbe]
 mitzvah_boulevard:
     site_id: torah_treasure
     title: Mitzvah Boulevard
@@ -233,6 +252,19 @@ mitzvah_boulevard_shabbos:
             description: free until Rosh Chodesh Nissan 5780 (26 March 2020)
             until: 2020-03-26T23:59:59-04:00
         - true
+    category:
+        main: entertainment
+        tags: [entertainment]
+mitzvah_island:
+    site_id: chabad_org
+    content_type: video
+    item_type: [series, brand]
+    title: Mitzvah Island
+    endpoints: https://www.chabad.org/kids/article_cdo/aid/1847177/jewish/Mitzvah-Island.htm
+    target_audience: [young children]
+    description: "Join your \"mitzvah friends\", Sarah and Avi on all their mitzvah adventures. This animated series teaches young children about Jewish life and values."
+    announcements:
+        - https://collive.com/shows-grew-with-creator/
     category:
         main: entertainment
         tags: [entertainment]
@@ -269,25 +301,11 @@ Rebbedrive_app:
     category:
         main: Rebbe
         tags: [Rebbe]
-mafteiach_app:
-    site_id: Rebbedrive
-    title: Mafteiach
-    accessed_with: app
-    item_type: group
-    endpoints:
-        web: https://www.mafteiach.app/
-        android: app.mafteiach.app
-        ios: "1455806077"
-    announcements:
-        - https://www.rebbedrive.com/single-post/2018/12/13/The-interactive-Mafteiach-is-now-available-for-download
-        - https://chabadinfo.com/news/rebbedrive-interactive-mafteiach-now-available/
-    category:
-        main: Rebbe
-        tags: [Rebbe]
 Rebbedrive_video:
     site_id: Rebbedrive
     content_type: video
     item_type: group
+    title: RebbeDrive video
     endpoints:
         web:
             -
@@ -333,14 +351,14 @@ small_wonder_puppets:
         facebook: SmallWonderPuppetTheatre
 small_wonder_puppets_videos:
     site_id: small_wonder_puppets
-    title: Small Wonder Puppet Theater Videos
+    title: Small Wonder Puppet Theater videos
     item_type: group
     content_type: video
     target_audience: [children]
     fee:
         -
             has_fee: false
-            description: fee suspended during coronavirus pandemic
+            description: free during coronavirus pandemic
         - true
     endpoints: https://www.unclepinchey.com/
     description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
@@ -370,6 +388,9 @@ stick_figure_vignettes:
         - https://collive.com/stick-figures-on-chabad-org/
         - https://collive.com/stick-figures-show-returns/
     description: 30 second animated shorts using stick figures to explore Jewish philosophy. Bizarre yet intriguing. Oh, and kind of funny.
+    category:
+        main: entertainment
+        tags: [entertainment]
 torah_treasure:
     title: Torah Treasure
     item_type: [org]

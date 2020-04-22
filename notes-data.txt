@@ -71,4 +71,6 @@ TODO
 	- fees
 		- add "from" field to fees? (like "until")
 	- endpoints
-		 - coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
+		- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
+	- compilation
+		- build transformation into eleventy pipeline?

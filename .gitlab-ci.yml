@@ -4,9 +4,11 @@ image: node
 pages:
   stage: deploy
   script:
+    - apt-get update && apt-get install -y jq && rm -rf /var/lib/apt/lists/*
     # via https://www.11ty.dev/docs/getting-started/
     - npm init -y
-    - npm install --save-dev @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
+    - npm install --save-dev @11ty/eleventy js-yaml @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
+    - sh ./proc_zach.sh
     - npx @11ty/eleventy --output=public
   artifacts:
     paths:
