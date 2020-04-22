@@ -83,4 +83,4 @@ preproc_items(){
 		#types: $types,
 	} |
 	.items
-' | tee _data/items.json
+' > _data/items.json
