@@ -8,7 +8,7 @@ pages:
     # via https://www.11ty.dev/docs/getting-started/
     - npm init -y
     - npm install --save-dev @11ty/eleventy js-yaml @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
-    - bash ./proc_zach.sh
+    - ./proc_zach.sh organized
     - npx @11ty/eleventy --output=public
   artifacts:
     paths:
