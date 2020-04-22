@@ -1,0 +1,42 @@
+---
+layout: page
+---
+{% macro info_type(type, flow=true) -%}
+, <span style="font-weight: bold">{{ type }}</span>{% if not flow %}:{% endif %} {{ caller() }}
+{%- endmacro %}
+<header><p>B"H</p></header>
+<section>
+<p>There is much existing content for both adults and children online that can bring good, happy use of our time.</p>
+<ul>
+{%- for content_type, categories in items.grouped %}
+  <li>{{ content_type.title }}
+  <ul>
+  {%- for category, items in categories %}
+    <li>{{ category.title }}
+    <ul>
+      {%- for item in items %}
+        <li>
+          {%- if "web" in item.endpoints %} {# TODO: make so only picks up if has web link without label? #}
+            <a href="{{ item.endpoints.web.entries[0].url }}">{{ item.title.main }}</a>
+          {%- else %}
+            {{ item.title.main }}
+          {% endif -%}
+          {%- if "target_audience" in item -%}{%- call info_type("For") -%}
+            {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}{{ comma() }}{{ audience.title }}{% endfor %}
+          {%- endcall -%}{%- endif %}
+          {%- if "fee" in item -%}{%- call info_type("Fee", flow=false) -%}
+            {{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}
+          {%- endcall -%}{%- endif %}
+        </li>
+      {%- endfor %}
+    </ul>
+    </li>
+  {%- endfor %}
+  </ul>
+  </li>
+{%- endfor %}
+</ul>
+<p>More updates to come, B'ezras Hashem!</p>
+<br />
+<footer><p>Source code available <a href="https://gitlab.com/abbafei/abbafei.gitlab.io/">here</a>.</p></footer>
+</section>
