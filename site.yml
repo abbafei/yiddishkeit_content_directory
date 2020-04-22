@@ -1,12 +1,14 @@
 # B"H.
 azoi:
     title: Azoi
+    type: [org, brand]
     endpoints:
         web: https://www.azoi.org/
         instagram: azoiapp
         twitter: azoiapp
 wrapp:
     title: Wrapp
+    type: [brand]
     endpoints:
         web: http://www.tefillinwrapp.com/
         facebook: TefillinWrapp
@@ -14,6 +16,7 @@ wrapp:
         twitter: TefillinWrapp
 jem:
     title: Jewish Educational Media
+    type: [org, brand]
     endpoints:
         web: https://jemcentral.org/
         facebook: jewishmedia
@@ -21,32 +24,15 @@ jem:
         twitter: JEMediaOrg
         instagram: jewish_media
         vimeo: jem
-Rebbedrive:
-    title: RebbeDrive
-    languages: [he, en]
-    endpoints:
-        web: https://www.Rebbedrive.com/
-        youtube: RebbeDrive
-        facebook: Rebbe-Drive-930351750466700
 living_torah:
     site_id: jem
+    type: [brand]
     title: Living Torah
     endpoints:
         web: https://www.livingtorah.org/
-torah_treasure:
-    title: Torah Treasure
-    endpoints:
-        web: https://torahtreasure.com/
-        facebook: TorahTreasure2
-        youtube: TorahTreasure
-small_wonder_puppets:
-    title: Small Wonder Puppet Theatre
-    endpoints:
-        web: http://smallwonderpuppets.com/
-        twitter: jewishpuppets
-        facebook: SmallWonderPuppetTheatre
 my_encounter:
     site_id: jem
+    type: [brand]
     title: My Encounter with the Rebbe
     endpoints:
         web:
@@ -55,8 +41,31 @@ my_encounter:
             - http://myencounterblog.com/
             - https://jemcentral.org/my-encounter/
         facebook: My-Encounter-with-the-Rebbe-311217318011
+Rebbedrive:
+    title: RebbeDrive
+    type: [org, brand]
+    languages: [he, en]
+    endpoints:
+        web: https://www.Rebbedrive.com/
+        youtube: RebbeDrive
+        facebook: Rebbe-Drive-930351750466700
+torah_treasure:
+    title: Torah Treasure
+    type: [org]
+    endpoints:
+        web: https://torahtreasure.com/
+        facebook: TorahTreasure2
+        youtube: TorahTreasure
+small_wonder_puppets:
+    title: Small Wonder Puppet Theatre
+    type: [org]
+    endpoints:
+        web: http://smallwonderpuppets.com/
+        twitter: jewishpuppets
+        facebook: SmallWonderPuppetTheatre
 chabad_org:
     title: Chabad.org
+    type: [org]
     languages: [he, en, fr, ru, es, de, pt, it]
     endpoints:
         web: https://www.chabad.org/
@@ -67,11 +76,16 @@ chabad_org:
         youtube_channel: UCc0y_E87EUnOW2m2mGJU9Gg
 sie:
     title: Sichos in English
+    type: [org, brand]
     endpoints:
         web: https://www.sie.org/
         facebook: SichosInEnglish
 hebrewbooks:
     title: HebrewBooks.org
+    type: [org, brand]
     endpoints:
         web: https://www.hebrewbooks.org/
         blog: https://blog.hebrewbooks.org/
+mitzvah_boulevard:
+    title: Mitzvah Boulevard
+    type: [brand]

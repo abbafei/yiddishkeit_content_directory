@@ -1,6 +1,6 @@
 # B"H.
 azoi_app:
-    site_id: azoi
+    site_id: azoi_site
     type: app
     title: Azoi
     endpoints:
@@ -114,7 +114,7 @@ living_torah_web:
     endpoints:
         web: http://www.chabad.org/livingtorah
     categories: [Rebbe]
-torah_treasure:
+torah_treasure_content:
     site_id: torah_treasure
     title: Torah Treasure
     type: video
@@ -132,8 +132,8 @@ small_wonder_puppet_videos:
     type: video
     target_audience: [children]
     fee:
-        value: false
-        description: fee suspended during coronavirus
+        has_fee: false
+        description: fee suspended during coronavirus pandemic
     endpoints: https://www.unclepinchey.com/
     description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
     categories: [entertainment]
@@ -226,7 +226,7 @@ chabad_org_music_app:
 mafteiach:
     site_id: Rebbedrive
     title: Mafteiach
-    type: index
+    type: library
     endpoints:
         web: https://www.mafteiach.app/
         android: app.mafteiach.app
@@ -241,3 +241,14 @@ ashreinu_app:
     type: audio
     endpoints: https://ashreinu.app/
     categories: [Rebbe]
+mitzvah_boulevard_shabbos:
+    site_id: mitzvah_boulevard
+    title: Mitzvah Boulevard - Shabbos
+    type: [video, item]
+    endpoints: https://torahtreasure.com/videos?pagination=&zype_parent=5cf504d3c7e83b68d351e7fd
+    target_audience: [children]
+    fee:
+        has_fee: false
+        description: free until Rosh Chodesh Nissan 5780 (26 March 2020)
+        until: 2020-03-26T23:59:59
+    categories: [entertainment]
