@@ -23,28 +23,52 @@ bH
 			- if map, key called "has_fee" with bool value, and optional description with more detail about fee
 	- output types:
 		- languages (content only?) - optional list of language code strings
-		- site_id - id of a site
+		- site_id - optional id of a site it is created by/part of
+		- part_of - optional id of another item of which item is a part
 		- name - human-readable name
 		- description (content only?) - describes the content
-		- categories (content only) - list of strings
+		- category: a map
+			- main: main category of the content
+			- tags (content only) - categories of the content - list of strings
 		- target_audience (content only) - optional, list of audience types (strings) that content seems tailored to
 		- endpoint: a map, with keys ref (the input itself, if it was a string) and label
 		- endpoints: a map
 			- keys representing the endpoint type
 			- values should be lists, with each item an endpoint
 				- if we want to get only one endpoint and no more, prefer ones without a label, and prefer ones earlier in list to later ones
-		- type - list of strings (type hierarchy kind of like mime type)
+		- item_type - list of strings - type of the item entry
+			- types: multiple types allowed, no hierarchy, tag-like
+				- brand - something with a logo, more or less :-)
+				- org - an organization or group who produces content, has one or more brands (it can also serve as a brand)
+				- channel - a live (continuous? stream-like thing) with audio or video etc. (not a channel with multiple elements like podcast)
+				- series - a group of items with an order (set-like)
+				- group - like series, but unordered, and can have subzachin(?)
+				- item - an individual video/audio/text/etc.
+		- content_type: video, audio, text
+		- accessed_with: how it's accessed
+			- app
 		- title - a map
 			- main - title
 			- subtitle - optional subtitle
-		- fee - map
+		- fee - array with map. earlier items in array take precedence, if we are before "until" date
 			- has_fee - boolean
 			- description - optional string
+			- until - iso 8601 date/time; is time fee field applies until
 
 TODO
-	- make a schema for content and site objectsalach (for both unprocessed objects and preprocessed ones)?
-		- if so, lint (i.e. check) against those schemas when running preprocessor?
-	- make contents able to have content_id, the way sites can have site_id? (i.e. hierarchy for contents)
-	- language codes - which system/standard do these follow?
-	- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
-
+	- schemas etc.
+		- make a schema for content and site objectsalach (for both unprocessed objects and preprocessed ones)?
+			- if so, lint (i.e. check) against those schemas when running preprocessor?
+		- encode hierarchy possibilities in schema?
+	- hierarchies
+		- differentiate between sites/orgs and brands for content?
+		- make able to have hierarchy with site_ids and part_ofs
+		- multiple site_ids or part_ofs?
+	- languages
+		- language codes - which system/standard do these follow?
+		- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
+		- filter languages?
+	- fees
+		- add "from" field to fees? (like "until")
+	- endpoints
+		 - coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
