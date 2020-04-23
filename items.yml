@@ -1,4 +1,19 @@
 # B"H.
+ascent_of_safed:
+    title: ASCENT
+    item_type: [org, brand]
+    endpoints:
+        web: http://ascentofsafed.com/
+        facebook: ascentoftzfat
+ascent_of_safed_stories:
+    site_id: ascent_of_safed
+    title: Ascent of Safed - Stories section
+    item_type: group
+    endpoints: http://ascentofsafed.com/cgi-bin/ascent.cgi?Name=Stories
+    content_type: text
+    category:
+        main: entertainment
+        tags: [entertainment]
 ashreinu_app:
     site_id: jem
     title: Ashreinu.app
