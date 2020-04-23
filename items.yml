@@ -100,6 +100,18 @@ chabad_org_music_section:
     category:
         main: music
         tags: [music]
+chabad_org_stories_section:
+    site_id: chabad_org
+    title:
+        main: Chabad.org - Stories section
+        subtitle: Jewish Tales from the Past 
+    description: Hundreds of Jewish stories from the sages, the Chassidic masters, and contemporary Jewish storytellers
+    content_type: text
+    item_type: group
+    endpoints: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
+    category:
+        main: entertainment
+        tags: [entertainment]
 hebrewbooks:
     title: HebrewBooks.org
     item_type: [org, brand]
@@ -254,6 +266,22 @@ mafteiach_app:
     category:
         main: Rebbe
         tags: [Rebbe]
+mendy_and_the_golem:
+    title: Mendy and the Golem archives
+    item_type: [series, brand]
+    endpoints:
+        google_drive_folder: 1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
+        web:
+            ref: https://drive.google.com/drive/u/1/folders/1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
+            label: google drive folder from RebbeDrive
+    content_type: text
+    target_audience: [older children, adults]
+    announcements:
+        - https://www.rebbedrive.com/single-post/2018/08/09/Mendy-And-The-Golem-Added
+        - https://chabadinfo.com/news/archive-mendy-and-the-golem/
+    category:
+        main: entertainment
+        tags: [entertainment]
 mitzvah_boulevard:
     site_id: torah_treasure
     title: Mitzvah Boulevard
