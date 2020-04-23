@@ -1,10 +1,13 @@
 ---
 layout: page
+eleventyNavigation:
+    key: main
+    order: 1
+    title: Home
 ---
 {% macro info_type(type, flow=true) -%}
 , <span style="font-weight: bold">{{ type }}</span>{% if not flow %}:{% endif %} {{ caller() }}
 {%- endmacro %}
-<header><p>B"H</p></header>
 <section>
 <p>There is much existing content for both adults and children online that can bring good, happy use of our time.</p>
 <ul>

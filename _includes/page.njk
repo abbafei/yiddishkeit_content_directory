@@ -12,6 +12,15 @@ mainTitle: Yiddishkeit.info
 <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-163978706-1');</script>
 </head><body>
 <div class="container">
+<header>
+<p>B"H</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"><div class="navbar-nav">
+{% for nav_item in collections.all | eleventyNavigation %}
+  {%- if nav_item.key === eleventyNavigation.key %}{% set nav_item_active = true -%}{% else %}{% set nav_item_active = false %}{% endif -%}
+  <a class="nav-item nav-link{% if nav_item_active %} active{% endif %}" href="{{ nav_item.url }}">{{ nav_item.title }}{% if nav_item_active %}<span class="sr-only"> (current)</span>{% endif %}</a>
+{% endfor -%}
+</div></nav>
+</header>
 {{ content | safe }}
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
