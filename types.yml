@@ -33,48 +33,51 @@ target_audiences:
         title: young children
 # TODO: pull from wikidata properties? example https://www.wikidata.org/wiki/Property:P3418 formatter url for play store
 endpoints:
-    youtube_playlist:
-        formatter: https://www.youtube.com/playlist?list=$1
-        title: YouTube playlist
-    youtube_channel:
-        formatter: http://www.youtube.com/channel/$1
-        title: YouTube channel
-    google_drive_folder:
-        formatter: https://drive.google.com/drive/folders/$1
-        title: Google Drive folder
-    donorbox:
-        formatter: https://donorbox.org/$1
-        title: Donorbox
-    twitter:
-        formatter: https://twitter.com/$1
-        title: Twitter
-    instagram:
-        formatter: https://www.instagram.com/$1
-        title: Instagram
-    facebook:
-        formatter: https://www.facebook.com/$1
-        title: Facebook
     android:
         formatter: https://play.google.com/store/apps/details?id=$1
         title: Google Play Store
+    blog:
+        formatter: $1
+        title: Blog
+    donorbox:
+        formatter: https://donorbox.org/$1
+        title: Donorbox
+    facebook:
+        formatter: https://www.facebook.com/$1
+        title: Facebook
+    google_drive_folder:
+        formatter: https://drive.google.com/drive/folders/$1
+        title: Google Drive folder
+    instagram:
+        formatter: https://www.instagram.com/$1
+        title: Instagram
     ios:
         formatter: https://apps.apple.com/us/app/id$1
         title: iTunes Store
     pinterest:
         formatter: https://www.pinterest.com/$1/
         title: Pinterest
+    tripadvisor:
+        formatter: https://www.tripadvisor.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3134&oldid=1128098972
+        title: TripAdvisor
     tunein:
         formatter: https://tunein.com/radio/$1/
         title: TuneIn
+    twitter:
+        formatter: https://twitter.com/$1
+        title: Twitter
     vimeo:
         formatter: https://vimeo.com/$1
         title: Vimeo
     web:
         formatter: $1
         title: Web
-    blog:
-        formatter: $1
-        title: Blog
     youtube:
         formatter: https://www.youtube.com/$1
         title: YouTube
+    youtube_channel:
+        formatter: http://www.youtube.com/channel/$1
+        title: YouTube channel
+    youtube_playlist:
+        formatter: https://www.youtube.com/playlist?list=$1
+        title: YouTube playlist

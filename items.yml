@@ -1,10 +1,15 @@
 # B"H.
 ascent_of_safed:
-    title: ASCENT
+    title: Ascent of Tzfat
     item_type: [org, brand]
     endpoints:
-        web: http://ascentofsafed.com/
+        web:
+            - https://www.myascent.org/
+            - http://ascentofsafed.com/
         facebook: ascentoftzfat
+        instagram: ascent_tzfat
+        twitter: ascent_tzfat
+        tripadvisor: g297763-d2360858
 ascent_of_safed_stories:
     site_id: ascent_of_safed
     title: Ascent of Safed - Stories section
