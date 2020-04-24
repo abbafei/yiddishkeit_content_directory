@@ -1,11 +1,11 @@
-#!/bin/sh
-# B"H.
-y2j(){
-	npx js-yaml
-	#yaml2json --preserve-key-order
-}
-preproc_items(){
-	y2j | jq '
+// B"H.
+const util = require("util");
+const fs = require("fs");
+
+const jq = require("node-jq");
+const js_yaml = require("js-yaml");
+
+const preproc_items_code = `
 	def update_key($key; code_uk): if has($key) then (.[$key] |= code_uk) else . end;
 	#def expand_val($type; code_ev): if $type == type then code_ev else . end;
 	def expand_endpoint: if type == "string" then {ref: .} else . end; #def expand_endpoint: expand_val("string"; {ref: .});
@@ -29,13 +29,10 @@ preproc_items(){
 			end))
 		end) |
 		if has("languages") then . else (.languages |= ["en"]) end
-	))'
-}
+	))
+`;
 
-(
-	cat items.yml | preproc_items
-	cat types.yml | y2j
-) | jq --slurp '
+const proc_items_code = `
 	def is_in(vals): [. == [vals][]] | any;
 	def defs_numbered: to_entries | with_entries(.value.value.sort_num = .key | .value);
 	def has_def($defs): is_in($defs | keys[]);
@@ -67,7 +64,7 @@ preproc_items(){
 				.key as $endpoint_type |
 				(.value |= (map(
 					.ref as $ref |
-					.url = ($types.endpoints[$endpoint_type].formatter | sub("\\$1"; $ref))
+					.url = ($types.endpoints[$endpoint_type].formatter | sub("\\\\$1"; $ref))
 				) | {title: $types.endpoints[$endpoint_type].title, entries: .}))
 			)) else . end) |
 			{
@@ -83,4 +80,12 @@ preproc_items(){
 		#types: $types,
 	} |
 	.items
-' > _data/items.json
+`;
+
+module.exports = async function() {
+    const items_inp_str = JSON.stringify(js_yaml.safeLoad(await util.promisify(fs.readFile)("items.yml")));
+    const types_inp_str = JSON.stringify(js_yaml.safeLoad(await util.promisify(fs.readFile)("types.yml")));
+    const preproced_items_str = await jq.run(preproc_items_code, items_inp_str, {input: "string", output: "compact"});
+    const proced_items_str = await jq.run(proc_items_code, [preproced_items_str, types_inp_str].join(""), {input: "string", output: "compact", slurp: true});
+    return JSON.parse(proced_items_str);
+};
