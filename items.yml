@@ -272,8 +272,9 @@ mendy_and_the_golem:
     endpoints:
         google_drive_folder: 1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
         web:
-            ref: https://drive.google.com/drive/u/1/folders/1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
-            label: google drive folder from RebbeDrive
+            -
+                ref: https://drive.google.com/drive/folders/1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
+                label: google drive folder from RebbeDrive
     content_type: text
     target_audience: [older children, adults]
     announcements:

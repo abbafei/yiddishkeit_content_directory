@@ -56,6 +56,8 @@ bH
 			- until - iso 8601 date/time; is time fee field applies until
 
 TODO
+	- bichlall
+		- add items in this list to gitlab issue tracker :-)
 	- schemas etc.
 		- make a schema for content and site objectsalach (for both unprocessed objects and preprocessed ones)?
 			- if so, lint (i.e. check) against those schemas when running preprocessor?
@@ -65,7 +67,7 @@ TODO
 		- make able to have hierarchy with site_ids and part_ofs
 		- multiple site_ids or part_ofs?
 	- languages
-		- language codes - which system/standard do these follow?
+		- language codes - which system/standard should these follow?
 		- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
 		- filter languages?
 	- fees
@@ -73,5 +75,12 @@ TODO
 	- endpoints
 		- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
 		- make a piece of data that indicates to use a specific endpoint url for an item if there is no (preferred) web endpoint?
+	- item info
+		- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 	- compilation
-		- build transformation into eleventy pipeline?
+		- done bH build transformation into eleventy pipeline?
+	- rendering etc.
+		- show page title in <title>, including for paginated (generated) pages
+		- add remaining keys to item info pages
+		- item links and more macros/functions in templating vechulu
+			- eleventyConfig.addFilter("item_id_to_info_link", function(value) { return `items/${this.slug(value)}`; });

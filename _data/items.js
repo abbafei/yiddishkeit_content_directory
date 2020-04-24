@@ -68,7 +68,8 @@ const proc_items_code = `
 				) | {title: $types.endpoints[$endpoint_type].title, entries: .}))
 			)) else . end) |
 			{
-				all: .,
+                all: .,
+                dict: map({key: .id, value: .}) | from_entries,
 				grouped:
 					grouped_array(.content_type; $types.content_types) |
 					map(.[1] |= (

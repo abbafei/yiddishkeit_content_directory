@@ -1,0 +1,67 @@
+---
+pagination:
+    data: items.all
+    size: 1
+    alias: item
+permalink: "items/{{item.id | slug}}/"
+layout: page
+---
+<section>
+{%- macro entry(item, entry_id, entry_name) %}
+{%- if entry_id in item %}
+<h5>{{ entry_name }}</h5>
+{{ caller() }}
+{%- endif %}
+{%- endmacro %}
+<h1>{{ item.title.main }}</h1>
+{%- if "subtitle" in item.title %}
+<h3>{{ item.title.subtitle }}</h3>
+{%- endif %}
+{%- call entry(item, "announcements", "Announcements") %}
+<ul>
+{%- for announcement in item.announcements %}
+  <li><a href="{{ announcement }}">{{ announcement }}</a></li>
+{%- endfor %}
+</ul>
+{%- endcall %}
+{%- call entry(item, "content_type", "Content type") %}
+<p>{{ types.content_types[item.content_type].title }}</p>
+{%- endcall %}
+{%- call entry(item, "description", "Description") %}
+<p>{{ item.description }}</p>
+{%- endcall %}
+{%- call entry(item, "endpoints", "Endpoints") %}
+<ul>
+{%- for endpoints_type_id, endpoints_typed in item.endpoints | dictsort %}
+  <li>{{ endpoints_typed.title }}
+  <ul>
+  {%- for endpoint in endpoints_typed.entries %}
+    <li>
+      <a href="{{ endpoint.url }}">{{ endpoint.url }}</a>{% if "label" in endpoint %} ({{ endpoint.label }}){% endif %}
+    </li>
+  {%- endfor %}
+  </ul>
+  </li>
+{%- endfor %}
+</ul>
+{%- endcall %}
+{%- call entry(item, "fee", "Has fee?") %}
+<p>{{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}</p>
+{%- endcall %}
+{%- call entry(item, "site_id", "From") %}
+<p>{{ items.dict[item.site_id].title.main }} (<a href="/items/{{ item.site_id | slug }}">More info</a>)</p>
+{%- endcall %}
+{%- call entry(item, "part_of", "Is part of") %}
+<p>{{ items.dict[item.part_of].title.main }} (<a href="/items/{{ item.part_of | slug }}">More info</a>)</p>
+{%- endcall %}
+{%- call entry(item, "target_audience", "Target audiences") %}
+<ul>
+{%- for audience in item.target_audience %}
+  <li>{{ audience.title }}</li>
+{%- endfor %}
+</ul>
+{%- endcall %}
+{# <p><code>
+{{ item | dump(2) | safe }}
+</code></p> #}
+</section>
