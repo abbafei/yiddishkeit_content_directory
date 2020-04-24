@@ -25,7 +25,7 @@ eleventyNavigation:
             {{ item.title.main }}
           {% endif -%}
           {%- if "target_audience" in item -%}{%- call info_type("For") -%}
-            {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}{{ comma() }}{{ audience.title }}{% endfor %}
+          {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}{{ " and " if loop.last and not loop.first else comma() }}{{ audience.title }}{% endfor %}
           {%- endcall -%}{%- endif %}
           {%- if "fee" in item -%}{%- call info_type("Fee", flow=false) -%}
             {{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}
