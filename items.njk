@@ -24,7 +24,7 @@ layout: page
 {%- if "endpoints" in item %}
 {%- for endpoints_type_id, endpoints_typed in item.endpoints | dictsort %}
   {%- if "formatter" in types.endpoints[endpoints_type_id] and "title" in types.endpoints[endpoints_type_id] %}
-  {% call entry(item, ["Links: ", types.endpoints[endpoints_type_id].title] | join) %}
+  {% call entry(item, ["Links — ", types.endpoints[endpoints_type_id].title] | join) %}
   <ul>
   {%- for endpoint in endpoints_typed %}
     <li>

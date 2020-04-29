@@ -24,7 +24,7 @@ eleventyNavigation:
           {%- else %}
             {{ item.title }}
           {% endif %}
-          {#- (<a href="items/{{ item.id | slug }}">More info</a>) #}
+          (<a href="items/{{ item.id | slug }}">More info</a>)
           {%- if "target_audience" in item -%}{%- call info_type("For") -%}
           {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}{{ " and " if loop.last and not loop.first else comma() }}{{ types.target_audiences[audience].title }}{% endfor %}
           {%- endcall -%}{%- endif %}
