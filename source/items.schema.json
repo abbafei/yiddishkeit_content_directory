@@ -25,34 +25,53 @@
         "type": "object",
         "required": ["title"],
         "properties": {
-            "title": {"type": "string"},
-            "main_category": {"type": "string"},
+            "id": {
+                "$ref": "#/definitions/item_identifier"
+            },
+            "title": {
+                "type": "string",
+                "description": "human-readable name or title"
+            },
+            "main_category": {
+                "type": "string",
+                "description": "main category of the content"
+            },
             "content_type": {
-                "type": "string"
+                "type": "string",
+                "description": "media type of the content"
             },
             "site_id": {
                 "$ref": "#/definitions/item_identifier"
             },
-            "tags": {"$ref": "#/definitions/tag_array"},
+            "tags": {
+                "$ref": "#/definitions/tag_array",
+                "description": "categories of the content"
+            },
             "fee": {
                 "type": "array",
                 "minItems": 1,
                 "items": {
                     "type": "object",
+                    "description": "describes whether there is a fee or not for the content, and other fee information (for example when does the fee apply)",
                     "required": ["has_fee"],
                     "properties": {
                         "has_fee": {"type": "boolean"},
                         "description": {"type": "string"},
                         "until": {
                             "type": "string",
-                            "format": "date-time"
+                            "format": "date-time",
+                            "description": "the time the fee entry applies until"
                         }
                     }
                 }
             },
-            "target_audience": {"$ref": "#/definitions/tag_array"},
+            "target_audience": {
+                "$ref": "#/definitions/tag_array",
+                "description": "audiences that the content seems tailored to"
+            },
             "announcements": {
                 "type": "array",
+                "description": "news articles pertaining to the item",
                 "minItems": 1,
                 "items": {
                     "type": "string",
@@ -61,6 +80,7 @@
             },
             "endpoints": {
                 "type": "object",
+                "description": "digital locations to access media of the item",
                 "additionalProperties": {
                     "type": "array",
                     "minItems": 1,
@@ -80,6 +100,7 @@
             },
             "languages": {
                 "type": "array",
+                "description": "list of language code strings for the languages the content of the item is available in",
                 "minItems": 1,
                 "items": {"$ref": "#/definitions/language_code"}
             }

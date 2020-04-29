@@ -25,7 +25,8 @@ bH
 		- languages (content only?) - optional list of language code strings
 		- site_id - optional id of a site it is created by/part of
 		- part_of - optional id of another item of which item is a part
-		- name - human-readable name
+		- title - human-readable name
+		- subtitle - optional subtitle, from site
 		- description (content only?) - describes the content
 		- main_category: main category of the content
 		- tags (content only) - categories of the content - list of strings
@@ -46,8 +47,6 @@ bH
 		- content_type: video, audio, text
 		- accessed_with: how it's accessed
 			- app
-		- title - title
-		- subtitle - optional subtitle, from site
 		- fee - array with map. earlier items in array take precedence, if we are before "until" date
 			- has_fee - boolean
 			- description - optional string
