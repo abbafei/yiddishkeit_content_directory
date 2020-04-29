@@ -72,6 +72,9 @@ endpoints:
     web:
         formatter: $1
         title: Web
+    #whatsapp_group:
+    #    formatter: https://chat.whatsapp.com/$1
+    #    title: WhatsApp group invite link
     youtube:
         formatter: https://www.youtube.com/$1
         title: YouTube

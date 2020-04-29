@@ -13,9 +13,9 @@ layout: page
 {{ caller() }}
 {%- endif %}
 {%- endmacro %}
-<h1>{{ item.title.main }}</h1>
-{%- if "subtitle" in item.title %}
-<h3>{{ item.title.subtitle }}</h3>
+<h1>{{ item.title }}</h1>
+{%- if "subtitle" in item %}
+<h3>{{ item.subtitle }}</h3>
 {%- endif %}
 {%- call entry(item, "announcements", "Announcements") %}
 <ul>
@@ -49,10 +49,10 @@ layout: page
 <p>{{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}</p>
 {%- endcall %}
 {%- call entry(item, "site_id", "From") %}
-<p>{{ items.dict[item.site_id].title.main }} (<a href="/items/{{ item.site_id | slug }}">More info</a>)</p>
+<p>{{ items.dict[item.site_id].title }} (<a href="/items/{{ item.site_id | slug }}">More info</a>)</p>
 {%- endcall %}
 {%- call entry(item, "part_of", "Is part of") %}
-<p>{{ items.dict[item.part_of].title.main }} (<a href="/items/{{ item.part_of | slug }}">More info</a>)</p>
+<p>{{ items.dict[item.part_of].title }} (<a href="/items/{{ item.part_of | slug }}">More info</a>)</p>
 {%- endcall %}
 {%- call entry(item, "target_audience", "Target audiences") %}
 <ul>

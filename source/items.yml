@@ -16,9 +16,8 @@ ascent_of_safed_stories:
     item_type: group
     endpoints: http://ascentofsafed.com/cgi-bin/ascent.cgi?Name=Stories
     content_type: text
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 ashreinu_app:
     site_id: jem
     title: Ashreinu.app
@@ -26,9 +25,8 @@ ashreinu_app:
     accessed_with: app
     content_type: audio
     endpoints: https://ashreinu.app/
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 azoi:
     title: Azoi
     item_type: [org, brand]
@@ -50,9 +48,8 @@ azoi_app:
         - https://anash.org/new-app-brings-jewish-practice-into-the-21st-century/
         - https://www.jpost.com/Diaspora/New-app-aims-to-make-Judaism-user-friendly-611688
         - https://crownheights.info/chabad-news/690016/azoi-the-practical-judaism-app/
-    category:
-        main: doing
-        tags: [learning, doing]
+    main_category: doing
+    tags: [learning, doing]
 chabad_org:
     title: Chabad.org
     item_type: [org, brand]
@@ -71,9 +68,8 @@ chabad_org_inspiration_entertainment:
     title: Chabad.org - Inspiration and Entertainment section
     item_type: group
     endpoints: https://www.chabad.org/library/article_cdo/aid/1675890/jewish/Inspiration-Entertainment.htm
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 chabad_org_music_app:
     site_id: chabad_org
     title: Chabad.org Jewish Music App
@@ -87,9 +83,8 @@ chabad_org_music_app:
         tunein: Chabadorg-Jewish-Music-s305576
     announcements:
         - https://www.chabad.org/blogs/blog_cdo/aid/4140232/jewish/Chabadorg-Music-Radio-App-Launched.htm
-    category:
-        main: music
-        tags: [music]
+    main_category: music
+    tags: [music]
 chabad_org_music_section:
     site_id: chabad_org
     title: Chabad.org - Music section
@@ -97,21 +92,18 @@ chabad_org_music_section:
     item_type: group
     endpoints: http://www.chabad.org/music
     description: Listen to our collection of Jewish music and Chassidic songs that inspire the heart and express the soul. Also enjoy listening to and learning the traditional Shabbat songs and prayers.
-    category:
-        main: music
-        tags: [music]
+    main_category: music
+    tags: [music]
 chabad_org_stories_section:
     site_id: chabad_org
-    title:
-        main: Chabad.org - Stories section
-        subtitle: Jewish Tales from the Past 
+    title: Chabad.org - Stories section
+    subtitle: Jewish Tales from the Past 
     description: Hundreds of Jewish stories from the sages, the Chassidic masters, and contemporary Jewish storytellers
     content_type: text
     item_type: group
     endpoints: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 hebrewbooks:
     title: HebrewBooks.org
     item_type: [org, brand]
@@ -142,9 +134,8 @@ hebrewbooks_english:
     content_type: text
     item_type: group
     endpoints: https://hebrewbooks.org/english
-    category:
-        main: more
-        tags: [Rebbe, entertainment]
+    main_category: more
+    tags: [Rebbe, entertainment]
 heres_my_story_english:
     site_id: my_encounter
     title: Here's My Story
@@ -156,9 +147,8 @@ heres_my_story_english:
             - https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm
             - http://myencounterblog.com/
     description: Part of JEM's My Encounter with the Rebbe oral history project, dedicated to documenting the life of the Rebbe.
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 heres_my_story_hebrew:
     site_id: my_encounter
     title: הסיפור שלי
@@ -172,9 +162,8 @@ heres_my_story_hebrew:
                 label: downloads
                 ref: http://myencounterblog.com/
     description: "חלק מפרוייקט \"הפגישה שלי עם הרבי\", המופק על-ידי חברת JEM, ומטרתו לתעד את חייו של הרבי מליובאוויטש."
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 itche_kadoozy:
     item_type: [group, brand]
     content_type: video
@@ -182,9 +171,8 @@ itche_kadoozy:
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/365676/jewish/Itche-Kadoozy.htm
     target_audience: [children, children-at-heart]
     description: Enter the world of Rabbi Itche Kadoozy, where a normal day is never quite normal, big laughs are to be expected, and Torah lessons can be found around every corner.
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 jem:
     title: Jewish Educational Media
     item_type: [org, brand]
@@ -207,24 +195,21 @@ jem_70_years:
     announcements:
         - https://jemcentral.org/2020/01/22/70/
         - https://anash.org/jem-to-refresh-living-torah/
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 jem_tv:
     site_id: jem
     content_type: video
     item_type: group
-    title:
-        main: Jem.TV
-        subtitle: An Island of Calm
+    title: Jem.TV
+    subtitle: An Island of Calm
     endpoints: https://jem.tv/
     description: Daily content selections of the Rebbe to be featured.
     announcements:
         - https://anash.org/jem-to-stream-free-premium-content/
         - https://jemcentral.org/2020/03/16/island-of-calm/
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 kabbala_toons:
     item_type: [brand, group]
     title: KabbalaToons
@@ -232,9 +217,8 @@ kabbala_toons:
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/530191/jewish/KabbalaToons.htm
     target_audience: [children, adults]
     description: KabbalaToons presents spiritual guidance and mystic insights in fun, fast animation.
-    category:
-        main: entertainment
-        tags: [entertainment, learning]
+    main_category: entertainment
+    tags: [entertainment, learning]
 living_torah:
     site_id: jem
     item_type: [brand]
@@ -248,9 +232,8 @@ living_torah_web:
     item_type: series
     endpoints:
         web: http://www.chabad.org/livingtorah
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 mafteiach_app:
     site_id: Rebbedrive
     title: Mafteiach
@@ -263,9 +246,8 @@ mafteiach_app:
     announcements:
         - https://www.rebbedrive.com/single-post/2018/12/13/The-interactive-Mafteiach-is-now-available-for-download
         - https://chabadinfo.com/news/rebbedrive-interactive-mafteiach-now-available/
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 mendy_and_the_golem:
     title: Mendy and the Golem archives
     item_type: [series, brand]
@@ -280,9 +262,8 @@ mendy_and_the_golem:
     announcements:
         - https://www.rebbedrive.com/single-post/2018/08/09/Mendy-And-The-Golem-Added
         - https://chabadinfo.com/news/archive-mendy-and-the-golem/
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 mitzvah_boulevard:
     site_id: torah_treasure
     title: Mitzvah Boulevard
@@ -301,9 +282,8 @@ mitzvah_boulevard_shabbos:
             description: free until Rosh Chodesh Nissan 5780 (26 March 2020)
             until: 2020-03-26T23:59:59-04:00
         - true
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 mitzvah_island:
     site_id: chabad_org
     content_type: video
@@ -314,9 +294,8 @@ mitzvah_island:
     description: "Join your \"mitzvah friends\", Sarah and Avi on all their mitzvah adventures. This animated series teaches young children about Jewish life and values."
     announcements:
         - https://collive.com/shows-grew-with-creator/
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 my_encounter:
     site_id: jem
     item_type: [brand]
@@ -337,6 +316,11 @@ Rebbedrive:
         youtube: RebbeDrive
         youtube_channel: UCFi-8_ZNu_QLUg6rKoh0p2Q
         facebook: Rebbe-Drive-930351750466700
+        blog:
+            -
+                ref: https://www.rebbedrive.com/blog
+                rss: https://www.rebbedrive.com/feed.xml
+        #whatsapp_group: IsUJLbfpFYnI8npExLbyzu
 Rebbedrive_app:
     site_id: Rebbedrive
     accessed_with: app
@@ -344,12 +328,10 @@ Rebbedrive_app:
     endpoints:
         android: com.rebbedrive.rebbedrive
         ios: "1332355082"
-    title:
-        main: RebbeDrive
-        subtitle: The Online Chabad Database
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    title: RebbeDrive
+    subtitle: The Online Chabad Database
+    main_category: Rebbe
+    tags: [Rebbe]
 Rebbedrive_video:
     site_id: Rebbedrive
     content_type: video
@@ -361,9 +343,8 @@ Rebbedrive_video:
                 ref: https://www.rebbedrive.com/youtube
                 label: youtube playlists
         google_drive_folder: 0B_WSU737WJ1ffmpRZHpRaGQ2ZzJFeUdkSEtJYTIzcHE5Njdkb0hpTnZmRW1iLVMzMnZsOHc
-    category:
-        main: Rebbe
-        tags: [Rebbe]
+    main_category: Rebbe
+    tags: [Rebbe]
 sie:
     title: Sichos in English
     item_type: [org, brand]
@@ -388,9 +369,8 @@ sie_lib_stories_history:
     item_type: group
     content_type: text
     endpoints: https://www.sie.org/templates/sie/article_cdo/aid/2346851/jewish/Stories-History.htm
-    category:
-        main: entertainment
-        tags: [Rebbe, entertainment]
+    main_category: entertainment
+    tags: [Rebbe, entertainment]
 small_wonder_puppets:
     title: Small Wonder Puppet Theatre
     item_type: [org]
@@ -411,9 +391,8 @@ small_wonder_puppets_videos:
         - true
     endpoints: https://www.unclepinchey.com/
     description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 space_rabbi:
     item_type: [series, brand]
     title: Space Rabbi
@@ -423,9 +402,8 @@ space_rabbi:
     description: What do you get when you put a Rabbi in a space ship with a bunch of Robots who have recently become self-aware and each have unique personality flaws? You get a bunch of funny videos, that's what.
     announcements:
         - https://collive.com/sci-fi-sends-rabbi-to-space/
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 stick_figure_vignettes:
     item_type: series
     title: Stick Figure Vignettes
@@ -437,9 +415,8 @@ stick_figure_vignettes:
         - https://collive.com/stick-figures-on-chabad-org/
         - https://collive.com/stick-figures-show-returns/
     description: 30 second animated shorts using stick figures to explore Jewish philosophy. Bizarre yet intriguing. Oh, and kind of funny.
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 torah_treasure:
     title: Torah Treasure
     item_type: [org]
@@ -460,9 +437,8 @@ torah_treasure_content:
         ios: "1245060220"
     fee: true
     description: An APP and website that has a wide variety of educational, fun entertainment for kids in a safe, ad-free space. In today’s day and age, even very young children spend time watching videos and Torah Treasure ensures that the content that we create and license is up to our Torah values. 
-    category:
-        main: entertainment
-        tags: [entertainment]
+    main_category: entertainment
+    tags: [entertainment]
 wrapp:
     title: Wrapp
     item_type: [brand, org]
@@ -489,6 +465,5 @@ wrapp_app:
         - https://www.ou.org/blog/like-uber-except-for-tefillin/
         - http://www.israelnationalnews.com/News/News.aspx/248407
         - http://beismoshiachmagazine.org/articles/mivtza-tefillin-for-a-new-era.html
-    category:
-        main: doing
-        tags: [doing]
+    main_category: doing
+    tags: [doing]

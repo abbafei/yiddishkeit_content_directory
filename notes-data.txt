@@ -58,6 +58,7 @@ bH
 TODO
 	- bichlall
 		- add items in this list to gitlab issue tracker :-)
+		- split up items data processing to its own js file and import from _data js file
 	- schemas etc.
 		- make a schema for content and site objectsalach (for both unprocessed objects and preprocessed ones)?
 			- if so, lint (i.e. check) against those schemas when running preprocessor?
@@ -75,12 +76,15 @@ TODO
 	- endpoints
 		- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
 		- make a piece of data that indicates to use a specific endpoint url for an item if there is no (preferred) web endpoint?
+		- rss feed - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
+		- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
 	- item info
 		- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 	- compilation
-		- done bH build transformation into eleventy pipeline?
 	- rendering etc.
 		- show page title in <title>, including for paginated (generated) pages
 		- add remaining keys to item info pages
 		- item links and more macros/functions in templating vechulu
 			- eleventyConfig.addFilter("item_id_to_info_link", function(value) { return `items/${this.slug(value)}`; });
+		- don't show endpoints types that don't have a title in type definition?
+		- use titles from types when rendering and don't merge them in to items themselves when data procing?
