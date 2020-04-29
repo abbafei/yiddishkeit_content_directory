@@ -319,7 +319,7 @@ Rebbedrive:
         blog:
             -
                 ref: https://www.rebbedrive.com/blog
-                rss: https://www.rebbedrive.com/feed.xml
+                #rss: https://www.rebbedrive.com/feed.xml
         #whatsapp_group: IsUJLbfpFYnI8npExLbyzu
 Rebbedrive_app:
     site_id: Rebbedrive

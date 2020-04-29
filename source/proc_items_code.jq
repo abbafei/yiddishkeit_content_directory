@@ -47,17 +47,16 @@ def grouped_array(key; $defs): group_by(key) | map(
         map(select(.languages as $langs | "en" | is_in($langs[]))) |
         # filter out items that have a fee, have a parent (that ideally should contain the item), and have item_type "item"
         map(select(((has("fee") and .fee[0].has_fee == true) and has("site_id") and (.item_type as $item_type | "item" | is_in($item_type[]))) | not)) |
-        # retrieve target audience defs
-        map(if .target_audience then .target_audience |= (
-            map(select(has_def($types.target_audiences)) | get_def($types.target_audiences))
-        ) | if (.target_audience | length) == 0 then del(.target_audience) else  . end else . end) |
         # expand endpoint refs to urls
         map(if .endpoints then .endpoints |= (with_entries(
             .key as $endpoint_type |
             (.value |= (map(
-                .ref as $ref |
-                .url = ($types.endpoints[$endpoint_type].formatter | sub("\\$1"; $ref))
-            ) | {title: $types.endpoints[$endpoint_type].title, entries: .}))
+                # render refs to urls
+                if $types.endpoints[$endpoint_type] | has("formatter") then
+                    .ref as $ref |
+                    .url = ($types.endpoints[$endpoint_type].formatter | sub("\\$1"; $ref))
+                else . end
+            )))
         )) else . end) |
         {
             all: .,

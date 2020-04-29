@@ -6,62 +6,57 @@ pagination:
 permalink: "items/{{item.id | slug}}/"
 layout: page
 ---
-<section>
-{%- macro entry(item, entry_id, entry_name) %}
-{%- if entry_id in item %}
+{%- macro entry(item, entry_name) %}
 <h5>{{ entry_name }}</h5>
 {{ caller() }}
-{%- endif %}
 {%- endmacro %}
+<section>
 <h1>{{ item.title }}</h1>
-{%- if "subtitle" in item %}
+{# {%- if "subtitle" in item %}
 <h3>{{ item.subtitle }}</h3>
-{%- endif %}
-{%- call entry(item, "announcements", "Announcements") %}
-<ul>
-{%- for announcement in item.announcements %}
-  <li><a href="{{ announcement }}">{{ announcement }}</a></li>
-{%- endfor %}
-</ul>
-{%- endcall %}
-{%- call entry(item, "content_type", "Content type") %}
+{%- endif %} #}
+{%- if "content_type" in item %}{% call entry(item, "Content type") %}
 <p>{{ types.content_types[item.content_type].title }}</p>
-{%- endcall %}
-{%- call entry(item, "description", "Description") %}
+{%- endcall %}{% endif %}
+{# {%- if "description" in item %}{% call entry(item, "Description") %}
 <p>{{ item.description }}</p>
-{%- endcall %}
-{%- call entry(item, "endpoints", "Endpoints") %}
-<ul>
+{%- endcall %}{% endif %} #}
+{%- if "endpoints" in item %}
 {%- for endpoints_type_id, endpoints_typed in item.endpoints | dictsort %}
-  <li>{{ endpoints_typed.title }}
+  {%- if "formatter" in types.endpoints[endpoints_type_id] and "title" in types.endpoints[endpoints_type_id] %}
+  {% call entry(item, ["Links: ", types.endpoints[endpoints_type_id].title] | join) %}
   <ul>
-  {%- for endpoint in endpoints_typed.entries %}
+  {%- for endpoint in endpoints_typed %}
     <li>
       <a href="{{ endpoint.url }}">{{ endpoint.url }}</a>{% if "label" in endpoint %} ({{ endpoint.label }}){% endif %}
     </li>
   {%- endfor %}
   </ul>
-  </li>
+  {%- endcall %}
+  {%- endif %}
 {%- endfor %}
-</ul>
-{%- endcall %}
-{%- call entry(item, "fee", "Has fee?") %}
+{% endif %}
+{%- if "fee" in item %}{% call entry(item, "Has fee?") %}
 <p>{{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}</p>
-{%- endcall %}
-{%- call entry(item, "site_id", "From") %}
+{%- endcall %}{% endif %}
+{%- if "site_id" in item %}{% call entry(item, "From") %}
 <p>{{ items.dict[item.site_id].title }} (<a href="/items/{{ item.site_id | slug }}">More info</a>)</p>
-{%- endcall %}
-{%- call entry(item, "part_of", "Is part of") %}
+{%- endcall %}{% endif %}
+{%- if "part_of" in item %}{% call entry(item, "Is part of") %}
 <p>{{ items.dict[item.part_of].title }} (<a href="/items/{{ item.part_of | slug }}">More info</a>)</p>
-{%- endcall %}
-{%- call entry(item, "target_audience", "Target audiences") %}
+{%- endcall %}{% endif %}
+{%- if "target_audience" in item %}{% call entry(item, "Target audiences") %}
 <ul>
 {%- for audience in item.target_audience %}
-  <li>{{ audience.title }}</li>
+  <li>{{ types.target_audiences[audience].title }}</li>
 {%- endfor %}
 </ul>
-{%- endcall %}
-{# <p><code>
-{{ item | dump(2) | safe }}
-</code></p> #}
+{%- endcall %}{% endif %}
+{%- if "announcements" in item %}{% call entry(item, "Announcements") %}
+<ul>
+{%- for announcement in item.announcements %}
+  <li><a href="{{ announcement }}">{{ announcement }}</a></li>
+{%- endfor %}
+</ul>
+{%- endcall %}{% endif %}
 </section>
