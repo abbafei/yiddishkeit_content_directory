@@ -4,13 +4,13 @@ image: node
 before_script: 
     - apt-get update && apt-get install -y jq && rm -rf /var/lib/apt/lists/*
     - npm init -y
-    - npm install --save-dev @11ty/eleventy js-yaml node-jq @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
+    - NODE_JQ_SKIP_INSTALL_BINARY=true npm install --save-dev @11ty/eleventy js-yaml node-jq ajv @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
 
 pages:
   stage: deploy
   script:
     # via https://www.11ty.dev/docs/getting-started/
-    - npx @11ty/eleventy --output=public
+    - JQ_PATH=jq npx @11ty/eleventy --output=public
   artifacts:
     paths:
       - public
