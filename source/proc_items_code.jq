@@ -1,12 +1,12 @@
 def is_in(vals): [. == [vals][]] | any;
 def defs_numbered: to_entries | with_entries(.value.value.sort_num = .key | .value);
 def has_def($defs): is_in($defs | keys[]);
-def get_def($defs): . as $id | $defs[$id] | .id = $id;
-def grouped_array(key; $defs): group_by(key) | map(
-    # adds type infomation based on id of a group
-    select(.[0] | key | has_def($defs)) |
-    [(.[0] | key | get_def($defs)), .]
-) | sort_by(.[0].sort_num);
+def grouped_array_items(key; $defs): group_by(key) | map(
+    (.[0] | key) as $key_id |
+    # adds type information based on id of a group
+    select($key_id | has_def($defs)) |
+    [{id: $key_id, title: $defs[$key_id].title}, .]
+) | sort_by($defs[.[0].id].sort_num);
 (.[0] |= (
     # preprocess items
     def update_key($key; code_uk): if has($key) then (.[$key] |= code_uk) else . end;
@@ -62,9 +62,10 @@ def grouped_array(key; $defs): group_by(key) | map(
             all: .,
             dict: map({key: .id, value: .}) | from_entries,
             grouped:
-                grouped_array(.content_type; $types.content_types) |
+                map(select(has("endpoints"))) |
+                grouped_array_items(.content_type; $types.content_types) |
                 map(.[1] |= (
-                    grouped_array(.main_category; $types.categories)
+                    grouped_array_items(.main_category; $types.categories)
                 ))
             ,
         }
