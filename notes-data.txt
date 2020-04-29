@@ -27,9 +27,8 @@ bH
 		- part_of - optional id of another item of which item is a part
 		- name - human-readable name
 		- description (content only?) - describes the content
-		- category: a map
-			- main: main category of the content
-			- tags (content only) - categories of the content - list of strings
+		- main_category: main category of the content
+		- tags (content only) - categories of the content - list of strings
 		- target_audience (content only) - optional, list of audience types (strings) that content seems tailored to
 		- endpoint: a map, with keys ref (the input itself, if it was a string) and label
 		- endpoints: a map
@@ -47,9 +46,8 @@ bH
 		- content_type: video, audio, text
 		- accessed_with: how it's accessed
 			- app
-		- title - a map
-			- main - title
-			- subtitle - optional subtitle
+		- title - title
+		- subtitle - optional subtitle, from site
 		- fee - array with map. earlier items in array take precedence, if we are before "until" date
 			- has_fee - boolean
 			- description - optional string
@@ -58,7 +56,6 @@ bH
 TODO
 	- bichlall
 		- add items in this list to gitlab issue tracker :-)
-		- split up items data processing to its own js file and import from _data js file
 	- schemas etc.
 		- make a schema for content and site objectsalach (for both unprocessed objects and preprocessed ones)?
 			- if so, lint (i.e. check) against those schemas when running preprocessor?
