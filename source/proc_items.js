@@ -14,7 +14,7 @@ function validate_schema({schema, data}={}) {
     return {ajv: ajv_obj, valid, validate};
 }
 
-async function proc_items({items_file_path="items.yml", types_file_path="types.yml", items_schema_file_path}={}) {
+async function proc_items({items_file_path, types_file_path, items_schema_file_path}={}) {
     const proc_items_code = await util.promisify(fs.readFile)(path.join(__dirname, "proc_items_code.jq"), "utf8");
     const items_inp_str = JSON.stringify(js_yaml.safeLoad(await util.promisify(fs.readFile)(items_file_path)));
     const types_inp_str = JSON.stringify(js_yaml.safeLoad(await util.promisify(fs.readFile)(types_file_path)));
@@ -33,7 +33,7 @@ if (require.main === module) {
     const process = require("process");
 
     (async () => {
-        process.stdout.write(JSON.stringify(await proc_items()));
+        process.stdout.write(JSON.stringify(await proc_items({items_file_path: "items.yml", types_file_path: "types.yml", items_schema_file_path: "items.schema.json"})));
     })();
 };
 
