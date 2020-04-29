@@ -55,7 +55,10 @@
                     "description": "describes whether there is a fee or not for the content, and other fee information (for example when does the fee apply)",
                     "required": ["has_fee"],
                     "properties": {
-                        "has_fee": {"type": "boolean"},
+                        "has_fee": {
+                            "type": "boolean",
+                            "default": false
+                        },
                         "description": {
                             "type": "string",
                             "description": "tells more about the fee entry in a human-readable way"
