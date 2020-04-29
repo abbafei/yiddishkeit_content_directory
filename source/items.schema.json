@@ -1,0 +1,88 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://yiddishkeit.info/schemas/items.schema.json",
+    "definitions": {
+        "tag_array": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string"
+            }
+        },
+        "item_identifier": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "language_code": {
+            "type": "string"
+        }
+    },
+    "type": "object",
+    "additionalProperties": {
+        "type": "object",
+        "required": ["title"],
+        "properties": {
+            "title": {"type": "string"},
+            "main_category": {"type": "string"},
+            "content_type": {
+                "type": "string"
+            },
+            "site_id": {
+                "$ref": "#/definitions/item_identifier"
+            },
+            "tags": {"$ref": "#/definitions/tag_array"},
+            "fee": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "required": ["has_fee"],
+                    "properties": {
+                        "has_fee": {"type": "boolean"},
+                        "description": {"type": "string"},
+                        "until": {
+                            "type": "string",
+                            "format": "date-time"
+                        }
+                    }
+                }
+            },
+            "target_audience": {"$ref": "#/definitions/tag_array"},
+            "announcements": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "endpoints": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "required": ["ref"],
+                        "additionalProperties": false,
+                        "properties": {
+                            "ref": {
+                                "type": "string"
+                            },
+                            "label": {"type": "string"},
+                            "url": {"$ref": "#/definitions/url"}
+                        }
+                    }
+                }
+            },
+            "languages": {
+                "type": "array",
+                "minItems": 1,
+                "items": {"$ref": "#/definitions/language_code"}
+            }
+        }
+    }
+}
