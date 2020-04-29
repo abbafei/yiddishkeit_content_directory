@@ -56,7 +56,10 @@
                     "required": ["has_fee"],
                     "properties": {
                         "has_fee": {"type": "boolean"},
-                        "description": {"type": "string"},
+                        "description": {
+                            "type": "string",
+                            "description": "tells more about the fee entry in a human-readable way"
+                        },
                         "until": {
                             "type": "string",
                             "format": "date-time",
@@ -71,12 +74,9 @@
             },
             "announcements": {
                 "type": "array",
-                "description": "news articles pertaining to the item",
+                "description": "links for news articles pertaining to the item",
                 "minItems": 1,
-                "items": {
-                    "type": "string",
-                    "format": "uri"
-                }
+                "items": {"$ref": "#/definitions/url"}
             },
             "endpoints": {
                 "type": "object",
@@ -87,13 +87,15 @@
                     "items": {
                         "type": "object",
                         "required": ["ref"],
-                        "additionalProperties": false,
                         "properties": {
                             "ref": {
-                                "type": "string"
+                                "type": "string",
+                                "description": "identifier for the resource"
                             },
-                            "label": {"type": "string"},
-                            "url": {"$ref": "#/definitions/url"}
+                            "label": {
+                                "type": "string",
+                                "description": "gives more information about the ref"
+                            }
                         }
                     }
                 }
