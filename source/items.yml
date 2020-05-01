@@ -1,7 +1,6 @@
 # B"H.
 ascent_of_safed:
     title: Ascent of Tzfat
-    #item_type: [org, brand]
     endpoints:
         web:
             - https://www.myascent.org/
@@ -31,7 +30,6 @@ ashreinu_app:
     tags: [Rebbe]
 azoi:
     title: Azoi
-    #item_type: [org, brand]
     endpoints:
         web: https://www.azoi.org/
         instagram: azoiapp
@@ -55,7 +53,6 @@ azoi_app:
     tags: [learning, doing]
 chabad_org:
     title: Chabad.org
-    #item_type: [org, brand]
     # TODO: make item for each language site
     #languages: [he, en, fr, ru, es, de, pt, it]
     endpoints:
@@ -113,7 +110,6 @@ chabad_org_stories_section:
     tags: [entertainment]
 hebrewbooks:
     title: HebrewBooks.org
-    #item_type: [org, brand]
     endpoints:
         web: https://www.hebrewbooks.org/
         blog: https://blog.hebrewbooks.org/
@@ -188,7 +184,6 @@ heres_my_story_hebrew:
 itche_kadoozy:
     related_ids:
         chabad_org: host
-    #item_type: [group, brand]
     media_type: video
     title: The Itche Kadoozy Show
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/365676/jewish/Itche-Kadoozy.htm
@@ -198,7 +193,6 @@ itche_kadoozy:
     tags: [entertainment]
 jem:
     title: Jewish Educational Media
-    #item_type: [org, brand]
     endpoints:
         web: https://jemcentral.org/
         facebook: jewishmedia
@@ -210,7 +204,6 @@ jem_70_years:
     related_ids:
         jem: [producer, brand]
     media_type: video
-    #item_type: [series, brand]
     content_type: series
     title: 70 Years
     endpoints:
@@ -239,7 +232,6 @@ jem_tv:
 kabbala_toons:
     related_ids:
         chabad_org: [host, brand]
-    #item_type: [brand, group]
     content_type: group
     title: KabbalaToons
     media_type: video
@@ -251,7 +243,6 @@ kabbala_toons:
 living_torah:
     related_ids:
         jem: [producer, brand]
-    #item_type: brand
     title: Living Torah
     endpoints:
         web: https://www.livingtorah.org/
@@ -293,7 +284,6 @@ mendy_and_the_golem:
     related_ids:
         Rebbedrive: host
     title: Mendy and the Golem archives
-    #item_type: [series, brand]
     content_type: series
     endpoints:
         google_drive_folder: 1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
@@ -313,7 +303,6 @@ mitzvah_boulevard:
         torah_treasure: producer
         torah_treasure_content: subitem_of
     title: Mitzvah Boulevard
-    #item_type: [brand, group]
     content_type: group
     media_type: video
 mitzvah_boulevard_shabbos:
@@ -336,7 +325,6 @@ mitzvah_island:
     related_ids:
         chabad_org: host
     media_type: video
-    #item_type: [series, brand]
     content_type: series
     title: Mitzvah Island
     endpoints: https://www.chabad.org/kids/article_cdo/aid/1847177/jewish/Mitzvah-Island.htm
@@ -349,7 +337,6 @@ mitzvah_island:
 my_encounter:
     related_ids:
         jem: [producer, brand]
-    #item_type: [brand]
     title: My Encounter with the Rebbe
     endpoints:
         web:
@@ -360,7 +347,6 @@ my_encounter:
         facebook: My-Encounter-with-the-Rebbe-311217318011
 Rebbedrive:
     title: RebbeDrive
-    #item_type: [org, brand]
     languages: [he, en]
     endpoints:
         web: https://www.Rebbedrive.com/
@@ -408,7 +394,6 @@ Rebbedrive_video:
     tags: [Rebbe]
 sie:
     title: Sichos in English
-    #item_type: [org, brand]
     endpoints:
         web: https://www.sie.org/
         facebook: SichosInEnglish
@@ -436,7 +421,6 @@ sie_lib_stories_history:
     tags: [Rebbe, entertainment]
 small_wonder_puppets:
     title: Small Wonder Puppet Theatre
-    #item_type: [org]
     endpoints:
         web: http://smallwonderpuppets.com/
         twitter: jewishpuppets
@@ -460,7 +444,6 @@ small_wonder_puppets_videos:
 space_rabbi:
     related_ids:
         chabad_org: host
-    #item_type: [series, brand]
     content_type: series
     title: Space Rabbi
     media_type: video
@@ -489,7 +472,6 @@ stick_figure_vignettes:
 #the_living_archive brand vechulu
 torah_treasure:
     title: Torah Treasure
-    #item_type: [org]
     endpoints:
         web: https://torahtreasure.com/
         facebook: TorahTreasure2
@@ -512,7 +494,6 @@ torah_treasure_content:
     tags: [entertainment]
 wrapp:
     title: Wrapp
-    #item_type: [brand, org]
     endpoints:
         web: http://www.tefillinwrapp.com/
         facebook: TefillinWrapp
