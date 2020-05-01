@@ -317,7 +317,7 @@ mitzvah_boulevard_shabbos:
         - 
             has_fee: false
             description: free until Rosh Chodesh Nissan 5780 (26 March 2020)
-            until: "2020-03-26T23:59:59-04:00"
+            until: "2020-03-26T23:59:59"
         - true
     main_category: entertainment
     tags: [entertainment]

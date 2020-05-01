@@ -19,7 +19,7 @@ def grouped_array_items(key; $defs): group_by(key) | map(
         else
             [expand_fee_entry]
         end) |
-        update_key("fee"; map(select(if has("until") then (.until | strptime("%Y-%m-%dT%H:%M:%S%Z") | mktime) > now else true end))) | if has("fee") and (.fee | length) == 0 then del(.fee) else . end |
+        update_key("fee"; map(select(if has("until") then (.until | strptime("%Y-%m-%dT%H:%M:%S") | mktime) > now else true end))) | if has("fee") and (.fee | length) == 0 then del(.fee) else . end |
         update_key("related_ids"; with_entries(.value |= if type == "string" then [.] else . end)) |
         update_key("endpoints"; if type == "string" then
             {web: [expand_endpoint]}
