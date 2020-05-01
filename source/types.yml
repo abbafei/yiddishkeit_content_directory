@@ -11,28 +11,24 @@ categories:
         description: Things to assist with learning Torah and doing Mitzvos
     more:
         title: More
+container_types:
+    app:
+        title: App
 content_types:
-    video:
-        title: Video
-    text:
-        title: Reading
-    audio:
-        title: Audio
-    more:
-        title: More
-target_audiences:
-    children:
-        title: children
-    children-at-heart:
-        title: children-at-heart
-    adults:
-        title: adults
-    older children:
-        title: older children
-    young children:
-        title: young children
-# TODO: pull from wikidata properties? example https://www.wikidata.org/wiki/Property:P3418 formatter url for play store
+    channel:
+        title: Channel
+        description: an item that is broadcast live
+    group:
+        title: Group
+        description: a collection of other content
+    item:
+        title: Item
+        description: an individual item
+    series:
+        title: Series
+        description: an ordered collection of items
 endpoints:
+    # TODO: pull from wikidata properties? example https://www.wikidata.org/wiki/Property:P3418 formatter url for play store
     android:
         formatter: https://play.google.com/store/apps/details?id=$1
         title: Google Play Store
@@ -84,3 +80,38 @@ endpoints:
     youtube_playlist:
         formatter: https://www.youtube.com/playlist?list=$1
         title: YouTube playlist
+media_types:
+    video:
+        title: Video
+    text:
+        title: Reading
+    audio:
+        title: Audio
+    more:
+        title: More
+related_id_types:
+    brand:
+        description: the item(s) with which this item is branded
+    content:
+        title: Has content from
+        description: the item(s?) whose content this item uses
+    host:
+        title: Hosted on
+        description: the item(s) that host this item
+    producer:
+        title: Produced by
+        description: the item(s) that produced this item
+    subitem_of:
+        title: Is part of
+        description: the item that this is a sub-item (aka part or contained-by) of
+target_audiences:
+    children:
+        title: children
+    children-at-heart:
+        title: children-at-heart
+    adults:
+        title: adults
+    older children:
+        title: older children
+    young children:
+        title: young children

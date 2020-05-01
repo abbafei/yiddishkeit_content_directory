@@ -36,16 +36,19 @@ bH
 			- keys representing the endpoint type
 			- values should be lists, with each item an endpoint
 				- if we want to get only one endpoint and no more, prefer ones without a label, and prefer ones earlier in list to later ones
-		- item_type - list of strings - type of the item entry
-			- types: multiple types allowed, no hierarchy, tag-like
-				- brand - something with a logo, more or less :-)
-				- org - an organization or group who produces content, has one or more brands (it can also serve as a brand)
+		- TODO: other description refactoring and short_description
+		- content_type - list of strings - type of the item entry
+			- types #: multiple types allowed, no hierarchy, tag-like
+				#- brand - something with a logo, more or less :-)
+				#	- TODO: use brand key instead?
+				#- org - an organization or group who produces content, has one or more brands (it can also serve as a brand)
 				- channel - a live (continuous? stream-like thing) with audio or video etc. (not a channel with multiple elements like podcast)
 				- series - a group of items with an order (set-like)
 				- group - like series, but unordered, and can have subzachin(?)
 				- item - an individual video/audio/text/etc.
 		- content_type: video, audio, text
-		- accessed_with: how it's accessed
+			- TODO: way to indicate if something is content without specifying content type? (perhaps content_type: true?, or see if any items have a content_type, or have it as related_ids subitem or content)
+		- container_type: how it's accessed
 			- app
 		- fee - array with map. earlier items in array take precedence, if we are before "until" date
 			- has_fee - boolean
@@ -56,13 +59,8 @@ TODO
 	- bichlall
 		- add items in this list to gitlab issue tracker :-)
 	- schemas etc.
-		- make a schema for content and site objectsalach (for both unprocessed objects and preprocessed ones)?
-			- if so, lint (i.e. check) against those schemas when running preprocessor?
-		- encode hierarchy possibilities in schema?
-	- hierarchies
-		- differentiate between sites/orgs and brands for content?
-		- make able to have hierarchy with site_ids and part_ofs
-		- multiple site_ids or part_ofs?
+		- make a schema for content and site objectsalach (for unprocessed objects too)?
+		- types.yml schema?
 	- languages
 		- language codes - which system/standard should these follow?
 		- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
@@ -76,11 +74,15 @@ TODO
 		- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
 	- item info
 		- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
+			- add remaining keys (description etc. at present) to item info pages
+		- verification that references to types in type definitions exist (may be able to do this by templating the schema, and inserting the type values)
+		- automatically generate item_types key? (with values/tags like content, brand, app, container/access_method
+		- hierarchies
+			- make able to generate hierarchy from related_ids
+		- make better alternative to "more" categories and media_types?
 	- compilation
 	- rendering etc.
-		- show page title in <title>, including for paginated (generated) pages
-		- add remaining keys to item info pages
+		- show page title in <title> html element, including for paginated (generated) pages
 		- item links and more macros/functions in templating vechulu
 			- eleventyConfig.addFilter("item_id_to_info_link", function(value) { return `items/${this.slug(value)}`; });
-		- don't show endpoints types that don't have a title in type definition?
-		- use titles from types when rendering and don't merge them in to items themselves when data procing?
+		- items pages: indent entry contents so it's more obvious it's the content part of the entry

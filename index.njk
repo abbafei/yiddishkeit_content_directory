@@ -11,8 +11,8 @@ eleventyNavigation:
 <section>
 <p>There is much existing content for both adults and children online that can bring good, happy use of our time.</p>
 <ul>
-{%- for content_type, categories in items.grouped %}
-  <li>{{ content_type.title }}
+{%- for media_type, categories in items.grouped %}
+  <li>{{ media_type.title }}
   <ul>
   {%- for category, items in categories %}
     <li>{{ category.title }}

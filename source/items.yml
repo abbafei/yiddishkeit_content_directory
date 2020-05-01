@@ -1,7 +1,7 @@
 # B"H.
 ascent_of_safed:
     title: Ascent of Tzfat
-    item_type: [org, brand]
+    #item_type: [org, brand]
     endpoints:
         web:
             - https://www.myascent.org/
@@ -11,25 +11,27 @@ ascent_of_safed:
         twitter: ascent_tzfat
         tripadvisor: g297763-d2360858
 ascent_of_safed_stories:
-    site_id: ascent_of_safed
+    related_ids:
+        ascent_of_safed: host
     title: Ascent of Safed - Stories section
-    item_type: group
+    content_type: group
     endpoints: http://ascentofsafed.com/cgi-bin/ascent.cgi?Name=Stories
-    content_type: text
+    media_type: text
     main_category: entertainment
     tags: [entertainment]
 ashreinu_app:
-    site_id: jem
+    related_ids:
+        jem: [producer, brand]
     title: Ashreinu.app
-    item_type: group
-    accessed_with: app
-    content_type: audio
+    content_type: group
+    container_type: app
+    media_type: audio
     endpoints: https://ashreinu.app/
     main_category: Rebbe
     tags: [Rebbe]
 azoi:
     title: Azoi
-    item_type: [org, brand]
+    #item_type: [org, brand]
     endpoints:
         web: https://www.azoi.org/
         instagram: azoiapp
@@ -37,8 +39,9 @@ azoi:
         facebook: Azoi-102282634595232
         donorbox: generate-jewish-action
 azoi_app:
-    site_id: azoi
-    accessed_with: app
+    related_ids:
+        azoi: [producer, brand]
+    container_type: app
     title: Azoi
     endpoints:
         android: com.azoi
@@ -52,7 +55,7 @@ azoi_app:
     tags: [learning, doing]
 chabad_org:
     title: Chabad.org
-    item_type: [org, brand]
+    #item_type: [org, brand]
     # TODO: make item for each language site
     #languages: [he, en, fr, ru, es, de, pt, it]
     endpoints:
@@ -63,19 +66,21 @@ chabad_org:
         instagram: chabadorg
         youtube_channel: UCc0y_E87EUnOW2m2mGJU9Gg
 chabad_org_inspiration_entertainment:
-    site_id: chabad_org
-    content_type: more
+    related_ids:
+        chabad_org: subitem_of
+    media_type: more
     title: Chabad.org - Inspiration and Entertainment section
-    item_type: group
+    content_type: group
     endpoints: https://www.chabad.org/library/article_cdo/aid/1675890/jewish/Inspiration-Entertainment.htm
     main_category: entertainment
     tags: [entertainment]
 chabad_org_music_app:
-    site_id: chabad_org
+    related_ids:
+        chabad_org: [producer, host, brand]
     title: Chabad.org Jewish Music App
-    content_type: audio
-    accessed_with: app
-    item_type: channel
+    media_type: audio
+    container_type: app
+    content_type: channel
     endpoints:
         web: https://www.chabad.org/multimedia/music_cdo/aid/3963654/jewish/Jewish-Music-App.htm
         android: com.radioco.m22310aa09
@@ -86,36 +91,40 @@ chabad_org_music_app:
     main_category: music
     tags: [music]
 chabad_org_music_section:
-    site_id: chabad_org
-    title: Chabad.org - Music section
-    content_type: audio
-    item_type: group
+    related_ids:
+        chabad_org_inspiration_entertainment: subitem_of
+    title: Chabad.org - Jewish Music section
+    media_type: audio
+    content_type: group
     endpoints: http://www.chabad.org/music
     description: Listen to our collection of Jewish music and Chassidic songs that inspire the heart and express the soul. Also enjoy listening to and learning the traditional Shabbat songs and prayers.
     main_category: music
     tags: [music]
 chabad_org_stories_section:
-    site_id: chabad_org
-    title: Chabad.org - Stories section
+    related_ids:
+        chabad_org_inspiration_entertainment: subitem_of
+    title: Chabad.org - Jewish Stories section
     subtitle: Jewish Tales from the Past 
     description: Hundreds of Jewish stories from the sages, the Chassidic masters, and contemporary Jewish storytellers
-    content_type: text
-    item_type: group
+    media_type: text
+    content_type: group
     endpoints: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
     main_category: entertainment
     tags: [entertainment]
 hebrewbooks:
     title: HebrewBooks.org
-    item_type: [org, brand]
+    #item_type: [org, brand]
     endpoints:
         web: https://www.hebrewbooks.org/
         blog: https://blog.hebrewbooks.org/
 hebrewbooks_app:
-    site_id: hebrewbooks
+    related_ids:
+        hebrewbooks: [producer, brand]
+        hebrewbooks_library: content
     title: HebrewBooks.org
-    item_type: group
-    accessed_with: app
-    content_type: text
+    content_type: group
+    container_type: app
+    media_type: text
     endpoints:
         web:
             - https://www.hebrewbooks.org/
@@ -129,19 +138,29 @@ hebrewbooks_app:
     announcements:
         - https://collive.com/thousands-of-seforim-free/
 hebrewbooks_english:
-    site_id: hebrewbooks
+    related_ids:
+        hebrewbooks_library: subitem_of
     title: HebrewBooks.org - English section
-    content_type: text
-    item_type: group
+    media_type: text
+    content_type: group
     endpoints: https://hebrewbooks.org/english
     main_category: more
     tags: [Rebbe, entertainment]
+hebrewbooks_library:
+    related_ids:
+        hebrewbooks: host
+    title: HebrewBooks.org library
+    languages: [he, en]
+    media_type: text
+    content_type: group
 heres_my_story_english:
-    site_id: my_encounter
+    related_ids:
+        my_encounter: [producer, brand]
+        jem: brand
     title: Here's My Story
     languages: [en]
-    content_type: text
-    item_type: series
+    media_type: text
+    content_type: series
     endpoints:
         web:
             - https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm
@@ -150,11 +169,13 @@ heres_my_story_english:
     main_category: Rebbe
     tags: [Rebbe]
 heres_my_story_hebrew:
-    site_id: my_encounter
+    related_ids:
+        my_encounter: [producer, brand]
+        jem: brand
     title: הסיפור שלי
     languages: [he]
-    content_type: text
-    item_type: series
+    media_type: text
+    content_type: series
     endpoints:
         web:
             - https://he.chabad.org/library/article_cdo/aid/3607191/jewish/%D7%94%D7%A1%D7%99%D7%A4%D7%95%D7%A8-%D7%A9%D7%9C%D7%99.htm
@@ -165,8 +186,10 @@ heres_my_story_hebrew:
     main_category: Rebbe
     tags: [Rebbe]
 itche_kadoozy:
-    item_type: [group, brand]
-    content_type: video
+    related_ids:
+        chabad_org: host
+    #item_type: [group, brand]
+    media_type: video
     title: The Itche Kadoozy Show
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/365676/jewish/Itche-Kadoozy.htm
     target_audience: [children, children-at-heart]
@@ -175,7 +198,7 @@ itche_kadoozy:
     tags: [entertainment]
 jem:
     title: Jewish Educational Media
-    item_type: [org, brand]
+    #item_type: [org, brand]
     endpoints:
         web: https://jemcentral.org/
         facebook: jewishmedia
@@ -184,9 +207,11 @@ jem:
         instagram: jewish_media
         vimeo: jem
 jem_70_years:
-    site_id: jem
-    content_type: video
-    item_type: series
+    related_ids:
+        jem: [producer, brand]
+    media_type: video
+    #item_type: [series, brand]
+    content_type: series
     title: 70 Years
     endpoints:
         web: https://70years.com/
@@ -198,9 +223,10 @@ jem_70_years:
     main_category: Rebbe
     tags: [Rebbe]
 jem_tv:
-    site_id: jem
-    content_type: video
-    item_type: group
+    related_ids:
+        jem: [host, brand]
+    media_type: video
+    content_type: group
     title: Jem.TV
     subtitle: An Island of Calm
     endpoints: https://jem.tv/
@@ -211,34 +237,49 @@ jem_tv:
     main_category: Rebbe
     tags: [Rebbe]
 kabbala_toons:
-    item_type: [brand, group]
+    related_ids:
+        chabad_org: [host, brand]
+    #item_type: [brand, group]
+    content_type: group
     title: KabbalaToons
-    content_type: video
+    media_type: video
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/530191/jewish/KabbalaToons.htm
     target_audience: [children, adults]
     description: KabbalaToons presents spiritual guidance and mystic insights in fun, fast animation.
     main_category: entertainment
     tags: [entertainment, learning]
 living_torah:
-    site_id: jem
-    item_type: [brand]
+    related_ids:
+        jem: [producer, brand]
+    #item_type: brand
     title: Living Torah
     endpoints:
         web: https://www.livingtorah.org/
+living_torah_weekly_video:
+    related_ids:
+        living_torah: brand
+        jem: producer
+    title: Living Torah weekly video series
+    content_type: series
+    media_type: video
+    main_category: Rebbe
+    tags: [Rebbe]
 living_torah_web:
-    site_id: living_torah
+    related_ids:
+        living_torah_weekly_video: content
+        chabad_org: host
     title: Living Torah
-    content_type: video
-    item_type: series
+    media_type: video
     endpoints:
         web: http://www.chabad.org/livingtorah
     main_category: Rebbe
     tags: [Rebbe]
 mafteiach_app:
-    site_id: Rebbedrive
+    related_ids:
+        Rebbedrive: producer
     title: Mafteiach
-    accessed_with: app
-    item_type: group
+    container_type: app
+    content_type: group
     endpoints:
         web: https://www.mafteiach.app/
         android: app.mafteiach.app
@@ -249,15 +290,18 @@ mafteiach_app:
     main_category: Rebbe
     tags: [Rebbe]
 mendy_and_the_golem:
+    related_ids:
+        Rebbedrive: host
     title: Mendy and the Golem archives
-    item_type: [series, brand]
+    #item_type: [series, brand]
+    content_type: series
     endpoints:
         google_drive_folder: 1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
         web:
             -
                 ref: https://drive.google.com/drive/folders/1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
                 label: google drive folder from RebbeDrive
-    content_type: text
+    media_type: text
     target_audience: [older children, adults]
     announcements:
         - https://www.rebbedrive.com/single-post/2018/08/09/Mendy-And-The-Golem-Added
@@ -265,15 +309,19 @@ mendy_and_the_golem:
     main_category: entertainment
     tags: [entertainment]
 mitzvah_boulevard:
-    site_id: torah_treasure
+    related_ids:
+        torah_treasure: producer
+        torah_treasure_content: subitem_of
     title: Mitzvah Boulevard
-    item_type: [brand, group]
-    content_type: video
+    #item_type: [brand, group]
+    content_type: group
+    media_type: video
 mitzvah_boulevard_shabbos:
-    site_id: mitzvah_boulevard
+    related_ids:
+        mitzvah_boulevard: subitem_of
     title: Mitzvah Boulevard - Shabbos
-    content_type: video
-    item_type: item
+    media_type: video
+    content_type: item
     endpoints: https://torahtreasure.com/videos?pagination=&zype_parent=5cf504d3c7e83b68d351e7fd
     target_audience: [children]
     fee:
@@ -285,9 +333,11 @@ mitzvah_boulevard_shabbos:
     main_category: entertainment
     tags: [entertainment]
 mitzvah_island:
-    site_id: chabad_org
-    content_type: video
-    item_type: [series, brand]
+    related_ids:
+        chabad_org: host
+    media_type: video
+    #item_type: [series, brand]
+    content_type: series
     title: Mitzvah Island
     endpoints: https://www.chabad.org/kids/article_cdo/aid/1847177/jewish/Mitzvah-Island.htm
     target_audience: [young children]
@@ -297,8 +347,9 @@ mitzvah_island:
     main_category: entertainment
     tags: [entertainment]
 my_encounter:
-    site_id: jem
-    item_type: [brand]
+    related_ids:
+        jem: [producer, brand]
+    #item_type: [brand]
     title: My Encounter with the Rebbe
     endpoints:
         web:
@@ -309,7 +360,7 @@ my_encounter:
         facebook: My-Encounter-with-the-Rebbe-311217318011
 Rebbedrive:
     title: RebbeDrive
-    item_type: [org, brand]
+    #item_type: [org, brand]
     languages: [he, en]
     endpoints:
         web: https://www.Rebbedrive.com/
@@ -322,9 +373,11 @@ Rebbedrive:
                 #rss: https://www.rebbedrive.com/feed.xml
         #whatsapp_group: IsUJLbfpFYnI8npExLbyzu
 Rebbedrive_app:
-    site_id: Rebbedrive
-    accessed_with: app
-    item_type: group
+    related_ids:
+        Rebbedrive: producer
+        Rebbedrive_content: content
+    container_type: app
+    content_type: group
     endpoints:
         android: com.rebbedrive.rebbedrive
         ios: "1332355082"
@@ -332,10 +385,18 @@ Rebbedrive_app:
     subtitle: The Online Chabad Database
     main_category: Rebbe
     tags: [Rebbe]
+Rebbedrive_content:
+    related_ids:
+        Rebbedrive: [brand, host]
+    content_type: group
+    title: RebbeDrive content
+    main_category: Rebbe
+    tags: [Rebbe]
 Rebbedrive_video:
-    site_id: Rebbedrive
-    content_type: video
-    item_type: group
+    related_ids:
+        Rebbedrive_content: subitem_of
+    media_type: video
+    content_type: group
     title: RebbeDrive video
     endpoints:
         web:
@@ -347,15 +408,17 @@ Rebbedrive_video:
     tags: [Rebbe]
 sie:
     title: Sichos in English
-    item_type: [org, brand]
+    #item_type: [org, brand]
     endpoints:
         web: https://www.sie.org/
         facebook: SichosInEnglish
 sie_lib:
-    site_id: sie
+    related_ids:
+        sie: [host, brand, producer]
     title: Sichos in English Library
-    content_type: text
-    item_type: group
+    short_description: Sichos in English's online book library
+    media_type: text
+    content_type: group
     endpoints:
         web:
             - https://www.sie.org/templates/sie/article_cdo/aid/2224514/jewish/SIE-Library.htm
@@ -363,26 +426,27 @@ sie_lib:
                 label: old
                 ref: http://www.sichos-in-english.org/books/
 sie_lib_stories_history:
-    site_id: sie
-    part_of: sie_lib
+    related_ids:
+        sie_lib: subitem_of
     title: Sichos in English Library - Stories & History section 
-    item_type: group
-    content_type: text
+    content_type: group
+    media_type: text
     endpoints: https://www.sie.org/templates/sie/article_cdo/aid/2346851/jewish/Stories-History.htm
     main_category: entertainment
     tags: [Rebbe, entertainment]
 small_wonder_puppets:
     title: Small Wonder Puppet Theatre
-    item_type: [org]
+    #item_type: [org]
     endpoints:
         web: http://smallwonderpuppets.com/
         twitter: jewishpuppets
         facebook: SmallWonderPuppetTheatre
 small_wonder_puppets_videos:
-    site_id: small_wonder_puppets
+    related_ids:
+        small_wonder_puppets: producer
     title: Small Wonder Puppet Theater videos
-    item_type: group
-    content_type: video
+    content_type: group
+    media_type: video
     target_audience: [children]
     fee:
         -
@@ -394,9 +458,12 @@ small_wonder_puppets_videos:
     main_category: entertainment
     tags: [entertainment]
 space_rabbi:
-    item_type: [series, brand]
+    related_ids:
+        chabad_org: host
+    #item_type: [series, brand]
+    content_type: series
     title: Space Rabbi
-    content_type: video
+    media_type: video
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/2080621/jewish/Space-Rabbi.htm
     target_audience: [older children, children-at-heart]
     description: What do you get when you put a Rabbi in a space ship with a bunch of Robots who have recently become self-aware and each have unique personality flaws? You get a bunch of funny videos, that's what.
@@ -405,9 +472,11 @@ space_rabbi:
     main_category: entertainment
     tags: [entertainment]
 stick_figure_vignettes:
-    item_type: series
+    related_ids:
+        chabad_org: host
+    content_type: series
     title: Stick Figure Vignettes
-    content_type: video
+    media_type: video
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/749657/jewish/Stick-Figure-Vignettes.htm
     target_audience: [older children, adults]
     announcements:
@@ -417,19 +486,21 @@ stick_figure_vignettes:
     description: 30 second animated shorts using stick figures to explore Jewish philosophy. Bizarre yet intriguing. Oh, and kind of funny.
     main_category: entertainment
     tags: [entertainment]
+#the_living_archive brand vechulu
 torah_treasure:
     title: Torah Treasure
-    item_type: [org]
+    #item_type: [org]
     endpoints:
         web: https://torahtreasure.com/
         facebook: TorahTreasure2
         youtube: TorahTreasure
 torah_treasure_content:
-    site_id: torah_treasure
+    related_ids:
+        torah_treasure: host
     title: Torah Treasure
-    accessed_with: app
-    content_type: video
-    item_type: group
+    container_type: app
+    media_type: video
+    content_type: group
     target_audience: [children]
     endpoints:
         web: https://torahtreasure.com/
@@ -441,7 +512,7 @@ torah_treasure_content:
     tags: [entertainment]
 wrapp:
     title: Wrapp
-    item_type: [brand, org]
+    #item_type: [brand, org]
     endpoints:
         web: http://www.tefillinwrapp.com/
         facebook: TefillinWrapp
@@ -449,8 +520,9 @@ wrapp:
         twitter: TefillinWrapp
         youtube_channel: UCr86I7jdQ5TR6jfer_ikgaQ
 wrapp_app:
-    site_id: wrapp
-    accessed_with: app
+    related_ids:
+        wrapp: [producer, brand]
+    container_type: app
     title: Wrapp
     endpoints:
         android: com.lightuptheworld.tefillinwrap
