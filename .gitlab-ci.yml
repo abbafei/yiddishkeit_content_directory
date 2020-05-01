@@ -1,8 +1,8 @@
 # B"H.
-image: node
+image: node:alpine
 
 before_script: 
-    - apt-get update && apt-get install -y jq && rm -rf /var/lib/apt/lists/*
+    - apk add --no-cache jq
     - npm init -y
     - NODE_JQ_SKIP_INSTALL_BINARY=true npm install --save-dev @11ty/eleventy js-yaml node-jq ajv @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
 
