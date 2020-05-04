@@ -6,7 +6,7 @@ eleventyNavigation:
     title: Home
 ---
 {% macro info_type(type, flow=true) -%}
-, <span style="font-weight: bold">{{ type }}</span>{% if not flow %}:{% endif %} {{ caller() }}
+<span class="sr-only">, </span><span class="ml-1"><span style="font-weight: bold">{{ type }}</span>{% if not flow %}:</span>{% endif %} {{ caller() }}
 {%- endmacro %}
 <section>
 <p>There is much existing content for both adults and children online that can bring good, happy use of our time.</p>
@@ -18,7 +18,7 @@ eleventyNavigation:
     <li>{{ category.title }}
     <ul>
       {%- for item in items %}
-        <li>
+        <li><div>
           {%- if "web" in item.endpoints %} {# TODO: make so only picks up if has web link without label? #}
             <a href="{{ item.endpoints.web.entries[0].url }}">{{ item.title }}</a>
           {%- else %}
@@ -31,7 +31,7 @@ eleventyNavigation:
           {%- if "fee" in item -%}{%- call info_type("Fee", flow=false) -%}
             <span class="badge badge-primary">{{ "yes" if item.fee[0].has_fee else "no" }}</span>{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}
           {%- endcall -%}{%- endif %}
-        </li>
+        </div></li>
       {%- endfor %}
     </ul>
     </li>
