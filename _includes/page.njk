@@ -13,8 +13,8 @@ mainTitle: Yiddishkeit.info
 </head><body>
 <div class="container">
 <header>
-<p>B"H</p>
-<nav class="navbar navbar-expand-lg navbar-light bg-light"><div class="navbar-nav">
+<div class="row">B"H</div>
+<nav class="navbar navbar-expand-lg navbar-light"><div class="navbar-nav">
 {% for nav_item in collections.all | eleventyNavigation %}
   {%- if nav_item.key === eleventyNavigation.key %}{% set nav_item_active = true -%}{% else %}{% set nav_item_active = false %}{% endif -%}
   <a class="nav-item nav-link{% if nav_item_active %} active{% endif %}" href="{{ nav_item.url }}">{{ nav_item.title }}{% if nav_item_active %}<span class="sr-only"> (current)</span>{% endif %}</a>

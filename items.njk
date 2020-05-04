@@ -64,7 +64,7 @@ layout: page
     <li>{{ types.related_id_types[related_id_type].title }}
     <ul>
     {%- for related_id in related_ids_typed %}
-        <li>{{ items.dict[related_id].title }} (<a href="/items/{{ related_id | slug }}">More info</a>)</li>
+        <li>{{ items.dict[related_id].title }} <a class="btn btn-outline-primary btn-sm" href="/items/{{ related_id | slug }}">More info</a></li>
     {%- endfor %}
     </ul></li>
 {%- endfor %}
