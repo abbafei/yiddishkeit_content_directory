@@ -59,20 +59,20 @@ TODO
 	- bichlall
 		- add items in this list to gitlab issue tracker :-)
 	- schemas etc.
-		- make a schema for content and site objectsalach (for unprocessed objects too)?
+		- make a schema for content and site objectsalach (for unprocessed/input objects too)?
 		- types.yml schema?
-	- languages
-		- language codes - which system/standard should these follow?
-		- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
-		- filter languages?
-	- fees
-		- add "from" field to fees? (like "until")
-	- endpoints
-		- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
-		- make a piece of data that indicates to use a specific endpoint url for an item if there is no (preferred) web endpoint?
-		- rss feed - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
-		- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
 	- item info
+		- languages
+			- language codes - which system/standard should these follow?
+			- languages - if same content in multiple languages, do they have more than one content entry? what if same site but different content for each language?
+			- filter languages?
+		- fees
+			- add "from" field to fees? (like "until")
+		- endpoints
+			- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
+			- make a piece of data that indicates to use a specific endpoint url for an item if there is no (preferred) web endpoint?
+			- item and/or endpoint rss feeds - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
+			- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
 		- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 			- add remaining keys (description etc. at present) to item info pages
 		- verification that references to types in type definitions exist (may be able to do this by templating the schema, and inserting the type values)
