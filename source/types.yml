@@ -1,18 +1,19 @@
 # B"H.
 categories:
+    # ordered on site in same order as here
+    Rebbe:
+        title: Rebbe
     doing:
         title: Doing
         description: Things to assist with learning Torah and doing Mitzvos
     entertainment:
         title: Entertainment
-    more:
-        title: More
     music:
         title: Music
-    Rebbe:
-        title: Rebbe
     stories:
         title: Stories
+    more:
+        title: More
 container_types:
     app:
         title: App
@@ -86,12 +87,13 @@ endpoints:
         formatter: https://www.youtube.com/playlist?list=$1
         title: YouTube playlist
 media_types:
+    # ordered on site in same order as here
     video:
         title: Video
-    text:
-        title: Reading
     audio:
         title: Audio
+    text:
+        title: Reading
     more:
         title: More
 related_id_types:
