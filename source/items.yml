@@ -345,6 +345,26 @@ my_encounter:
             - http://myencounterblog.com/
             - https://jemcentral.org/my-encounter/
         facebook: My-Encounter-with-the-Rebbe-311217318011
+rabbi_perl_stories:
+    title: Rabbi Perl stories
+    endpoints: https://www.rabbiperlstories.com/
+rabbi_perl_stories_content:
+    related_ids:
+        rabbi_perl_stories: [brand, host, producer]
+    title: Rabbi Perl stories
+    endpoints:
+        web:
+            - https://www.rabbiperlstories.com/all-stories.html
+            - https://www.chabad.org/kids/article_cdo/aid/3715749/jewish/Storytelling-with-Rabbi-Perl.htm
+        soundcloud: user-109848505
+    target_audience: [children]
+    content_type: group
+    media_type: audio
+    announcements:
+        - https://anash.org/master-storyteller-makes-everything-available-online/
+        - https://crownheights.info/chabad-news/704146/stories-by-rabbi-sholem-perl-now-online/
+    main_category: entertainment
+    tags: [entertainment, stories]
 Rebbedrive:
     title: RebbeDrive
     languages: [he, en]
@@ -469,6 +489,16 @@ stick_figure_vignettes:
     description: 30 second animated shorts using stick figures to explore Jewish philosophy. Bizarre yet intriguing. Oh, and kind of funny.
     main_category: entertainment
     tags: [entertainment]
+story_time_with_uncle_yossi:
+    related_ids:
+        chabad_org: host
+    content_type: group
+    media_type: audio
+    title: Story Time with Uncle Yossi
+    target_audience: [young children, children]
+    endpoints: https://www.chabad.org/kids/article_cdo/aid/4572067/jewish/Story-Time-with-Uncle-Yossi.htm
+    main_category: entertainment
+    tags: [entertainment, stories]
 #the_living_archive brand vechulu
 torah_treasure:
     title: Torah Treasure

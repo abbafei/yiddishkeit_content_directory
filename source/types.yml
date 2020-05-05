@@ -53,6 +53,9 @@ endpoints:
     pinterest:
         formatter: https://www.pinterest.com/$1/
         title: Pinterest
+    soundcloud:
+        formatter: https://soundcloud.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3040&oldid=1145191783
+        title: SoundCloud
     tripadvisor:
         formatter: https://www.tripadvisor.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3134&oldid=1128098972
         title: TripAdvisor
