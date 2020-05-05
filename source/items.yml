@@ -112,6 +112,8 @@ chaim_the_storyteller:
     related_ids:
         chabad_org: host
     title: Chaim the Storyteller
+    subtitle: Fascinating Tales of Jewish Heroism and Dedication
+    description: Join Chaim, the storyteller each week as he shares stories of old that teach important lessons and virtues
     endpoints: https://www.chabad.org/kids/article_cdo/aid/470212/jewish/Chaim-the-Storyteller.htm
     media_type: audio
     content_type: group
@@ -502,9 +504,10 @@ stick_figure_vignettes:
 story_time_with_uncle_yossi:
     related_ids:
         chabad_org: host
+    title: Story Time with Uncle Yossi
+    description: Listen to Jewish tales and parables from the unforgettable recordings of “Story Time with Uncle Yossi” (Rabbi Yosef Goldstein). Drawn from the Midrash, Talmud, and Jewish lore, his beloved stories instill a love of G-d, the Torah, and the Jewish people; planting the seeds for fine character development and personal refinement.
     content_type: group
     media_type: audio
-    title: Story Time with Uncle Yossi
     target_audience: [young children, children]
     endpoints: https://www.chabad.org/kids/article_cdo/aid/4572067/jewish/Story-Time-with-Uncle-Yossi.htm
     main_category: entertainment
