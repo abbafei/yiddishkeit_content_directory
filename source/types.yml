@@ -1,16 +1,18 @@
 # B"H.
 categories:
-    Rebbe:
-        title: Rebbe
-    entertainment:
-        title: Entertainment
-    music:
-        title: Music
     doing:
         title: Doing
         description: Things to assist with learning Torah and doing Mitzvos
+    entertainment:
+        title: Entertainment
     more:
         title: More
+    music:
+        title: Music
+    Rebbe:
+        title: Rebbe
+    stories:
+        title: Stories
 container_types:
     app:
         title: App

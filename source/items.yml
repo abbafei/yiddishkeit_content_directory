@@ -108,6 +108,16 @@ chabad_org_stories_section:
     endpoints: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
     main_category: entertainment
     tags: [entertainment]
+chaim_the_storyteller:
+    related_ids:
+        chabad_org: host
+    title: Chaim the Storyteller
+    endpoints: https://www.chabad.org/kids/article_cdo/aid/470212/jewish/Chaim-the-Storyteller.htm
+    media_type: audio
+    content_type: group
+    target_audience: [young children, children]
+    main_category: entertainment
+    tags: [entertainment, stories]
 hebrewbooks:
     title: HebrewBooks.org
     endpoints:
