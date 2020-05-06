@@ -8,7 +8,7 @@ layout: page
 ---
 {%- macro entry(item, entry_name) %}
 <h5>{{ entry_name }}</h5>
-{{ caller() }}
+<div class="mx-2">{{ caller() }}</div>
 {%- endmacro %}
 <section>
 <h1>{{ item.title }}</h1>
@@ -18,16 +18,6 @@ layout: page
 {# {%- if "description" in item %}{% call entry(item, "Description") %}
 <p>{{ item.description }}</p>
 {%- endcall %}{% endif %} #}
-{%- if "target_audience" in item %}{% call entry(item, "Target audiences") %}
-<ul>
-{%- for audience in item.target_audience %}
-  <li>{{ types.target_audiences[audience].title }}</li>
-{%- endfor %}
-</ul>
-{%- endcall %}{% endif %}
-{%- if "fee" in item %}{% call entry(item, "Has fee?") %}
-<p>{{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}</p>
-{%- endcall %}{% endif %}
 {%- if "endpoints" in item %}{% call entry(item, "Links") %}
 <ul>
 {%- for endpoints_type_id, endpoints_typed in item.endpoints | dictsort %}
@@ -41,6 +31,16 @@ layout: page
   </ul></li>
 {%- endfor %}
 </ul>
+{%- endcall %}{% endif %}
+{%- if "target_audience" in item %}{% call entry(item, "Target audiences") %}
+<ul>
+{%- for audience in item.target_audience %}
+  <li>{{ types.target_audiences[audience].title }}</li>
+{%- endfor %}
+</ul>
+{%- endcall %}{% endif %}
+{%- if "fee" in item %}{% call entry(item, "Has fee?") %}
+<p>{{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}</p>
 {%- endcall %}{% endif %}
 {%- if "container_type" in item %}{% call entry(item, "Container type") %}
 <p>{{ types.container_types[item.container_type].title }}</p>
@@ -64,7 +64,7 @@ layout: page
     <li>{{ types.related_id_types[related_id_type].title }}
     <ul>
     {%- for related_id in related_ids_typed %}
-        <li>{{ items.dict[related_id].title }} <a class="btn btn-outline-primary btn-sm" href="/items/{{ related_id | slug }}">More info</a></li>
+        <li>{{ items.dict[related_id].title }} (<a href="/items/{{ related_id | slug }}">More info</a>)</li>
     {%- endfor %}
     </ul></li>
 {%- endfor %}

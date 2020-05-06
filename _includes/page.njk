@@ -13,13 +13,17 @@ mainTitle: Yiddishkeit.info
 </head><body>
 <div class="container">
 <header>
-<div class="row">B"H</div>
-<nav class="navbar navbar-expand-lg navbar-light"><div class="navbar-nav">
+<nav class="navbar navbar-expand-lg">
+<ul class="navbar-nav nav-pills mr-auto">
 {% for nav_item in collections.all | eleventyNavigation %}
   {%- if nav_item.key === eleventyNavigation.key %}{% set nav_item_active = true -%}{% else %}{% set nav_item_active = false %}{% endif -%}
-  <a class="nav-item nav-link{% if nav_item_active %} active{% endif %}" href="{{ nav_item.url }}">{{ nav_item.title }}{% if nav_item_active %}<span class="sr-only"> (current)</span>{% endif %}</a>
+  <li class="nav-item">
+  <a class="nav-link{% if nav_item_active %} active{% endif %}" href="{{ nav_item.url }}">{{ nav_item.title }}{% if nav_item_active %}<span class="sr-only"> (current)</span>{% endif %}</a>
+  </li>
 {% endfor -%}
-</div></nav>
+</ul>
+<span class="navbar-text">B"H.</span>
+</nav>
 </header>
 {{ content | safe }}
 </div>

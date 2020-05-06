@@ -6,10 +6,11 @@ eleventyNavigation:
     title: Home
 ---
 {% macro info_type(type, flow=true) -%}
-<span class="sr-only">, </span><span class="ml-1"><span style="font-weight: bold">{{ type }}</span>{% if not flow %}:</span>{% endif %} {{ caller() }}
+, <span class="sr-only">, </span><span class="ml-1"><span>{{ type }}</span>{% if not flow %}:</span>{% endif %}{{ caller() }}
 {%- endmacro %}
 <section>
-<p>There is much existing content for both adults and children online that can bring good, happy use of our time.</p>
+<div>There is much existing content for both adults and children online that can bring good, happy use of our time.</div>
+<br />
 <ul>
 {%- for media_type, categories in items.grouped %}
   <li>{{ media_type.title }}
@@ -18,20 +19,22 @@ eleventyNavigation:
     <li>{{ category.title }}
     <ul>
       {%- for item in items %}
-        <li><div>
+        <li>
+          <span>
           {%- if "web" in item.endpoints %} {# TODO: make so only picks up if has web link without label? #}
             <a href="{{ item.endpoints.web.entries[0].url }}">{{ item.title }}</a>
           {%- else %}
             {{ item.title }}
           {% endif %}
-          <a class="btn btn-outline-primary btn-sm" href="items/{{ item.id | slug }}">More info</a>
+          </span>
+          (<a href="items/{{ item.id | slug }}">More info</a>)
           {%- if "target_audience" in item -%}{%- call info_type("For", flow=false) -%}
-          {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}<span class="sr-only">{{ " and " if loop.last and not loop.first else comma() }}</span><span class="badge badge-primary">{{ types.target_audiences[audience].title }}</span>{% endfor %}
+          {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}<span class="sr-only">{{ " and " if loop.last and not loop.first else comma() }}</span><span class="badge badge-pill badge-light">{{ types.target_audiences[audience].title }}</span>{% endfor %}
           {%- endcall -%}{%- endif %}
           {%- if "fee" in item -%}{%- call info_type("Fee", flow=false) -%}
-            <span class="badge badge-primary">{{ "yes" if item.fee[0].has_fee else "no" }}</span>{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}
+            <span class="badge badge-pill badge-light">{{ "yes" if item.fee[0].has_fee else "no" }}</span>{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}
           {%- endcall -%}{%- endif %}
-        </div></li>
+        </li>
       {%- endfor %}
     </ul>
     </li>
@@ -40,7 +43,7 @@ eleventyNavigation:
   </li>
 {%- endfor %}
 </ul>
-<p>More updates to come, B'ezras Hashem!</p>
-<br />
+<div>More updates to come, B'ezras Hashem!</div>
+<br /><br />
 <footer><p>Source code available <a href="https://gitlab.com/abbafei/abbafei.gitlab.io/">here</a>.</p></footer>
 </section>
