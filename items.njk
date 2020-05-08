@@ -3,7 +3,7 @@ pagination:
     data: items.all
     size: 1
     alias: item
-permalink: "items/{{item.id | slug}}/"
+permalink: "item/{{item.id | slug}}/"
 layout: page
 ---
 {%- macro entry(item, entry_name) %}
@@ -75,7 +75,7 @@ layout: page
     <li>{{ types.related_id_types[related_id_type].title }}
     <ul>
     {%- for related_id in related_ids_typed %}
-        <li>{{ items.dict[related_id].title }} (<a href="/items/{{ related_id | slug }}">More info</a>)</li>
+        <li>{{ items.dict[related_id].title }} (<a href="/item/{{ related_id | slug }}">More info</a>)</li>
     {%- endfor %}
     </ul></li>
 {%- endfor %}
