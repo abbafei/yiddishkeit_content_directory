@@ -1,13 +1,23 @@
 def is_in(vals): [. == [vals][]] | any;
 def defs_numbered: to_entries | with_entries(.value.value.sort_num = .key | .value);
 def has_def($defs): is_in($defs | keys[]);
-def grouped_array_items(key; $defs): group_by(key) | map(
-    (.[0] | key) as $key_id |
-    # select keys that have a definition in type defs and that have a title in their type def entry
-    select($key_id | (has_def($defs) and ($defs[$key_id] | has("title")))) |
-    # adds type information based on id of a group
-    [{id: $key_id, title: $defs[$key_id].title}, .]
-) | sort_by($defs[.[0].id].sort_num);
+def grouped_array_items(key; $defs):
+    group_by(key) | map(
+        (.[0] | key) as $key_id |
+        # select keys that have a definition in type defs and that have a title in their type def entry
+        select($key_id | (has_def($defs) and ($defs[$key_id] | has("title")))) |
+        # adds type information based on id of a group
+        [{id: $key_id, title: $defs[$key_id].title}, .]
+    ) | sort_by($defs[.[0].id].sort_num)
+;
+def item_select_key_title_array($key; $type_defs):
+    if has($key) then
+        (.[$key] |=
+            map(select($type_defs[.] | has("title")))
+        ) |
+        if (.[$key] | length) == 0 then del(.[$key]) else . end
+    else . end
+;
 (.[0] |= (
     # preprocess items: simple expansions (from items input format to output format), etc.
     def update_key($key; code_uk): if has($key) then (.[$key] |= (code_uk)) else . end;
@@ -21,6 +31,7 @@ def grouped_array_items(key; $defs): group_by(key) | map(
         end) |
         update_key("fee"; map(select(if has("until") then (.until | strptime("%Y-%m-%dT%H:%M:%S") | mktime) > now else true end))) | if has("fee") and (.fee | length) == 0 then del(.fee) else . end |
         update_key("related_ids"; with_entries(.value |= if type == "string" then [.] else . end)) |
+        update_key("container_type"; if type == "string" then [.] else . end) |
         update_key("endpoints"; if type == "string" then
             {web: [expand_endpoint]}
         else
@@ -78,27 +89,17 @@ map(
 # prepare output object
 {
     all: # used for items page generation
-        # select related_ids whose types have a title
         map(
+            # select related_ids whose types have a title
             if has("related_ids") then
                 (.related_ids |=
                     with_entries(select($types.related_id_types[.key] | has("title")))
                 ) |
                 if (.related_ids | length) == 0 then del(.related_ids) else . end
-            else . end
-        ) |
-        # select container_types that have title
-        map(if has("container_type") then
-            if $types.container_types[.container_type] | has("title") then . else del(.container_type) end
-        else . end) |
-        # select tags that have title
-        map(
-            if has("tags") then
-                (.tags |=
-                    map(select($types.categories[.] | has("title")))
-                ) |
-                if (.tags | length) == 0 then del(.tags) else . end
-            else . end
+            else . end |
+            # select other keys that have titles
+            item_select_key_title_array("tags"; $types.categories) |
+            item_select_key_title_array("container_type"; $types.container_types)
         )
     ,
     dict: map({key: .id, value: del(.id)}) | from_entries, # rewrapped into dict

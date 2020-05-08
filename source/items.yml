@@ -76,7 +76,7 @@ chabad_org_music_app:
         chabad_org: [producer, host, brand]
     title: Chabad.org Jewish Music App
     media_type: audio
-    container_type: app
+    container_type: [app, stream]
     content_type: channel
     endpoints:
         web: https://www.chabad.org/multimedia/music_cdo/aid/3963654/jewish/Jewish-Music-App.htm

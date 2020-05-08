@@ -18,16 +18,16 @@
         "target_audience": {
             "type": "string"
         },
-        "content_type": {
-            "type": "string"
-        },
-        "media_type": {
-            "type": "string"
-        },
         "container_type": {
             "type": "string"
         },
+        "content_type": {
+            "type": "string"
+        },
         "endpoint_type": {
+            "type": "string"
+        },
+        "media_type": {
             "type": "string"
         },
         "related_id_type": {
@@ -55,8 +55,12 @@
                 "description": "media type of the content"
             },
             "container_type": {
-                "$ref": "#/definitions/container_type",
-                "description": "the type of technology used to access the item"
+                "type": "array",
+                "description": "the type of technology that the item is accessed with",
+                "minItems": 1,
+                "items": {
+                    "$ref": "#/definitions/container_type"
+                }
             },
             "related_ids": {
                 "type": "object",

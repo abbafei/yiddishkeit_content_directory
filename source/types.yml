@@ -21,6 +21,8 @@ container_types:
         title: App
     podcast:
         title: Podcast
+    stream:
+        title: Stream
 content_types:
     channel: # TODO rename to station?
         title: Channel
