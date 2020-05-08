@@ -77,7 +77,7 @@ map(
 ) |
 # prepare output object
 {
-    all: 
+    all: # used for items page generation
         # select related_ids that have a title
         map(
             if has("related_ids") then
@@ -90,10 +90,19 @@ map(
         # select container_types that have title
         map(if has("container_type") then
             if $types.container_types[.container_type] | has("title") then . else del(.container_type) end
-        else . end)
+        else . end) |
+        # select tags that have title
+        map(
+            if has("tags") then
+                (.tags |=
+                    map(select($types.categories[.] | has("title")))
+                ) |
+                if (.tags | length) == 0 then del(.tags) else . end
+            else . end
+        )
     ,
     dict: map({key: .id, value: del(.id)}) | from_entries, # rewrapped into dict
-    grouped:
+    grouped: # used for items by categories listing
         # filter out items that have no endpoints
         map(select(has("endpoints"))) |
         # filter out items that have a fee, are a subitem of something, and have content_type "item"

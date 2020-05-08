@@ -58,6 +58,13 @@ layout: page
 {%- endfor %}
 </ul>
 {%- endcall %}{% endif %}
+{%- if "tags" in item %}{% call entry(item, "Categories") %}
+<ul>
+{%- for category in item.tags %}
+  <li>{{ types.categories[category].title }}</li>
+{%- endfor %}
+</ul>
+{%- endcall %}{% endif %}
 {%- if "related_ids" in item %}{% call entry(item, "Related items") %}
 <ul>
 {%- for related_id_type, related_ids_typed in item.related_ids | dictsort %}
