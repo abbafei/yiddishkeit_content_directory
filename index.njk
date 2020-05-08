@@ -21,8 +21,8 @@ eleventyNavigation:
       {%- for item in items %}
         <li>
           <span>
-          {%- if "web" in item.endpoints %} {# TODO: make so only picks up if has web link without label? #}
-            <a href="{{ item.endpoints.web.entries[0].url }}">{{ item.title }}</a>
+          {%- if "web" in item.endpoints %}
+            <a href="{{ item.endpoints.web[0].url }}">{{ item.title }}</a>
           {%- else %}
             {{ item.title }}
           {% endif %}
