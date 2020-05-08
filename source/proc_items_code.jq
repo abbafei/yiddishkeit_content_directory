@@ -78,7 +78,7 @@ map(
 # prepare output object
 {
     all: # used for items page generation
-        # select related_ids that have a title
+        # select related_ids whose types have a title
         map(
             if has("related_ids") then
                 (.related_ids |=

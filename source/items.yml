@@ -187,6 +187,36 @@ chitas_for_kids_audio:
     target_audience: [children, adults]
     main_category: learning
     tags: [learning]
+derher:
+    title: A Chassidisher Derher
+    related_ids:
+        vaad_hatmimim: [producer, brand]
+    endpoints:
+        web: https://derher.org/
+        facebook: A-Chassidisher-Derher-100579208120780
+        youtube_channel: UC2PIqmsLQPeBm9ucYYfizZA
+    announcements:
+        - https://collive.com/derher-expanded-for-3-tammuz/
+        - https://crownheights.info/something-jewish/422475/derher-magazine-publishes-the-rebbetzins-notes/
+        - https://anash.org/derher-progress-report/
+        - https://anash.org/download-nissan-derher-for-free/
+derher_archive:
+    title: A Chassidisher Derher - archive
+    related_ids:
+        derher: [producer, brand]
+    content_type: group
+    media_type: text
+    endpoints: https://derher.org/archive/
+    main_category: learning
+    tags: [Rebbe, learning]
+derher_monthly:
+    title: A Chassidisher Derher
+    related_ids:
+        derher: [producer, brand]
+    endpoints: https://derher.org/subscribe/
+    content_type: series
+    main_category: learning
+    tags: [Rebbe, learning]
 hebrewbooks:
     title: HebrewBooks.org
     endpoints:
@@ -392,6 +422,10 @@ mendy_and_the_golem:
         - https://chabadinfo.com/news/archive-mendy-and-the-golem/
     main_category: entertainment
     tags: [entertainment]
+merkaz_anash:
+    title: Merkaz Anash
+    endpoints:
+        web: http://merkazanash.com/
 mitzvah_boulevard:
     related_ids:
         torah_treasure: producer
@@ -533,6 +567,19 @@ sie_lib_stories_history:
     endpoints: https://www.sie.org/templates/sie/article_cdo/aid/2346851/jewish/Stories-History.htm
     main_category: entertainment
     tags: [Rebbe, entertainment]
+simply_chassidus:
+    title: Simply Chassidus
+    content_type: group
+    media_type: text
+    endpoints:
+        web: http://www.simplychassidus.com/
+        facebook: simplychassidus
+        twitter: simplychassidus
+    announcements:
+        - https://anash.org/simply-chassidus-moves-to-next-step/
+        - https://anash.org/new-resources-assist-basi-lgani-study/
+    main_category: learning
+    tags: [learning]
 small_wonder_puppets:
     title: Small Wonder Puppet Theatre
     endpoints:
@@ -617,6 +664,26 @@ torah_treasure_content:
     description: An APP and website that has a wide variety of educational, fun entertainment for kids in a safe, ad-free space. In today’s day and age, even very young children spend time watching videos and Torah Treasure ensures that the content that we create and license is up to our Torah values. 
     main_category: entertainment
     tags: [entertainment]
+vaad_hatmimim: 
+    title: Vaad Talmidei Hatmimim
+    endpoints:
+        web: https://www.vaadhatmimim.org/
+        vimeo: vaadhatmimim
+        wikidata: Q18639844
+        youtube_channel: UCyM5f8H4cAaRikifKTOQpKQ
+    announcements:
+        - https://collive.com/banner-year-for-vaad-hatmimim/
+        - https://anash.org/vaad-hatmimims-shabbos-hachonoh-at-the-ohel/
+        - https://crownheights.info/chabad-news/696787/vaad-hatmimim-airs-video-at-halikut-siyum/
+weekly_farbrengen:
+    related_ids:
+        merkaz_anash: [producer, brand]
+    title: The Weekly Farbrengen
+    content_type: series
+    media_type: text
+    endpoints: http://merkazanash.com/ly
+    main_category: learning
+    tags: [learning]
 wrapp:
     title: Wrapp
     endpoints:

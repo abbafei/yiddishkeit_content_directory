@@ -76,6 +76,8 @@ TODO
 				- use parent web link sometimes? or maybe if indicated specifically?
 			- item and/or endpoint rss feeds - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
 			- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
+		- content types
+			- for series content type, make a data field for how often items in series are released, if applicable? (daily, weekly, monthly, etc.)
 		- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 			- add remaining keys (description etc. at present) to item info pages
 		- verification that references to types in type definitions exist (may be able to do this by templating the schema, and inserting the type values)

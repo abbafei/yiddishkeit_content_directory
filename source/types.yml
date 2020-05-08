@@ -88,6 +88,8 @@ endpoints:
     #whatsapp_group:
     #    formatter: https://chat.whatsapp.com/$1
     #    title: WhatsApp group invite link
+    wikidata:
+        formatter: https://www.wikidata.org/wiki/$1
     youtube:
         formatter: https://www.youtube.com/$1
         title: YouTube
