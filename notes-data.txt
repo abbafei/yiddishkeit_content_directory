@@ -70,7 +70,10 @@ TODO
 			- add "from" field to fees? (like "until")
 		- endpoints
 			- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
-			- make a piece of data that indicates to use a specific endpoint url for an item if there is no (preferred) web endpoint?
+			- main link:
+				- make a piece of data that indicates to use a specific endpoint url for an item if there is no (preferred) web endpoint?
+				- also make one that gets used by default if none is indicated specifically
+				- use parent web link sometimes? or maybe if indicated specifically?
 			- item and/or endpoint rss feeds - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
 			- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
 		- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
