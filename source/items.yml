@@ -120,6 +120,73 @@ chaim_the_storyteller:
     target_audience: [young children, children]
     main_category: entertainment
     tags: [entertainment, stories]
+chayenu:
+    title: Chayenu
+    endpoints:
+        web: https://chayenu.org/
+        facebook: Chayenu
+        instagram: chayenu
+    announcements:
+        - http://lubavitch.com/news/article/2077713/A-Compact-Study-Routine.html
+        - https://anash.org/chayenu-daily-torah-study-wherever-and-however-you-need-it/
+chayenu_app:
+    related_ids:
+        chayenu: [producer, brand]
+    title: Chayenu app
+    container_type: app
+    content_type: series
+    media_type: text
+    fee: true
+    endpoints:
+        android: com.ionicframework.chayenu504086
+        ios: "1165498202"
+    announcements:
+        - https://collive.com/chayenu-releases-slick-new-app/
+        - https://gorinsystems.com/portfolio-item/chayenu/
+    main_category: learning
+    tags: [learning]
+chitas_for_kids:
+    title: Chitas for Kids
+    content_type: series
+    endpoints:
+        web:
+            - https://kidschitas.org/
+            - https://mashpia.com/blog/author/chitas/ # TODO: this is a blog with a feed of daily chitas - put under different item/endpoint?
+        facebook: KidsChitas
+        #phone: https://kidschitas.org/subscribe#phone tel:718-682-2632 then press 3 for Chitas options
+    #announcements:
+    #    - https://anash.org/learn-chitas-play-and-win/
+    target_audience: [children, adults]
+    main_category: learning
+    tags: [learning]
+chitas_for_kids_app:
+    related_ids:
+        chitas_for_kids: [content, producer]
+    title: Chitas for Kids app
+    content_type: series
+    container_type: app
+    endpoints:
+        web: https://kidschitas.org/subscribe#apps
+        android: tv.wizzard.android.chitas
+        ios: "1346381806"
+    target_audience: [children, adults]
+    main_category: learning
+    tags: [learning]
+chitas_for_kids_audio:
+    related_ids:
+        chitas_for_kids: subitem_of
+    title: Chitas for Kids Audio Shiur
+    content_type: series
+    container_type: podcast
+    media_type: audio
+    endpoints:
+        web: https://kidschitas.org/listen
+        libsyn: kidschitas
+        tunein: Chitas-for-Kids-Audio-p1234415
+        apple_podcast: "1473205884"
+    target_audience: [children, adults]
+    main_category: learning
+    tags: [learning]
 hebrewbooks:
     title: HebrewBooks.org
     endpoints:
@@ -252,6 +319,21 @@ kabbala_toons:
     description: KabbalaToons presents spiritual guidance and mystic insights in fun, fast animation.
     main_category: entertainment
     tags: [entertainment, learning]
+lchaim_weekly:
+    title: L'Chaim Weekly
+    subtitle: The Weekly Publication for Every Jewish Person
+    content_type: series
+    media_type: text
+    endpoints:
+        web:
+            - https://www.lchaimweeklyprint.org/
+            -
+                ref: http://www.lchaimweekly.org/
+                label: older issues
+    announcements:
+        - https://collive.com/missing-the-mivtzoim-route-send-the-lchaim/
+    main_category: learning
+    tags: [learning, entertainment]
 living_torah:
     related_ids:
         jem: [producer, brand]

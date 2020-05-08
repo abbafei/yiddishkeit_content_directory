@@ -12,13 +12,17 @@ categories:
         title: Music
     stories:
         title: Stories
+    learning:
+        title: Learning
     more:
         title: More
 container_types:
     app:
         title: App
+    podcast:
+        title: Podcast
 content_types:
-    channel:
+    channel: # TODO rename to station?
         title: Channel
         description: an item that is broadcast live
     group:
@@ -35,6 +39,9 @@ endpoints:
     android:
         formatter: https://play.google.com/store/apps/details?id=$1
         title: Google Play Store
+    apple_podcast:
+        formatter: https://podcasts.apple.com/podcast/id$1 # via https://www.wikidata.org/w/index.php?title=Property:P5842&oldid=1111859221
+        title: Apple Podcasts
     blog:
         formatter: $1
         title: Blog
@@ -53,6 +60,10 @@ endpoints:
     ios:
         formatter: https://apps.apple.com/us/app/id$1
         title: iTunes Store
+    libsyn:
+        formatter: https://directory.libsyn.com/shows/view/id/$1
+        #formatter (?): https://$1.libsyn.com/
+        title: Libsyn
     pinterest:
         formatter: https://www.pinterest.com/$1/
         title: Pinterest
@@ -93,7 +104,7 @@ media_types:
     audio:
         title: Audio
     text:
-        title: Reading
+        title: Text
     more:
         title: More
 related_id_types:
