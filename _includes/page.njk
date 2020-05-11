@@ -11,20 +11,25 @@ mainTitle: Yiddishkeit.info
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163978706-1"></script>
 <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-163978706-1');</script>
 </head><body>
-<div class="container">
 <header>
-<nav class="navbar navbar-expand-lg">
-<ul class="navbar-nav nav-pills mr-auto">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
 {% for nav_item in collections.all | eleventyNavigation %}
   {%- if nav_item.key === eleventyNavigation.key %}{% set nav_item_active = true -%}{% else %}{% set nav_item_active = false %}{% endif -%}
-  <li class="nav-item">
-  <a class="nav-link{% if nav_item_active %} active{% endif %}" href="{{ nav_item.url }}">{{ nav_item.title }}{% if nav_item_active %}<span class="sr-only"> (current)</span>{% endif %}</a>
+  <li class="nav-item{% if nav_item_active %} active{% endif %}">
+  <a class="nav-link" href="{{ nav_item.url }}">{{ nav_item.title }}{% if nav_item_active %}<span class="sr-only"> (current)</span>{% endif %}</a>
   </li>
 {% endfor -%}
 </ul>
 <span class="navbar-text">B"H.</span>
+</div>
 </nav>
 </header>
+<div class="container">
 {{ content | safe }}
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
