@@ -96,7 +96,7 @@ endpoints:
         formatter: https://www.youtube.com/$1
         title: YouTube
     youtube_channel:
-        formatter: http://www.youtube.com/channel/$1
+        formatter: https://www.youtube.com/channel/$1
         title: YouTube channel
     youtube_playlist:
         formatter: https://www.youtube.com/playlist?list=$1
