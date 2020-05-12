@@ -1,15 +1,14 @@
----
-mainTitle: Yiddishkeit.info
----
+{# note: this template has no front matter so it can be imported by other templates #}
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<title>{{ mainTitle }}</title>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163978706-1"></script>
-<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-163978706-1');</script>
+<title>{% if title or pagination.items[0].title %}{{ title if title else pagination.items[0].title }} | {% endif %}{{ defs.main_title }}</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163978706-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'UA-163978706-1');</script>
+{%- block head_extra %}
+{%- endblock %}
 </head><body>
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,6 +30,8 @@ mainTitle: Yiddishkeit.info
 </header>
 <div class="container">
 {{ content | safe }}
+{%- block content %}{# for when template is included by another one (i.e. not used as a layout) #}
+{%- endblock %}
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
