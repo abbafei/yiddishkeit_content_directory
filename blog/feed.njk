@@ -1,0 +1,32 @@
+---
+permalink: blog/feed.xml
+eleventyExcludeFromCollections: true
+metadata:
+    title: Yiddishkeit.info Blog
+    url: https://yiddishkeit.info/blog/
+    feedUrl: https://yiddishkeit.info/blog/feed.xml
+    author:
+        name: Yiddishkeit.info
+---
+<?xml version="1.0" encoding="utf-8"?>
+{%- set coll = collections.blog -%}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ coll | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for post in coll %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

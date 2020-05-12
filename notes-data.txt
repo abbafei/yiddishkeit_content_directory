@@ -89,6 +89,8 @@ TODO
 			- endpoint type? or related_ids type?
 		- make better alternative to "more" categories and media_types?
 	- compilation
+		- are eleventy excerpts suppposed to be in data.page.excerpt?
+		- when eleventy is in watch mode, have it delete old _site in between?
 	- rendering etc.
 		- show individual page title in <title> html element also (aside from site title), including for paginated (generated) pages
 		- fix everything shifting between pages in navbar and rest of pages

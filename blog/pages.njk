@@ -1,0 +1,45 @@
+---
+title: Blog
+pagination:
+    data: collections.blog
+    size: 8
+    reverse: true
+permalink: blog/{% if pagination.pageNumber  > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+eleventyNavigation:
+    key: blog
+    order: 2
+    title: Blog
+---
+{%- extends "page.njk" %}
+{%- block head_extra %}
+<meta name="robots" content="noindex, follow">
+<link rel="alternate feed" type="application/atom+xml" href="{{ pagination.href.first }}feed.xml" title="{{ title }}"> {# via https://blog.whatwg.org/feed-autodiscovery and https://www.petefreitag.com/item/384.cfm #}
+{%- endblock %}
+{%- block content %}
+<section>
+{%- for post in pagination.items %}
+{%- set di_excerpt = post.data.page.excerpt %}
+<div class="card my-2">
+<h5 class="card-header"><a href="{{ post.url }}">{{ post.data.title }}</a></h5>
+<div class="card-body">
+<!--<h5 class="card-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h5>-->
+<h6 class="card-subtitle text-muted mb-2">{{ post.date | as_post_date }}</h6>
+<div class="card-text">
+{%- if di_excerpt %}
+{{ di_excerpt | safe }}
+{%- else %}
+{{ post.templateContent | safe }}
+{%- endif %}
+</div>
+</div>
+{%- if di_excerpt %}
+<a class="card-footer" href="{{ post.url }}">Read more…</a>
+{%- endif %}
+</div>
+{%- endfor %}
+</section>
+<nav class="nav justify-content-between">
+{%- if pagination.href.next %}<a class="nav-link" href="{{ pagination.href.next }}">Older posts</a>{%- endif %}
+{%- if pagination.href.previous %}<a class="nav-link" href="{{ pagination.href.previous }}">Newer posts</a>{%- endif %}
+</nav>
+{%- endblock %}
