@@ -18,6 +18,6 @@ module.exports = function(eleventyConfig) {
         return collection.getFilteredByGlob("blog/post/*");
     });
     eleventyConfig.addFilter("as_post_date", function(date_obj) {
-        return date_obj.toLocaleDateString("default", {calendar: "hebrew", timeZone: "utc", weekday: "long", year: "2-digit", month: "numeric", day: "numeric"});
+        return date_obj.toLocaleDateString("default", {calendar: "hebrew", timeZone: "utc", weekday: "long", year: "numeric", month: "numeric", day: "numeric"});
     });
 };
