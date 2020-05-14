@@ -93,7 +93,7 @@ chabad_org_music_section:
     title: Chabad.org - Jewish Music section
     media_type: audio
     content_type: group
-    endpoints: http://www.chabad.org/music
+    endpoints: https://www.chabad.org/music
     description: Listen to our collection of Jewish music and Chassidic songs that inspire the heart and express the soul. Also enjoy listening to and learning the traditional Shabbat songs and prayers.
     main_category: music
     tags: [music]
@@ -385,7 +385,7 @@ living_torah_web:
         chabad_org: host
     title: Living Torah
     media_type: video
-    endpoints: http://www.chabad.org/livingtorah
+    endpoints: https://www.chabad.org/livingtorah
     main_category: Rebbe
     tags: [Rebbe]
 mafteiach_app:
