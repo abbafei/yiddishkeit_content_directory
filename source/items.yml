@@ -385,8 +385,7 @@ living_torah_web:
         chabad_org: host
     title: Living Torah
     media_type: video
-    endpoints:
-        web: http://www.chabad.org/livingtorah
+    endpoints: http://www.chabad.org/livingtorah
     main_category: Rebbe
     tags: [Rebbe]
 mafteiach_app:
@@ -410,11 +409,10 @@ mendy_and_the_golem:
     title: Mendy and the Golem archives
     content_type: series
     endpoints:
-        google_drive_folder: 1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
-        web:
+        google_drive_folder:
             -
-                ref: https://drive.google.com/drive/folders/1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
-                label: google drive folder from RebbeDrive
+                ref: 1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
+                main_url: true
     media_type: text
     target_audience: [older children, adults]
     announcements:
@@ -467,8 +465,7 @@ my_encounter:
         jem: [producer, brand]
     title: My Encounter with the Rebbe
     endpoints:
-        web:
-            - http://www.1000encounters.com/
+        web: http://www.1000encounters.com/
         blog:
             - http://myencounterblog.com/
             - https://jemcentral.org/my-encounter/
@@ -483,7 +480,9 @@ rabbi_perl_stories_content:
     endpoints:
         web:
             - https://www.rabbiperlstories.com/all-stories.html
-            - https://www.chabad.org/kids/article_cdo/aid/3715749/jewish/Storytelling-with-Rabbi-Perl.htm
+            -
+                ref: https://www.chabad.org/kids/article_cdo/aid/3715749/jewish/Storytelling-with-Rabbi-Perl.htm
+                label: at Chabad.org
         soundcloud: user-109848505
     target_audience: [children]
     content_type: group
