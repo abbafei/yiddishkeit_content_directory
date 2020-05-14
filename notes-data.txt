@@ -71,8 +71,6 @@ TODO
 		- endpoints
 			- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
 			- main link:
-				- make a piece of data that indicates to use a specific endpoint url for an item if there is no (preferred) web endpoint?
-				- also make one that gets used by default if none is indicated specifically
 				- use parent web link sometimes? or maybe if indicated specifically?
 			- item and/or endpoint rss feeds - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
 			- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
@@ -85,7 +83,7 @@ TODO
 		- hierarchies
 			- make able to generate hierarchy from related_ids
 				- also can copy relevant data from those items e.g. target audience, categories, etc.
-		- multi-part items
+		- multi-part items (multiple pieces that form a "item" content-type item)
 			- endpoint type? or related_ids type?
 		- make better alternative to "more" categories and media_types?
 	- compilation

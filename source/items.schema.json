@@ -148,6 +148,10 @@
                                 "type": "string",
                                 "description": "gives more information about the ref"
                             },
+                            "main_url": {
+                                "type": "boolean",
+                                "description": "whether this is a main url or not"
+                            },
                             "url": {
                                 "type": "string",
                                 "description": "url of the resource, generated from ref"

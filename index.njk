@@ -21,8 +21,8 @@ eleventyNavigation:
       {%- for item in items %}
         <li>
           <span>
-          {%- if "web" in item.endpoints %}
-            <a href="{{ item.endpoints.web[0].url }}">{{ item.title }}</a>
+          {%- if "main_url" in item %}
+            <a href="{{ item.main_url }}">{{ item.title }}</a>
           {%- else %}
             {{ item.title }}
           {% endif %}

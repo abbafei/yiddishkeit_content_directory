@@ -1,3 +1,4 @@
+# B"H.
 def is_in(vals): [. == [vals][]] | any;
 def defs_numbered: to_entries | with_entries(.value.value.sort_num = .key | .value);
 def has_def($defs): is_in($defs | keys[]);
@@ -17,6 +18,9 @@ def item_select_key_title_array($key; $type_defs):
         ) |
         if (.[$key] | length) == 0 then del(.[$key]) else . end
     else . end
+;
+def main_url_from_endpoints($type_defs):
+    ((with_entries(select($type_defs[.key] | has("formatter"))) | [to_entries[] | .value[] | select(.main_url == true)]) + .web) | if length > 0 then .[0].url else null end
 ;
 (.[0] |= (
     # preprocess items: simple expansions (from items input format to output format), etc.
@@ -74,7 +78,12 @@ map(if .endpoints then .endpoints |= (with_entries(
         else . end
     )))
 )) else . end) |
-# filter endpoints whose type does not have a url and title
+# set main url (optional)
+map(if .endpoints then
+    (.main_url = (.endpoints | main_url_from_endpoints($types.endpoints))) |
+    if .main_url == null then del(.main_url) else . end
+else . end) |
+# filter out endpoints whose type does not have a url and title
 map(
     if has("endpoints") then 
         (.endpoints |= (

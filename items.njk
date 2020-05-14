@@ -18,6 +18,9 @@ layout: page
 {# {%- if "description" in item %}{% call entry(item, "Description") %}
 <p>{{ item.description }}</p>
 {%- endcall %}{% endif %} #}
+{%- if "main_url" in item %}{% call entry(item, "Main link") %}
+<p><a href="{{ item.main_url }}">{{ item.main_url }}</a></p>
+{%- endcall %}{% endif %}
 {%- if "endpoints" in item %}{% call entry(item, "Links") %}
 <ul>
 {%- for endpoints_type_id, endpoints_typed in item.endpoints | dictsort %}
