@@ -6,6 +6,7 @@ pagination:
 permalink: "item/{{item.id | slug}}/"
 layout: page
 ---
+{%- from "util.njk" import more_info_link %}
 {%- macro entry(item, entry_name) %}
 <h5>{{ entry_name }}</h5>
 <div class="mx-2">{{ caller() }}</div>
@@ -78,7 +79,7 @@ layout: page
     <li>{{ types.related_id_types[related_id_type].title }}
     <ul>
     {%- for related_id in related_ids_typed %}
-        <li>{{ items.dict[related_id].title }} (<a href="/item/{{ related_id | slug }}">More info</a>)</li>
+        <li>{{ items.dict[related_id].title }} {{ more_info_link(related_id) }}</li>
     {%- endfor %}
     </ul></li>
 {%- endfor %}

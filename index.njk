@@ -5,6 +5,7 @@ eleventyNavigation:
     order: 1
     title: Home
 ---
+{%- from "util.njk" import more_info_link %}
 {% macro info_type(type, flow=true) -%}
 , <span class="sr-only">, </span><span class="ml-1"><span>{{ type }}</span>{% if not flow %}:</span>{% endif %}{{ caller() }}
 {%- endmacro %}
@@ -27,7 +28,7 @@ eleventyNavigation:
             {{ item.title }}
           {% endif %}
           </span>
-          (<a href="item/{{ item.id | slug }}">More info</a>)
+          {{ more_info_link(item.id) }}
           {%- if "target_audience" in item -%}{%- call info_type("For", flow=false) -%}
           {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}<span class="sr-only">{{ " and " if loop.last and not loop.first else comma() }}</span><span class="badge badge-pill badge-light">{{ types.target_audiences[audience].title }}</span>{% endfor %}
           {%- endcall -%}{%- endif %}
