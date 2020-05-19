@@ -14,9 +14,6 @@ module.exports = function(eleventyConfig) {
     });
 
     // content
-    eleventyConfig.addCollection("blog", function(collection) {
-        return collection.getFilteredByGlob("blog/post/*");
-    });
     eleventyConfig.addFilter("as_post_date", function(date_obj) {
         return date_obj.toLocaleDateString("default", {calendar: "hebrew", timeZone: "utc", weekday: "long", year: "numeric", month: "numeric", day: "numeric"});
     });
