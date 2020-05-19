@@ -59,7 +59,9 @@ TODO
 	- bichlall
 		- add items in this list to gitlab issue tracker :-)
 	- schemas etc.
-		- make a schema for content and site objectsalach (for unprocessed/input objects too)?
+		- make a schema for for unprocessed/input objects too?
+		- add possible values from types and items in schema
+			- maybe with JSON patch.
 		- types.yml schema?
 	- item info
 		- languages
@@ -69,15 +71,25 @@ TODO
 		- fees
 			- add "from" field to fees? (like "until")
 		- endpoints
+			- broken links
+				- add section on contact form?
+				- crawl for broken links?
+			- check for working https on http uris, announcements, and endpoint formatters etc.?
 			- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
 			- main link:
-				- use parent web link sometimes? or maybe if indicated specifically?
+				- use parent item web/main link sometimes? or maybe if indicated specifically?
+					- if so, what type of related_id(s) are parent items?
 			- item and/or endpoint rss feeds - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
+			- third-party endpoint types: add flag instead of removing title?
+				- third-party -- i.e. content does not necessarily originate from the same ppl as control site
+				- verify using rel=me links? what if a site doesnt support/use them though?
+				- can then filter out third-party endpoints, instead of (or in addition to) filtering out everything without a title
 			- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
 		- content types
 			- for series content type, make a data field for how often items in series are released, if applicable? (daily, weekly, monthly, etc.)
 		- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 			- add remaining keys (description etc. at present) to item info pages
+			- perhaps use prefixes like site_ or author_ etc for their keys
 		- verification that references to types in type definitions exist (may be able to do this by templating the schema, and inserting the type values)
 		- automatically generate item_types key? (with values/tags like content, brand, app, container/access_method
 		- hierarchies
@@ -87,10 +99,18 @@ TODO
 			- endpoint type? or related_ids type?
 		- make better alternative to "more" categories and media_types?
 	- compilation
-		- are eleventy excerpts suppposed to be in data.page.excerpt?
 		- when eleventy is in watch mode, have it delete old _site in between?
+			- and also have it rerun on removed files
+	- templates
+		- are eleventy excerpts suppposed to be in data.page.excerpt?
+			- use "log" filter to debug?
+		- have social network/alt accounts in array in defs.json
+			- make rel=me links based on them
+		- have domain name in defs.json
+			- use in link rel canonical and in rss feed
 	- rendering etc.
 		- show individual page title in <title> html element also (aside from site title), including for paginated (generated) pages
 		- fix everything shifting between pages in navbar and rest of pages
 		- item links and more macros/functions in templating vechulu
 			- eleventyConfig.addFilter("item_id_to_info_link", function(value) { return `items/${this.slug(value)}`; });
+				- or shortcode?

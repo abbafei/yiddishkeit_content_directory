@@ -43,7 +43,7 @@ layout: page
 {%- endfor %}
 </ul>
 {%- endcall %}{% endif %}
-{%- if "fee" in item %}{% call entry(item, "Has fee?") %}
+{%- if "fee" in item %}{% call entry(item, "Fee?") %}
 <p>{{ "yes" if item.fee[0].has_fee else "no" }}{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}</p>
 {%- endcall %}{% endif %}
 {%- if "container_type" in item %}{% call entry(item, "Container types") %}

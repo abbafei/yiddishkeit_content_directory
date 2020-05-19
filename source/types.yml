@@ -74,7 +74,7 @@ endpoints:
         title: SoundCloud
     tripadvisor:
         formatter: https://www.tripadvisor.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3134&oldid=1128098972
-        title: TripAdvisor
+        #title: TripAdvisor
     tunein:
         formatter: https://tunein.com/radio/$1/
         title: TuneIn
