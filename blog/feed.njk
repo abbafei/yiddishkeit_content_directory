@@ -2,22 +2,20 @@
 permalink: blog/feed.xml
 eleventyExcludeFromCollections: true
 metadata:
-    title: Yiddishkeit.info Blog
-    url: https://yiddishkeit.info/blog/
-    feedUrl: https://yiddishkeit.info/blog/feed.xml
-    author:
-        name: Yiddishkeit.info
+    feed_path_suffix: "feed.xml"
+    on_path: "blog/"
+    title_suffix: " Blog"
 ---
 <?xml version="1.0" encoding="utf-8"?>
 {%- set coll = collections.blog -%}
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }}</title>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
+  <title>{{ defs.main_title + metadata.title_suffix }}</title>
+  <link href="{{ defs.main_address + metadata.on_path + metadata.feed_path_suffix }}" rel="self"/>
+  <link href="{{ defs.main_address + metadata.on_path }}"/>
   <updated>{{ coll | rssLastUpdatedDate }}</updated>
-  <id>{{ metadata.url }}</id>
+  <id>{{ defs.main_address + metadata.on_path }}</id>
   <author>
-    <name>{{ metadata.author.name }}</name>
+    <name>{{ defs.main_title }}</name>
   </author>
   {%- for post in coll %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
