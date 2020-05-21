@@ -18,7 +18,7 @@ metadata:
     <name>{{ defs.main_title }}</name>
   </author>
   {%- for post in coll %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(defs.main_address + metadata.on_path) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
