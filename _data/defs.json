@@ -1,4 +1,7 @@
 {
     "main_title": "Yiddishkeit.info",
-    "main_address": "https://www.yiddishkeit.info/"
+    "main_address": "https://yiddishkeit.info/",
+    "external_profiles": [
+        {"entity_type": "twitter", "url": "https://twitter.com/yiddishkeitinfo"}
+    ]
 }

@@ -1,14 +1,21 @@
 ---
-layout: page
 eleventyNavigation:
     key: main
     order: 1
     title: Home
 ---
+{%- extends "page.njk" %}
 {%- from "util.njk" import more_info_link %}
 {% macro info_type(type, flow=true) -%}
 , <span class="sr-only">, </span><span class="ml-1"><span>{{ type }}</span>{% if not flow %}:</span>{% endif %}{{ caller() }}
 {%- endmacro %}
+{%- block head_extra %}
+<link rel="canonical" href="{{ defs.main_address }}">
+{%- for profile in defs.external_profiles %}
+<link rel="me" href="{{ profile.url }}">
+{%- endfor %}
+{%- endblock %}
+{%- block content %}
 <section>
 <div>There is much existing content for both adults and children online that can bring good, happy use of our time.</div>
 <br />
@@ -48,3 +55,4 @@ eleventyNavigation:
 <br /><br />
 <footer><p>Source code available <a href="https://gitlab.com/abbafei/abbafei.gitlab.io/">here</a>.</p></footer>
 </section>
+{%- endblock %}
