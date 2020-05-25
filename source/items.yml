@@ -51,6 +51,21 @@ azoi_app:
         - https://crownheights.info/chabad-news/690016/azoi-the-practical-judaism-app/
     main_category: doing
     tags: [learning, doing]
+blood_brothers:
+    related_ids:
+        soulwords: [brand, producer, host]
+    title: Two Brothers Discussing Interesting Subjects
+    endpoints:
+        youtube_playlist:
+            -
+                ref: PL1he-JRtnKeir6RtuooEj5MNJ2ymKaH2P
+                main_url: true
+    media_type: video
+    content_type: series
+    announcements:
+        - https://collive.com/live-taub-brothers-discuss-interesting-subjects/
+    main_category: entertainment
+    tags: [entertainment]
 chabad_org:
     title: Chabad.org
     # TODO: make item for each language site
@@ -601,6 +616,30 @@ small_wonder_puppets_videos:
     description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
     main_category: entertainment
     tags: [entertainment]
+soulwords:
+    title: SoulWords
+    endpoints:
+        web: https://soulwords.org/
+        youtube: SoulWords
+        youtube_channel: UCUdm4q0z1AoH5O5DuhZabzw
+        apple_podcast: "1450892501"
+        vimeo: "soulwords"
+        stitcher: soulwords
+        iheartradio_podcast: "31124815"
+soulwords_shaar_habitachon:
+    title: SoulWords - Shaar HaBitachon
+    related_ids:
+        soulwords: [producer, brand, host]
+    description: Text-based class on the classic Shaar HaBitachon (Gate of Trust) from Rabenu Bachaye's Chovos HaLevavos.
+    endpoints:
+        youtube_playlist:
+            -
+                ref: PL1he-JRtnKegzLXc4NPIQhcadCJz6s4pM
+                main_url: true
+    media_type: video
+    content_type: series
+    main_category: learning
+    tags: [learning]
 space_rabbi:
     related_ids:
         chabad_org: host

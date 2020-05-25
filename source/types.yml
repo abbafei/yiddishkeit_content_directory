@@ -56,6 +56,9 @@ endpoints:
     google_drive_folder:
         formatter: https://drive.google.com/drive/folders/$1
         title: Google Drive folder
+    iheartradio_podcast:
+        formatter: https://www.iheart.com/podcast/wd-$1/ # via https://www.wikidata.org/w/index.php?title=Property:P7324&oldid=1111858788
+        title: iHeartRadio podcast
     instagram:
         formatter: https://www.instagram.com/$1
         title: Instagram
@@ -72,6 +75,9 @@ endpoints:
     soundcloud:
         formatter: https://soundcloud.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3040&oldid=1145191783
         title: SoundCloud
+    stitcher:
+        formatter: https://www.stitcher.com/podcast/$1
+        title: Stitcher
     tripadvisor:
         formatter: https://www.tripadvisor.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3134&oldid=1128098972
         #title: TripAdvisor
