@@ -3,5 +3,6 @@
     "main_address": "https://yiddishkeit.info/",
     "external_profiles": [
         {"entity_type": "twitter", "url": "https://twitter.com/yiddishkeitinfo"}
-    ]
+    ],
+    "site_description": "An index of Jewish, Torah-true multimedia and resources"
 }
