@@ -4,7 +4,7 @@ image: node:alpine
 before_script: 
     - apk add --no-cache jq
     - npm init -y
-    - NODE_JQ_SKIP_INSTALL_BINARY=true npm install --save-dev @11ty/eleventy js-yaml node-jq ajv @11ty/eleventy-navigation @11ty/eleventy-plugin-rss
+    - NODE_JQ_SKIP_INSTALL_BINARY=true npm install --save-dev @11ty/eleventy @11ty/eleventy-navigation @11ty/eleventy-plugin-rss js-yaml node-jq ajv fast-json-patch
 
 pages:
   stage: deploy
