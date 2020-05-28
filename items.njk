@@ -13,12 +13,15 @@ layout: page
 {%- endmacro %}
 <section>
 <h2>{{ item.title }}</h2>
-{# {%- if "subtitle" in item %}
-<h3>{{ item.subtitle }}</h3>
-{%- endif %} #}
-{# {%- if "description" in item %}{% call entry(item, "Description") %}
-<p>{{ item.description }}</p>
+{# {%- if "source_subtitle" in item %}
+<blockquote class="blockquote"><h3>{{ item.source_subtitle }}</h3></blockquote>
+{%- endif %}
+{%- if "source_description" in item %}{% call entry(item, "Description") %}
+<blockquote class="blockquote"><p>{{ item.source_description }}</p></blockquote>
 {%- endcall %}{% endif %} #}
+{%- if "summary" in item %}{% call entry(item, "Summary") %}
+<blockquote class="blockquote"><p>{{ item.summary }}</p></blockquote>
+{%- endcall %}{% endif %}
 {%- if "main_url" in item %}{% call entry(item, "Main link") %}
 <p><a href="{{ item.main_url }}">{{ item.main_url }}</a></p>
 {%- endcall %}{% endif %}

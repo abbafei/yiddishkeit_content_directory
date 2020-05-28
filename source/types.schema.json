@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://yiddishkeit.info/schemas/items.schema.json",
+    "definitions": {
+        "type_value_entry": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "type": "object",
+    "properties": {
+        "endpoints": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "required": ["formatter"],
+                "additionalProperties": false,
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "formatter": {
+                        "type": "string",
+                        "pattern": "\\$1"
+                    },
+                    "third_party_content": {
+                        "type": "boolean",
+                        "description": "whether content can be added to this endpoint type by parties who do not own the item"
+                    }
+                }
+            }
+        }
+    },
+    "additionalProperties": {
+        "type": "object",
+        "description": "types names (keys) and infos (values) for a type",
+        "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
+

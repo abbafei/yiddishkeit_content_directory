@@ -2,6 +2,29 @@
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://yiddishkeit.info/schemas/items.schema.json",
     "definitions": {
+        "types": {
+            "categories": {
+                "type": "string"
+            },
+            "container_types": {
+                "type": "string"
+            },
+            "content_types": {
+                "type": "string"
+            },
+            "endpoints": {
+                "type": "string"
+            },
+            "media_types": {
+                "type": "string"
+            },
+            "related_id_types": {
+                "type": "string"
+            },
+            "target_audiences": {
+                "type": "string"
+            }
+        },
         "item_identifier": {
             "type": "string"
         },
@@ -11,47 +34,39 @@
         },
         "language_code": {
             "type": "string"
-        },
-        "category": {
-            "type": "string"
-        },
-        "target_audience": {
-            "type": "string"
-        },
-        "container_type": {
-            "type": "string"
-        },
-        "content_type": {
-            "type": "string"
-        },
-        "endpoint_type": {
-            "type": "string"
-        },
-        "media_type": {
-            "type": "string"
-        },
-        "related_id_type": {
-            "type": "string"
         }
     },
     "type": "object",
+    "propertyNames": {
+        "$ref": "#/definitions/item_identifier"
+    },
     "additionalProperties": {
         "type": "object",
         "required": ["title"],
-        "propertyNames": {
-            "$ref": "#/definitions/item_identifier"
-        },
+        "additionalProperties": false,
         "properties": {
             "title": {
                 "type": "string",
                 "description": "human-readable name or title"
             },
+            "source_subtitle": {
+                "type": "string",
+                "description": "subtitle of the item (taken from its source)"
+            },
+            "source_description": {
+                "type": "string",
+                "description": "description of the item (taken from its source)"
+            },
+            "summary": {
+                "type": "string",
+                "description": "a summary of the item"
+            },
             "content_type": {
-                "$ref": "#/definitions/content_type",
+                "$ref": "#/definitions/types/content_types",
                 "description": "type of the item entry"
             },
             "media_type": {
-                "$ref": "#/definitions/media_type",
+                "$ref": "#/definitions/types/media_types",
                 "description": "media type of the content"
             },
             "container_type": {
@@ -59,13 +74,52 @@
                 "description": "the type of technology that the item is accessed with",
                 "minItems": 1,
                 "items": {
-                    "$ref": "#/definitions/container_type"
+                    "$ref": "#/definitions/types/container_types"
+                }
+            },
+            "tags": {
+                "description": "categories of the content",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "$ref": "#/definitions/types/categories"
+                }
+            },
+            "main_category": {
+                "$ref": "#/definitions/types/categories",
+                "description": "main category of the content"
+            },
+            "main_url": {
+                "$ref": "#/definitions/url",
+                "description": "primary url of the item"
+            },
+            "target_audience": {
+                "description": "audiences that the content seems tailored to",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "$ref": "#/definitions/types/target_audiences"
+                }
+            },
+            "announcements": {
+                "type": "array",
+                "description": "links for news articles pertaining to the item",
+                "minItems": 1,
+                "items": {"$ref": "#/definitions/url"}
+            },
+            "languages": {
+                "type": "array",
+                "description": "list of language code strings for the languages the item is available in",
+                "minItems": 1,
+                "default": ["en"],
+                "items": {
+                    "$ref": "#/definitions/language_code"
                 }
             },
             "related_ids": {
                 "type": "object",
                 "propertyNames": {
-                    "$ref": "#/definitions/related_id_type"
+                    "$ref": "#/definitions/types/related_id_types"
                 },
                 "additionalProperties": {
                     "type": "array",
@@ -74,18 +128,6 @@
                         "$ref": "#/definitions/item_identifier"
                     }
                 }
-            },
-            "tags": {
-                "description": "categories of the content",
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                    "$ref": "#/definitions/category"
-                }
-            },
-            "main_category": {
-                "$ref": "#/definitions/category",
-                "description": "main category of the content"
             },
             "fee": {
                 "type": "array",
@@ -112,25 +154,11 @@
                     }
                 }
             },
-            "target_audience": {
-                "description": "audiences that the content seems tailored to",
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                    "$ref": "#/definitions/target_audience"
-                }
-            },
-            "announcements": {
-                "type": "array",
-                "description": "links for news articles pertaining to the item",
-                "minItems": 1,
-                "items": {"$ref": "#/definitions/url"}
-            },
             "endpoints": {
                 "type": "object",
                 "description": "digital locations to access media of the item",
                 "propertyNames": {
-                    "$ref": "#/definitions/endpoint_type"
+                    "$ref": "#/definitions/types/endpoints"
                 },
                 "additionalProperties": {
                     "type": "array",
@@ -142,13 +170,13 @@
                         "properties": {
                             "ref": {
                                 "type": "string",
-                                "description": "identifier for the resource"
+                                "description": "identifier value for the resource"
                             },
                             "label": {
                                 "type": "string",
                                 "description": "gives more information about the ref"
                             },
-                            "main_url": {
+                            "is_main_url": {
                                 "type": "boolean",
                                 "description": "whether this is a main url or not"
                             },
@@ -158,15 +186,6 @@
                             }
                         }
                     }
-                }
-            },
-            "languages": {
-                "type": "array",
-                "description": "list of language code strings for the languages the item is available in",
-                "minItems": 1,
-                "default": ["en"],
-                "items": {
-                    "$ref": "#/definitions/language_code"
                 }
             }
         }

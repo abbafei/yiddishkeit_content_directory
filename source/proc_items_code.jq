@@ -20,7 +20,7 @@ def item_select_key_title_array($key; $type_defs):
     else . end
 ;
 def main_url_from_endpoints($type_defs):
-    ((with_entries(select($type_defs[.key] | has("formatter"))) | [to_entries[] | .value[] | select(.main_url == true)]) + .web) | if length > 0 then .[0].url else null end
+    ((with_entries(select($type_defs[.key] | has("formatter"))) | [to_entries[] | .value[] | select(.is_main_url == true)]) + .web) | if length > 0 then .[0].url else null end
 ;
 (.[0] |= (
     # preprocess items: simple expansions (from items input format to output format), etc.
@@ -83,13 +83,12 @@ map(if .endpoints then
     (.main_url = (.endpoints | main_url_from_endpoints($types.endpoints))) |
     if .main_url == null then del(.main_url) else . end
 else . end) |
-# filter out endpoints whose type does not have a url and title
+# filter out endpoints whose type has no title or that use third-party content
 map(
     if has("endpoints") then 
         (.endpoints |= (
             with_entries(
-                (.value |= map(select(has("url")))) |
-                select((.value | length) > 0 and ($types.endpoints[.key] | has("title")))
+                select((.value | length) > 0 and ($types.endpoints[.key] | has("title")) and ($types.endpoints[.key].third_party_content | not))
             )
         )) |
         if (.endpoints | length) == 0 then del(.endpoints) else . end

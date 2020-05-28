@@ -44,7 +44,7 @@ azoi_app:
     endpoints:
         android: com.azoi
         ios: "1491144054"
-    description: User-friendly Jewish How-to's
+    source_description: User-friendly Jewish How-to's
     announcements: 
         - https://anash.org/new-app-brings-jewish-practice-into-the-21st-century/
         - https://www.jpost.com/Diaspora/New-app-aims-to-make-Judaism-user-friendly-611688
@@ -59,11 +59,16 @@ blood_brothers:
         youtube_playlist:
             -
                 ref: PL1he-JRtnKeir6RtuooEj5MNJ2ymKaH2P
-                main_url: true
+                is_main_url: true
     media_type: video
     content_type: series
     announcements:
+        - https://anash.org/rabbi-and-puppeteer-discuss-intriguing-topics/
+        - https://anash.org/rabbi-and-puppeteer-discuss-intriguing-topics-2/
+        - https://anash.org/taub-brothers-episode-3/
         - https://collive.com/live-taub-brothers-discuss-interesting-subjects/
+        - https://collive.com/live-taub-brothers-episode-2/
+        - https://collive.com/live-taub-brothers-discuss-interesting-subjects-2/
     main_category: entertainment
     tags: [entertainment]
 chabad_org:
@@ -109,15 +114,15 @@ chabad_org_music_section:
     media_type: audio
     content_type: group
     endpoints: https://www.chabad.org/music
-    description: Listen to our collection of Jewish music and Chassidic songs that inspire the heart and express the soul. Also enjoy listening to and learning the traditional Shabbat songs and prayers.
+    source_description: Listen to our collection of Jewish music and Chassidic songs that inspire the heart and express the soul. Also enjoy listening to and learning the traditional Shabbat songs and prayers.
     main_category: music
     tags: [music]
 chabad_org_stories_section:
     related_ids:
         chabad_org_inspiration_entertainment: subitem_of
     title: Chabad.org - Jewish Stories section
-    subtitle: Jewish Tales from the Past 
-    description: Hundreds of Jewish stories from the sages, the Chassidic masters, and contemporary Jewish storytellers
+    source_subtitle: Jewish Tales from the Past 
+    source_description: Hundreds of Jewish stories from the sages, the Chassidic masters, and contemporary Jewish storytellers
     media_type: text
     content_type: group
     endpoints: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
@@ -127,8 +132,8 @@ chaim_the_storyteller:
     related_ids:
         chabad_org: host
     title: Chaim the Storyteller
-    subtitle: Fascinating Tales of Jewish Heroism and Dedication
-    description: Join Chaim, the storyteller each week as he shares stories of old that teach important lessons and virtues
+    source_subtitle: Fascinating Tales of Jewish Heroism and Dedication
+    source_description: Join Chaim, the storyteller each week as he shares stories of old that teach important lessons and virtues
     endpoints: https://www.chabad.org/kids/article_cdo/aid/470212/jewish/Chaim-the-Storyteller.htm
     media_type: audio
     content_type: group
@@ -285,7 +290,7 @@ heres_my_story_english:
         web:
             - https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm
             - http://myencounterblog.com/
-    description: Part of JEM's My Encounter with the Rebbe oral history project, dedicated to documenting the life of the Rebbe.
+    source_description: Part of JEM's My Encounter with the Rebbe oral history project, dedicated to documenting the life of the Rebbe.
     main_category: Rebbe
     tags: [Rebbe]
 heres_my_story_hebrew:
@@ -302,7 +307,7 @@ heres_my_story_hebrew:
             -
                 label: downloads
                 ref: http://myencounterblog.com/
-    description: "חלק מפרוייקט \"הפגישה שלי עם הרבי\", המופק על-ידי חברת JEM, ומטרתו לתעד את חייו של הרבי מליובאוויטש."
+    source_description: "חלק מפרוייקט \"הפגישה שלי עם הרבי\", המופק על-ידי חברת JEM, ומטרתו לתעד את חייו של הרבי מליובאוויטש."
     main_category: Rebbe
     tags: [Rebbe]
 itche_kadoozy:
@@ -312,7 +317,7 @@ itche_kadoozy:
     title: The Itche Kadoozy Show
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/365676/jewish/Itche-Kadoozy.htm
     target_audience: [children, children-at-heart]
-    description: Enter the world of Rabbi Itche Kadoozy, where a normal day is never quite normal, big laughs are to be expected, and Torah lessons can be found around every corner.
+    source_description: Enter the world of Rabbi Itche Kadoozy, where a normal day is never quite normal, big laughs are to be expected, and Torah lessons can be found around every corner.
     main_category: entertainment
     tags: [entertainment]
 jem:
@@ -333,7 +338,7 @@ jem_70_years:
     endpoints:
         web: https://70years.com/
         youtube_playlist: PLkXcDdOrqRiqD_jiJDhIRfywJ_FT9XLHi
-    description: In celebration of seventy years of the Rebbe's leadership, JEM presents an initiative showcasing the Rebbe's enduring influence. Seventy short films exploring different events, ideas, or personalities impacted by the Rebbe. Watch, learn, and be inspired.
+    source_description: In celebration of seventy years of the Rebbe's leadership, JEM presents an initiative showcasing the Rebbe's enduring influence. Seventy short films exploring different events, ideas, or personalities impacted by the Rebbe. Watch, learn, and be inspired.
     announcements:
         - https://jemcentral.org/2020/01/22/70/
         - https://anash.org/jem-to-refresh-living-torah/
@@ -345,9 +350,9 @@ jem_tv:
     media_type: video
     content_type: group
     title: Jem.TV
-    subtitle: An Island of Calm
+    source_subtitle: An Island of Calm
     endpoints: https://jem.tv/
-    description: Daily content selections of the Rebbe to be featured.
+    source_description: Daily content selections of the Rebbe to be featured.
     announcements:
         - https://anash.org/jem-to-stream-free-premium-content/
         - https://jemcentral.org/2020/03/16/island-of-calm/
@@ -361,12 +366,12 @@ kabbala_toons:
     media_type: video
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/530191/jewish/KabbalaToons.htm
     target_audience: [children, adults]
-    description: KabbalaToons presents spiritual guidance and mystic insights in fun, fast animation.
+    source_description: KabbalaToons presents spiritual guidance and mystic insights in fun, fast animation.
     main_category: entertainment
     tags: [entertainment, learning]
 lchaim_weekly:
     title: L'Chaim Weekly
-    subtitle: The Weekly Publication for Every Jewish Person
+    source_subtitle: The Weekly Publication for Every Jewish Person
     content_type: series
     media_type: text
     endpoints:
@@ -427,7 +432,7 @@ mendy_and_the_golem:
         google_drive_folder:
             -
                 ref: 1gF3ifxEvEk-wepg6UL4LKzzVeJ-U1Upx
-                main_url: true
+                is_main_url: true
     media_type: text
     target_audience: [older children, adults]
     announcements:
@@ -470,7 +475,7 @@ mitzvah_island:
     title: Mitzvah Island
     endpoints: https://www.chabad.org/kids/article_cdo/aid/1847177/jewish/Mitzvah-Island.htm
     target_audience: [young children]
-    description: "Join your \"mitzvah friends\", Sarah and Avi on all their mitzvah adventures. This animated series teaches young children about Jewish life and values."
+    source_description: "Join your \"mitzvah friends\", Sarah and Avi on all their mitzvah adventures. This animated series teaches young children about Jewish life and values."
     announcements:
         - https://collive.com/shows-grew-with-creator/
     main_category: entertainment
@@ -530,7 +535,7 @@ Rebbedrive_app:
         android: com.rebbedrive.rebbedrive
         ios: "1332355082"
     title: RebbeDrive
-    subtitle: The Online Chabad Database
+    source_subtitle: The Online Chabad Database
     main_category: Rebbe
     tags: [Rebbe]
 Rebbedrive_content:
@@ -563,7 +568,7 @@ sie_lib:
     related_ids:
         sie: [host, brand, producer]
     title: Sichos in English Library
-    short_description: Sichos in English's online book library
+    summary: Sichos in English's online book library
     media_type: text
     content_type: group
     endpoints:
@@ -613,7 +618,7 @@ small_wonder_puppets_videos:
             description: free during coronavirus pandemic
         - true
     endpoints: https://www.unclepinchey.com/
-    description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
+    source_description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
     main_category: entertainment
     tags: [entertainment]
 soulwords:
@@ -630,14 +635,16 @@ soulwords_shaar_habitachon:
     title: SoulWords - Shaar HaBitachon
     related_ids:
         soulwords: [producer, brand, host]
-    description: Text-based class on the classic Shaar HaBitachon (Gate of Trust) from Rabenu Bachaye's Chovos HaLevavos.
+    source_description: Text-based class on the classic Shaar HaBitachon (Gate of Trust) from Rabenu Bachaye's Chovos HaLevavos.
     endpoints:
         youtube_playlist:
             -
                 ref: PL1he-JRtnKegzLXc4NPIQhcadCJz6s4pM
-                main_url: true
+                is_main_url: true
     media_type: video
     content_type: series
+    announcements:
+        - https://collive.com/learn-shaar-habitachon-with-rabbi-taub/
     main_category: learning
     tags: [learning]
 space_rabbi:
@@ -648,7 +655,7 @@ space_rabbi:
     media_type: video
     endpoints: https://www.chabad.org/multimedia/video_cdo/aid/2080621/jewish/Space-Rabbi.htm
     target_audience: [older children, children-at-heart]
-    description: What do you get when you put a Rabbi in a space ship with a bunch of Robots who have recently become self-aware and each have unique personality flaws? You get a bunch of funny videos, that's what.
+    source_description: What do you get when you put a Rabbi in a space ship with a bunch of Robots who have recently become self-aware and each have unique personality flaws? You get a bunch of funny videos, that's what.
     announcements:
         - https://collive.com/sci-fi-sends-rabbi-to-space/
     main_category: entertainment
@@ -665,14 +672,14 @@ stick_figure_vignettes:
         - https://www.chabad.org/blogs/blog_cdo/aid/1920928/jewish/New-Stick-Figure-Cartoons.htm
         - https://collive.com/stick-figures-on-chabad-org/
         - https://collive.com/stick-figures-show-returns/
-    description: 30 second animated shorts using stick figures to explore Jewish philosophy. Bizarre yet intriguing. Oh, and kind of funny.
+    source_description: 30 second animated shorts using stick figures to explore Jewish philosophy. Bizarre yet intriguing. Oh, and kind of funny.
     main_category: entertainment
     tags: [entertainment]
 story_time_with_uncle_yossi:
     related_ids:
         chabad_org: host
     title: Story Time with Uncle Yossi
-    description: Listen to Jewish tales and parables from the unforgettable recordings of “Story Time with Uncle Yossi” (Rabbi Yosef Goldstein). Drawn from the Midrash, Talmud, and Jewish lore, his beloved stories instill a love of G-d, the Torah, and the Jewish people; planting the seeds for fine character development and personal refinement.
+    source_description: Listen to Jewish tales and parables from the unforgettable recordings of “Story Time with Uncle Yossi” (Rabbi Yosef Goldstein). Drawn from the Midrash, Talmud, and Jewish lore, his beloved stories instill a love of G-d, the Torah, and the Jewish people; planting the seeds for fine character development and personal refinement.
     content_type: group
     media_type: audio
     target_audience: [young children, children]
@@ -699,7 +706,7 @@ torah_treasure_content:
         android: tv.torahtreasure.android
         ios: "1245060220"
     fee: true
-    description: An APP and website that has a wide variety of educational, fun entertainment for kids in a safe, ad-free space. In today’s day and age, even very young children spend time watching videos and Torah Treasure ensures that the content that we create and license is up to our Torah values. 
+    source_description: An APP and website that has a wide variety of educational, fun entertainment for kids in a safe, ad-free space. In today’s day and age, even very young children spend time watching videos and Torah Treasure ensures that the content that we create and license is up to our Torah values. 
     main_category: entertainment
     tags: [entertainment]
 vaad_hatmimim: 
@@ -738,7 +745,7 @@ wrapp_app:
     endpoints:
         android: com.lightuptheworld.tefillinwrap
         ios: "1385724757"
-    description: A mobile app that links those with Tefillin with those desiring to wrap Tefillin.
+    source_description: A mobile app that links those with Tefillin with those desiring to wrap Tefillin.
     announcements: 
         - https://chabadinfo.com/news/new-app-uber-for-tefillin/
         - https://jewishnews.timesofisrael.com/new-wrapp-app-to-be-the-uber-of-the-tefillin-world/
