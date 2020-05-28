@@ -39,7 +39,7 @@ eleventyNavigation:
 {%- endfor %}
 </section>
 <nav class="nav justify-content-between">
-{%- if pagination.href.next %}<a class="nav-link" href="{{ pagination.href.next }}">Older posts</a>{%- endif %}
-{%- if pagination.href.previous %}<a class="nav-link" href="{{ pagination.href.previous }}">Newer posts</a>{%- endif %}
+{%- if pagination.href.next %}<a rel="next" class="nav-link" href="{{ pagination.href.next }}">Older posts</a>{%- endif %}
+{%- if pagination.href.previous %}<a rel="prev" class="nav-link" href="{{ pagination.href.previous }}">Newer posts</a>{%- endif %}
 </nav>
 {%- endblock %}
