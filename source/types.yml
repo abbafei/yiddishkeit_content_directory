@@ -47,6 +47,12 @@ endpoints:
     blog:
         formatter: $1
         title: Blog
+    chabad_org_aid:
+        formatter: https://www.chabad.org/$1
+        title: Chabad.org page
+    chabad_org_kid:
+        formatter: https://www.chabad.org/search/keyword_cdo/kid/$1/
+        title: Chabad.org item
     donorbox:
         formatter: https://donorbox.org/$1
         title: Donorbox
@@ -78,6 +84,9 @@ endpoints:
     stitcher:
         formatter: https://www.stitcher.com/podcast/$1
         title: Stitcher
+    torahanytime_speaker:
+        formatter: https://www.torahanytime.com/#/speaker?l=$1
+        title: TorahAnytime.com speaker
     tripadvisor:
         formatter: https://www.tripadvisor.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3134&oldid=1128098972
         title: TripAdvisor
@@ -121,6 +130,9 @@ media_types:
     more:
         title: More
 related_id_types:
+    author:
+        title: Author
+        description: the author of the item
     brand:
         description: the item(s) with which this item is branded
     content:
