@@ -38,6 +38,9 @@ content_types:
         description: an ordered collection of items
 endpoints:
     # TODO: pull from wikidata properties? example https://www.wikidata.org/wiki/Property:P3418 formatter url for play store
+    amazon_author:
+        formatter: https://amazon.com/wd/e/$1
+        title: Amazon.com author
     android:
         formatter: https://play.google.com/store/apps/details?id=$1
         title: Google Play Store

@@ -582,7 +582,9 @@ rabbi_perl_stories_content:
 rabbi_shais_taub:
     title: Rabbi Shais Taub
     endpoints:
+        amazon_author: B0041OUKJW
         chabad_org_kid: "10572"
+        goodreads_author: "7654139"
         instagram: rabbi_shais_taub
         torahanytime_speaker: "1042"
         wikidata: Q7462485
