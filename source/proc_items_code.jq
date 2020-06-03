@@ -83,12 +83,15 @@ map(if .endpoints then
     (.main_url = (.endpoints | main_url_from_endpoints($types.endpoints))) |
     if .main_url == null then del(.main_url) else . end
 else . end) |
-# filter out endpoints whose type has no title or that use third-party content
+# filter out endpoints that have a type entry, and whose type has no title or that uses third-party content
 map(
     if has("endpoints") then 
         (.endpoints |= (
             with_entries(
-                select((.value | length) > 0 and ($types.endpoints[.key] | has("title")) and ($types.endpoints[.key].third_party_content | not))
+                select(
+                    (.key as $key | $types.endpoints | has($key) | not) or # if no type entry, detect this in schema
+                    ((.value | length) > 0 and ($types.endpoints[.key] | has("title")) and ($types.endpoints[.key].third_party_content | not))
+                )
             )
         )) |
         if (.endpoints | length) == 0 then del(.endpoints) else . end
