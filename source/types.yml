@@ -65,6 +65,14 @@ endpoints:
     iheartradio_podcast:
         formatter: https://www.iheart.com/podcast/wd-$1/ # via https://www.wikidata.org/w/index.php?title=Property:P7324&oldid=1111858788
         title: iHeartRadio podcast
+    imdb_name:
+        formatter: https://m.imdb.com/name/nm$1/
+        title: IMDb name
+        third_party_content: true
+    imdb_title:
+        formatter: https://m.imdb.com/title/tt$1/
+        title: IMDb title
+        third_party_content: true
     instagram:
         formatter: https://www.instagram.com/$1
         title: Instagram

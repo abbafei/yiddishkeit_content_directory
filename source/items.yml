@@ -281,11 +281,11 @@ derher_monthly:
 dovid_taub:
     title: Dovid Taub
     endpoints:
-        #blog: https://thedovid-blog.tumblr.com/
+        blog: https://thedovid-blog.tumblr.com/
         chabad_org_kid: "8703"
         facebook: thedovid
         imdb_name: "2253534"
-        #instagram: thedovid
+        instagram: thedovid
         linkedin: dovid-taub-819644111
         #twitter: thedovid
         youtube: dovidtaub
