@@ -1,4 +1,34 @@
 # B"H.
+aleph_beis_gimmel:
+    title: Aleph Beis Gimmel
+    source_description: Using Jewish Learning, Jewish Faith & Jewish Inspiration To Change Our World For The Better
+    endpoints:
+        web: https://www.alephbeisgimmel.com/
+        facebook: alephbeisgimmel
+        twitter: AlephBeisGimmel
+        instagram: alephbeisgimmel
+aleph_beis_gimmel_english_audio:
+    title: Shaar Habitachon shiurim - R' S. M. Rubashkin - audio
+    related_ids:
+        aleph_beis_gimmel: [brand, host]
+        reb_sm_rubashkin: author
+    content_type: series
+    media_type: audio
+    endpoints: https://www.alephbeisgimmel.com/audio
+    languages: [en]
+    main_category: learning
+    tags: [learning]
+aleph_beis_gimmel_english_video:
+    title: Shaar Habitachon shiurim - R' S. M. Rubashkin - video
+    related_ids:
+        aleph_beis_gimmel: [brand, host]
+        reb_sm_rubashkin: author
+    content_type: series
+    media_type: video
+    endpoints: https://www.alephbeisgimmel.com/shaar-habiitachon-in-english
+    languages: [en]
+    main_category: learning
+    tags: [learning]
 ascent_of_safed:
     title: Ascent of Tzfat
     endpoints:
@@ -53,6 +83,8 @@ azoi_app:
     tags: [learning, doing]
 blood_brothers:
     related_ids:
+        dovid_taub: author
+        rabbi_shais_taub: author
         soulwords: [brand, producer, host]
     title: Two Brothers Discussing Interesting Subjects
     endpoints:
@@ -88,7 +120,9 @@ chabad_org_inspiration_entertainment:
     media_type: more
     title: Chabad.org - Inspiration and Entertainment section
     content_type: group
-    endpoints: https://www.chabad.org/library/article_cdo/aid/1675890/jewish/Inspiration-Entertainment.htm
+    endpoints:
+        web: https://www.chabad.org/library/article_cdo/aid/1675890/jewish/Inspiration-Entertainment.htm
+        chabad_org_aid: "1675890"
     main_category: entertainment
     tags: [entertainment]
 chabad_org_music_app:
@@ -101,6 +135,7 @@ chabad_org_music_app:
     endpoints:
         web: https://www.chabad.org/multimedia/music_cdo/aid/3963654/jewish/Jewish-Music-App.htm
         android: com.radioco.m22310aa09
+        chabad_org_aid: "3963654"
         ios: "1360236938"
         tunein: Chabadorg-Jewish-Music-s305576
     announcements:
@@ -113,7 +148,9 @@ chabad_org_music_section:
     title: Chabad.org - Jewish Music section
     media_type: audio
     content_type: group
-    endpoints: https://www.chabad.org/music
+    endpoints:
+        web: https://www.chabad.org/music
+        chabad_org_aid: "254237"
     source_description: Listen to our collection of Jewish music and Chassidic songs that inspire the heart and express the soul. Also enjoy listening to and learning the traditional Shabbat songs and prayers.
     main_category: music
     tags: [music]
@@ -125,7 +162,9 @@ chabad_org_stories_section:
     source_description: Hundreds of Jewish stories from the sages, the Chassidic masters, and contemporary Jewish storytellers
     media_type: text
     content_type: group
-    endpoints: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
+    endpoints:
+        web: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
+        chabad_org_aid: "109851"
     main_category: entertainment
     tags: [entertainment]
 chaim_the_storyteller:
@@ -134,7 +173,9 @@ chaim_the_storyteller:
     title: Chaim the Storyteller
     source_subtitle: Fascinating Tales of Jewish Heroism and Dedication
     source_description: Join Chaim, the storyteller each week as he shares stories of old that teach important lessons and virtues
-    endpoints: https://www.chabad.org/kids/article_cdo/aid/470212/jewish/Chaim-the-Storyteller.htm
+    endpoints:
+        web: https://www.chabad.org/kids/article_cdo/aid/470212/jewish/Chaim-the-Storyteller.htm
+        chabad_org_aid: "470212"
     media_type: audio
     content_type: group
     target_audience: [young children, children]
@@ -237,6 +278,16 @@ derher_monthly:
     content_type: series
     main_category: learning
     tags: [Rebbe, learning]
+dovid_taub:
+    title: Dovid Taub
+    endpoints:
+        #blog: https://thedovid-blog.tumblr.com/
+        chabad_org_kid: "8703"
+        #facebook: thedovid
+        #https://www.imdb.com/name/nm2253534/
+        #instagram: thedovid
+        #twitter: thedovid
+        #youtube: dovidtaub
 hebrewbooks:
     title: HebrewBooks.org
     endpoints:
@@ -290,6 +341,7 @@ heres_my_story_english:
         web:
             - https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm
             - http://myencounterblog.com/
+        chabad_org_aid: "2184170"
     source_description: Part of JEM's My Encounter with the Rebbe oral history project, dedicated to documenting the life of the Rebbe.
     main_category: Rebbe
     tags: [Rebbe]
@@ -307,6 +359,7 @@ heres_my_story_hebrew:
             -
                 label: downloads
                 ref: http://myencounterblog.com/
+        chabad_org_aid: "3607191"
     source_description: "חלק מפרוייקט \"הפגישה שלי עם הרבי\", המופק על-ידי חברת JEM, ומטרתו לתעד את חייו של הרבי מליובאוויטש."
     main_category: Rebbe
     tags: [Rebbe]
@@ -315,7 +368,11 @@ itche_kadoozy:
         chabad_org: host
     media_type: video
     title: The Itche Kadoozy Show
-    endpoints: https://www.chabad.org/multimedia/video_cdo/aid/365676/jewish/Itche-Kadoozy.htm
+    endpoints:
+        #https://www.imdb.com/title/tt0799878/
+        web: https://www.chabad.org/iks
+        chabad_org_aid: "365676"
+        youtube_channel: UC7iUU1jT4wSgQ71hCgM14yA
     target_audience: [children, children-at-heart]
     source_description: Enter the world of Rabbi Itche Kadoozy, where a normal day is never quite normal, big laughs are to be expected, and Torah lessons can be found around every corner.
     main_category: entertainment
@@ -364,7 +421,9 @@ kabbala_toons:
     content_type: group
     title: KabbalaToons
     media_type: video
-    endpoints: https://www.chabad.org/multimedia/video_cdo/aid/530191/jewish/KabbalaToons.htm
+    endpoints:
+        web: https://www.chabad.org/multimedia/video_cdo/aid/530191/jewish/KabbalaToons.htm
+        chabad_org_aid: "530191"
     target_audience: [children, adults]
     source_description: KabbalaToons presents spiritual guidance and mystic insights in fun, fast animation.
     main_category: entertainment
@@ -405,7 +464,9 @@ living_torah_web:
         chabad_org: host
     title: Living Torah
     media_type: video
-    endpoints: https://www.chabad.org/livingtorah
+    endpoints:
+        web: https://www.chabad.org/livingtorah
+        chabad_org_aid: "42100"
     main_category: Rebbe
     tags: [Rebbe]
 mafteiach_app:
@@ -473,7 +534,9 @@ mitzvah_island:
     media_type: video
     content_type: series
     title: Mitzvah Island
-    endpoints: https://www.chabad.org/kids/article_cdo/aid/1847177/jewish/Mitzvah-Island.htm
+    endpoints:
+        web: https://www.chabad.org/kids/article_cdo/aid/1847177/jewish/Mitzvah-Island.htm
+        chabad_org_aid: "1847177"
     target_audience: [young children]
     source_description: "Join your \"mitzvah friends\", Sarah and Avi on all their mitzvah adventures. This animated series teaches young children about Jewish life and values."
     announcements:
@@ -503,6 +566,7 @@ rabbi_perl_stories_content:
             -
                 ref: https://www.chabad.org/kids/article_cdo/aid/3715749/jewish/Storytelling-with-Rabbi-Perl.htm
                 label: at Chabad.org
+        chabad_org_aid: "3715749"
         soundcloud: user-109848505
     target_audience: [children]
     content_type: group
@@ -512,6 +576,13 @@ rabbi_perl_stories_content:
         - https://crownheights.info/chabad-news/704146/stories-by-rabbi-sholem-perl-now-online/
     main_category: entertainment
     tags: [entertainment, stories]
+rabbi_shais_taub:
+    title: Rabbi Shais Taub
+    endpoints:
+        chabad_org_kid: "10572"
+        instagram: rabbi_shais_taub
+        torahanytime_speaker: "1042"
+        wikidata: Q7462485
 Rebbedrive:
     title: RebbeDrive
     languages: [he, en]
@@ -559,6 +630,10 @@ Rebbedrive_video:
         google_drive_folder: 0B_WSU737WJ1ffmpRZHpRaGQ2ZzJFeUdkSEtJYTIzcHE5Njdkb0hpTnZmRW1iLVMzMnZsOHc
     main_category: Rebbe
     tags: [Rebbe]
+reb_sm_rubashkin:
+    title: Reb Sholom Mordechai Rubashkin
+    endpoints:
+        torahanytime_speaker: "1076"
 sie:
     title: Sichos in English
     endpoints:
@@ -634,6 +709,7 @@ soulwords:
 soulwords_shaar_habitachon:
     title: SoulWords - Shaar HaBitachon
     related_ids:
+        rabbi_shais_taub: author
         soulwords: [producer, brand, host]
     source_description: Text-based class on the classic Shaar HaBitachon (Gate of Trust) from Rabenu Bachaye's Chovos HaLevavos.
     endpoints:
@@ -653,7 +729,9 @@ space_rabbi:
     content_type: series
     title: Space Rabbi
     media_type: video
-    endpoints: https://www.chabad.org/multimedia/video_cdo/aid/2080621/jewish/Space-Rabbi.htm
+    endpoints:
+        web: https://www.chabad.org/multimedia/video_cdo/aid/2080621/jewish/Space-Rabbi.htm
+        chabad_org_aid: "2080621"
     target_audience: [older children, children-at-heart]
     source_description: What do you get when you put a Rabbi in a space ship with a bunch of Robots who have recently become self-aware and each have unique personality flaws? You get a bunch of funny videos, that's what.
     announcements:
@@ -666,7 +744,9 @@ stick_figure_vignettes:
     content_type: series
     title: Stick Figure Vignettes
     media_type: video
-    endpoints: https://www.chabad.org/multimedia/video_cdo/aid/749657/jewish/Stick-Figure-Vignettes.htm
+    endpoints:
+        web: https://www.chabad.org/multimedia/video_cdo/aid/749657/jewish/Stick-Figure-Vignettes.htm
+        chabad_org_aid: "749657"
     target_audience: [older children, adults]
     announcements:
         - https://www.chabad.org/blogs/blog_cdo/aid/1920928/jewish/New-Stick-Figure-Cartoons.htm
@@ -683,7 +763,9 @@ story_time_with_uncle_yossi:
     content_type: group
     media_type: audio
     target_audience: [young children, children]
-    endpoints: https://www.chabad.org/kids/article_cdo/aid/4572067/jewish/Story-Time-with-Uncle-Yossi.htm
+    endpoints:
+        web: https://www.chabad.org/kids/article_cdo/aid/4572067/jewish/Story-Time-with-Uncle-Yossi.htm
+        chabad_org_aid: "4572067"
     main_category: entertainment
     tags: [entertainment, stories]
 #the_living_archive brand vechulu
