@@ -59,6 +59,10 @@ endpoints:
     facebook:
         formatter: https://www.facebook.com/$1
         title: Facebook
+    goodreads_author:
+        formatter: https://www.goodreads.com/author/show/$1 # via https://www.wikidata.org/w/index.php?title=Property:P2963&oldid=1176868305
+        title: Goodreads author
+        third_party_content: true
     google_drive_folder:
         formatter: https://drive.google.com/drive/folders/$1
         title: Google Drive folder
