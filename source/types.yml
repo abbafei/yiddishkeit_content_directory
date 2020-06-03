@@ -75,6 +75,9 @@ endpoints:
         formatter: https://directory.libsyn.com/shows/view/id/$1
         #formatter (?): https://$1.libsyn.com/
         title: Libsyn
+    linkedin:
+        formatter: https://www.linkedin.com/in/$1
+        title: LinkedIn
     pinterest:
         formatter: https://www.pinterest.com/$1/
         title: Pinterest
