@@ -283,11 +283,12 @@ dovid_taub:
     endpoints:
         #blog: https://thedovid-blog.tumblr.com/
         chabad_org_kid: "8703"
-        #facebook: thedovid
-        #https://www.imdb.com/name/nm2253534/
+        facebook: thedovid
+        imdb_name: "2253534"
         #instagram: thedovid
+        linkedin: dovid-taub-819644111
         #twitter: thedovid
-        #youtube: dovidtaub
+        youtube: dovidtaub
 hebrewbooks:
     title: HebrewBooks.org
     endpoints:
@@ -369,9 +370,10 @@ itche_kadoozy:
     media_type: video
     title: The Itche Kadoozy Show
     endpoints:
-        #https://www.imdb.com/title/tt0799878/
         web: https://www.chabad.org/iks
         chabad_org_aid: "365676"
+        facebook: itchekadoozyshow
+        imdb_title: "0799878"
         youtube_channel: UC7iUU1jT4wSgQ71hCgM14yA
     target_audience: [children, children-at-heart]
     source_description: Enter the world of Rabbi Itche Kadoozy, where a normal day is never quite normal, big laughs are to be expected, and Torah lessons can be found around every corner.
@@ -583,6 +585,14 @@ rabbi_shais_taub:
         instagram: rabbi_shais_taub
         torahanytime_speaker: "1042"
         wikidata: Q7462485
+rabbi_yy_jacobson:
+    title: Rabbi YY Jacobson
+    endpoints:
+        chabad_org_kid: "198"
+        linkedin: yyjacobson
+        torahanytime_speaker: "369"
+        twitter: YYJacobson
+        wikidata: Q8055896
 Rebbedrive:
     title: RebbeDrive
     languages: [he, en]
@@ -769,6 +779,24 @@ story_time_with_uncle_yossi:
     main_category: entertainment
     tags: [entertainment, stories]
 #the_living_archive brand vechulu
+theyeshiva_net:
+    related_ids:
+        rabbi_yy_jacobson: author
+    title: TheYeshiva.net
+    content_type: group
+    media_type: video
+    endpoints:
+        web: https://www.theyeshiva.net/
+        android: net.theyeshiva.app
+        apple_podcast: "1092920184"
+        facebook: TheYeshiva
+        iheartradio_podcast: "31138059"
+        ios: "1074354259"
+        twitter: TheYeshiva
+        youtube: TheYeshiva
+        youtube_channel: UCwiVeBUpUQGOLhEd9DSMMrg
+    main_category: learning
+    tags: [learning]
 torah_treasure:
     title: Torah Treasure
     endpoints:
