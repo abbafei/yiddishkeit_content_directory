@@ -509,8 +509,8 @@ merkaz_anash:
         web: http://merkazanash.com/
 mitzvah_boulevard:
     related_ids:
-        torah_treasure: producer
-        torah_treasure_content: subitem_of
+        toveedo: producer
+        toveedo_content: subitem_of
     title: Mitzvah Boulevard
     content_type: group
     media_type: video
@@ -797,26 +797,28 @@ theyeshiva_net:
         youtube_channel: UCwiVeBUpUQGOLhEd9DSMMrg
     main_category: learning
     tags: [learning]
-torah_treasure:
-    title: Torah Treasure
+toveedo:
+    title: Toveedo
     endpoints:
-        web: https://torahtreasure.com/
+        web: https://toveedo.com/
         facebook: TorahTreasure2
         youtube: TorahTreasure
-torah_treasure_content:
+    announcements:
+        - https://betweencarpools.com/we-love-torah-treasure-and-now-we-love-toveedo/
+toveedo_content:
     related_ids:
-        torah_treasure: host
-    title: Torah Treasure
+        toveedo: host
+    title: Toveedo
     container_type: app
     media_type: video
     content_type: group
     target_audience: [children]
     endpoints:
-        web: https://torahtreasure.com/
+        web: https://toveedo.com/
         android: tv.torahtreasure.android
         ios: "1245060220"
     fee: true
-    source_description: An APP and website that has a wide variety of educational, fun entertainment for kids in a safe, ad-free space. In today’s day and age, even very young children spend time watching videos and Torah Treasure ensures that the content that we create and license is up to our Torah values. 
+    source_description: The Jewish videos your kids love, all in one happy place.
     main_category: entertainment
     tags: [entertainment]
 vaad_hatmimim: 
