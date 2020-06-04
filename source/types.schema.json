@@ -2,17 +2,9 @@
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://yiddishkeit.info/schemas/items.schema.json",
     "definitions": {
-        "type_value_entry": {
-            "type": "object",
-            "properties": {
-                "title": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                }
-            }
-        }
+		"category_identifier": {
+			"type": "string"
+		}
     },
     "type": "object",
     "properties": {
@@ -36,10 +28,37 @@
                     "third_party_content": {
                         "type": "boolean",
                         "description": "whether content can be added to this endpoint type by parties who do not own the item"
-                    }
+                    },
+					"wikidata": {
+						"type": "string",
+						"pattern": "P\\d+",
+						"description": "Wikidata property for this endpoint type"
+					}
                 }
             }
-        }
+        },
+		"categories": {
+            "type": "object",
+            "additionalProperties": {
+				"type": "object",
+				"additionalProperties": false,
+				"propertyNames": {
+					"$ref": "#/definitions/category_identifier"
+				},
+				"properties": {
+					"title": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"parent": {
+						"$ref": "#/definitions/category_identifier",
+						"description": "category that this category is a subcategory (a.k.a. child, or part) of"
+					}
+				}
+			}
+		}
     },
     "additionalProperties": {
         "type": "object",
