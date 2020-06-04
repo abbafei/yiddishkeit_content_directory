@@ -62,7 +62,11 @@ TODO
 		- make a schema for for unprocessed/input objects too?
 		- add possible values from types and items in schema
 			- maybe with JSON patch.
-		- types.yml schema?
+		- types.yml schema
+			- additionalProperties no for most zachin?
+			- categories json patch injection?
+			- endpoints wikidata checking?
+		- validate endpoint refs with regexes (from wikidata maybe)?
 	- item info
 		- languages
 			- language codes - which system/standard should these follow?
@@ -91,6 +95,8 @@ TODO
 				- also date etc. fields?
 		- content types
 			- for series content type, make a data field for how often items in series are released, if applicable? (daily, weekly, monthly, etc.)
+		- media types
+			- allow multiple? if so make processing and rendering zachin handle it
 		- source_{description,subtitle}
 			- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 				- add remaining keys (description etc. at present) to item info pages
@@ -118,6 +124,7 @@ TODO
 			- use "log" filter to debug?
 	- rendering etc.
 		- media type icons - maybe from bootstrap icons
+		- blog posts - english dates too?
 		- item links and more macros/functions in templating vechulu
 			- eleventyConfig.addFilter("item_id_to_info_link", function(value) { return `items/${this.slug(value)}`; });
 				- or shortcode?
