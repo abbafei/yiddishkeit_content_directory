@@ -200,14 +200,14 @@ related_id_types:
         title: Has content from
         description: the item(s?) whose content this item uses
     host:
-        title: Hosted on
+        title: Hosted by
         description: the item(s) that host this item
     producer:
         title: Produced by
         description: the item(s) that produced this item
     subitem_of:
         title: Is part of
-        description: the item that this is a sub-item (aka part or contained-by) of
+        description: the content of this item is a sub-item (aka part or contained-by) of
 target_audiences:
     children:
         title: children
