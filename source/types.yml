@@ -54,7 +54,7 @@ endpoints:
         formatter: https://www.chabad.org/$1
         title: Chabad.org page
     chabad_org_kid:
-        formatter: https://www.chabad.org/search/keyword_cdo/kid/$1/
+        formatter: https://www.chabad.org/k$1
         title: Chabad.org item
     donorbox:
         formatter: https://donorbox.org/$1

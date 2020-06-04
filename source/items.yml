@@ -137,9 +137,10 @@ chabad_org_music_app:
         android: com.radioco.m22310aa09
         chabad_org_aid: "3963654"
         ios: "1360236938"
-        tunein: Chabadorg-Jewish-Music-s305576
+        tunein: s305576
     announcements:
         - https://www.chabad.org/blogs/blog_cdo/aid/4140232/jewish/Chabadorg-Music-Radio-App-Launched.htm
+        - https://www.facebook.com/ChabadOrg/posts/10156600947835883/
     main_category: music
     tags: [music]
 chabad_org_music_section:
@@ -154,6 +155,23 @@ chabad_org_music_section:
     source_description: Listen to our collection of Jewish music and Chassidic songs that inspire the heart and express the soul. Also enjoy listening to and learning the traditional Shabbat songs and prayers.
     main_category: music
     tags: [music]
+chabad_org_radio:
+    related_ids:
+        chabad_org: [producer, host, brand]
+    title: Chabad.org Radio
+    media_type: audio
+    container_type: [app, stream]
+    content_type: channel
+    endpoints:
+        web: https://www.chabad.org/Radio
+        android: com.radioco.m7a0dc3e4d
+        chabad_org_aid: "3921992"
+        ios: "1339617598"
+        tunein: s303294
+    announcements:
+        - https://crownheights.info/something-jewish/607420/chabad-org-launches-internet-radio-station/
+    main_category: learning
+    tags: [learning]
 chabad_org_stories_section:
     related_ids:
         chabad_org_inspiration_entertainment: subitem_of
@@ -167,6 +185,21 @@ chabad_org_stories_section:
         chabad_org_aid: "109851"
     main_category: entertainment
     tags: [entertainment]
+chabadtalk_podcast:
+    title: ChabadTalk Podcast
+    related_ids:
+        chabad_org: host
+        tzvi_freeman: author
+    media_type: audio
+    content_type: series
+    container_type: podcast
+    endpoints:
+        web: https://www.chabad.org/multimedia/audio_cdo/aid/4100607/jewish/ChabadTalk-Podcast.htm
+        apple_podcast: "1435079242"
+        chabad_org_aid: "4100607"
+        iheartradio_podcast: "31079681"
+    main_category: learning
+    tags: [learning]
 chaim_the_storyteller:
     related_ids:
         chabad_org: host
@@ -243,7 +276,7 @@ chitas_for_kids_audio:
     endpoints:
         web: https://kidschitas.org/listen
         libsyn: kidschitas
-        tunein: Chitas-for-Kids-Audio-p1234415
+        tunein: p1234415
         apple_podcast: "1473205884"
     target_audience: [children, adults]
     main_category: learning
@@ -421,6 +454,7 @@ jem_tv:
 kabbala_toons:
     related_ids:
         chabad_org: [host, brand]
+        tzvi_freeman: author
     content_type: group
     title: KabbalaToons
     media_type: video
@@ -534,6 +568,7 @@ mitzvah_boulevard_shabbos:
 mitzvah_island:
     related_ids:
         chabad_org: host
+        dovid_taub: author
     media_type: video
     content_type: series
     title: Mitzvah Island
@@ -824,6 +859,19 @@ toveedo_content:
     source_description: The Jewish videos your kids love, all in one happy place.
     main_category: entertainment
     tags: [entertainment]
+tzvi_freeman:
+    title: Tzvi Freeman
+    endpoints:
+        amazon_author: B00354ZKE4
+        chabad_org_kid: "193"
+        facebook: TzviFreeman
+        goodreads_author: "59067"
+        imdb_name: "3435739"
+        linkedin:
+            - tzvi-freeman-48a39712
+            - tzvi-freeman-27a60a4a
+        twitter: tzvifreeman
+        wikidata: Q80554081
 vaad_hatmimim: 
     title: Vaad Talmidei Hatmimim
     endpoints:
