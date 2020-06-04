@@ -46,6 +46,7 @@ async function proc_items({items_file_path, types_file_path, items_schema_file_p
     const items_schema_out = fast_json_patch.applyPatch(items_schema_inp, schema_type_values_patch).newDocument;
 
     // validate output item info
+    validate_schema({schema: types_schema, validating_name: "types.json", data: types_info});
     validate_schema({schema: items_schema_out, validating_name: "items.json", data: items_out["dict"]});
 
     return items_out;
