@@ -491,6 +491,48 @@ jem_tv:
         - https://jemcentral.org/2020/03/16/island-of-calm/
     main_category: Rebbe
     tags: [Rebbe]
+jli:
+    title: Jewish Learning Institute
+    endpoints:
+        web: https://www.myjli.com/
+        facebook: myJLI
+        twitter: myjli
+        wikidata: Q16932258
+        youtube: myjli
+        youtube_channel: UCESz8P8IVAdOV-vcfavS1qA
+jnet:
+    related_ids:
+        merkos_302: brand
+    title: JNet
+    endpoints:
+        web: https://www.jnet.org/
+        blog:
+            -
+                ref: https://merkos302.com/category/education/jnet/
+                label: Merkos302 JNet category
+        facebook: JewishLearningNetwork
+    announcements:
+        - https://www.chabad.org/news/article_cdo/aid/621373/jewish/Learning-Network-Connects-Jews-Around-the-World.htm
+        - http://lubavitch.com/news/article/2030305/JNet-Study-Partners-Celebrate-Ancient-Custom.html
+        - https://www.chabad.org/news/article_cdo/aid/1507652/jewish/Global-Initiative-Unites-Distant-Jews.htm
+        - https://www.chabad.org/news/article_cdo/aid/2372138/jewish/Making-the-Most-of-Torah-by-Telephone.htm
+        - https://crownheights.info/chabad-news/645087/jnet-honors-volunteers-at-6th-annual-dinner/
+        - https://collive.com/jnet-holds-appreciation-dinner/
+        - https://anash.org/chavrusas-of-6-years-finally-meet-at-jnet-dinner/
+    main_category: doing
+    tags: [learning, doing]
+jnet_online_classes:
+    related_ids:
+        chabad_org: host
+        jnet: [brand, producer]
+    title: JNet Online Classes
+    content_type: series
+    media_type: video
+    endpoints:
+        web: https://www.chabad.org/multimedia/video_cdo/aid/2954724/jewish/JNet-Online-Classes.htm
+        chabad_org_aid: "2954724"
+    main_category: learning
+    tags: [shiurim]
 kabbala_toons:
     related_ids:
         chabad_org: [host, brand]
@@ -582,6 +624,18 @@ merkaz_anash:
     title: Merkaz Anash
     endpoints:
         web: http://merkazanash.com/
+merkos_302:
+    title: Merkos Suite 302
+    endpoints:
+        web: https://merkos302.com/
+        blog:
+            -
+                ref: https://merkos302.wordpress.com/
+                label: old blog
+
+        linkedin_company: merkos-302---chabad-world-headquarters
+        vimeo: user38477828
+        youtube_channel: UCJF5jSQ1h4Go_W50H0E_vsQ
 mitzvah_boulevard:
     related_ids:
         toveedo: producer
@@ -631,6 +685,23 @@ my_encounter:
             - http://myencounterblog.com/
             - https://jemcentral.org/my-encounter/
         facebook: My-Encounter-with-the-Rebbe-311217318011
+myjli_videos:
+    related_ids:
+        jli: producer
+    title: MyJLI videos
+    content_type: group
+    media_type: video
+    endpoints:
+        web:
+            -
+                ref: https://www.youtube.com/myJLI/videos
+                label: Youtube
+                is_main_url: true
+            -
+                ref: https://www.facebook.com/myJLI/videos
+                label: Facebook
+    main_category: learning
+    tags: [shiurim]
 rabbi_perl_stories:
     title: Rabbi Perl stories
     endpoints: https://www.rabbiperlstories.com/
@@ -654,6 +725,23 @@ rabbi_perl_stories_content:
         - https://crownheights.info/chabad-news/704146/stories-by-rabbi-sholem-perl-now-online/
     main_category: entertainment
     tags: [stories]
+rabbi_yitzis_blog:
+    related_ids:
+        rabbi_yitzi_hurwitz: author
+    title: Rabbi Yitzi's Blog
+    content_type: series
+    media_type: text
+    endpoints:
+        blog:
+            -
+                ref: http://yitzihurwitz.blogspot.com/
+                is_main_url: true
+        web:
+            -
+                ref: http://yitzihurwitz.blogspot.com/p/blog-page_24.html
+                label: index
+    main_category: learning
+    tags: [learning]
 Rebbedrive:
     title: RebbeDrive
     languages: [he, en]
@@ -895,6 +983,26 @@ theyeshiva_net:
         youtube_channel: UCwiVeBUpUQGOLhEd9DSMMrg
     main_category: learning
     tags: [learning, shiurim]
+torahcafe:
+    related_ids:
+        jli: [host, brand]
+    title: TorahCafe.com
+    content_type: group
+    media_type: video
+    endpoints:
+        web: https://www.torahcafe.com/
+        blog:
+            -
+                ref: https://merkos302.com/tag/torahcafe/
+                label: Merkos302 TorahCafe tag
+        facebook: TorahCafe
+        twitter: torahcafe
+        youtube: TorahCafe
+        youtube_channel: UCZK9rQGTdKm4P28DqFivj0w
+    announcements:
+        - http://lubavitch.com/news/article/2027494/Torah-Caf-Invites-Users-to-Explore-Jewish-Themes-Online.html
+    main_category: learning
+    tags: [shiurim]
 toveedo:
     title: Toveedo
     endpoints:
@@ -1006,6 +1114,43 @@ rabbi_shais_taub:
         torahanytime_speaker: "1042"
         torahcafe_scholar: rabbi-shais-taub_0000000680
         wikidata: Q7462485
+rabbi_yitzi_hurwitz:
+    title: Rabbi Yitzi Hurwitz
+    endpoints:
+        chabad_org_kid: "20754"
+        web: 
+            -
+                ref: https://www.chabad.org/library/article_cdo/aid/3592415/jewish/Rabbi-Yitzis-Corner.htm
+                label: Rabbi Yitzi's Corner at Chabad.org
+            -
+                ref: https://hurwitzfamilyfund.com/
+                label: Hurwitz Family Fund
+            -
+                ref: https://run4yitzi.com/about-yitzi/
+                label: Run4Yitzi page about Rabbi Yitzi
+            -
+                ref: https://chabadinfo.com/tag/yitzi-hurwitz/
+                label: Rabbi Yitzi Chabadinfo.com tag
+            -
+                ref: http://tefillinforyitzi.com/
+                label: TefillinForYitzi website
+    announcements:
+        - https://www.wsj.com/articles/the-life-of-a-rabbi-with-als-11567723713
+        - https://www.aish.com/sp/so/Rabbi-Yitzi-Hurwitz-is-Lighting-Up-the-World.html
+        - https://nypost.com/2019/09/08/incredibly-moving-journey-for-als-stricken-rabbi-from-brooklyn/
+        - https://newyork.cbslocal.com/2019/09/09/rabbi-yitzi-hurwitz-als-bar-mitzvah-crown-heights-brooklyn/
+        - https://collive.com/tefillin-campaign-for-rabbi-yitzis-birthday-aims-even-higher/
+        - https://collive.com/watch-live-now-kumzitz-with-rabbi-yitzi-hurwitz/
+        - http://www.amimagazine.org/2019/10/02/matchless-memories-2/
+        - https://anash.org/a-heartfelt-plea-from-rabbi-yitzi-hurwitz/
+        - https://anash.org/rewind-kumzitz-with-rabbi-yitzi-hurwitz/
+        - https://jewishmom.com/2017/07/26/inside-the-home-of-als-patient-rabbi-yitzi-hurwitz-by-ellie/
+        - https://www.sun-sentinel.com/florida-jewish-journal/fl-jj-rabbi-als-trip-son-bar-mitzvah-20190918-20190910-7xeadp6v3nbmrg4ji5qboqoyvq-story.html
+        - https://www.theyeshivaworld.com/news/general/1783855/incredible-chesed-rabbi-yitzi-hurwitz-being-flown-to-ny-by-hatzolah-air-videos-photos.html
+        - https://jewishjournal.com/judaism/180023/
+        - https://crownheights.info/chabad-news/678583/hatzalah-air-transports-rabbi-yitzi-hurwitz-to-new-york/
+        - https://matzav.com/watch-this-rabbi-yitzi-hurwitz-travels-for-sons-bar-mitzvah/
+        - https://www.timesofisrael.com/als-stricken-chabadnik-writes-hopeful-musical-message/
 rabbi_yossi_paltiel:
     title: Rabbi Yossi Paltiel
     endpoints:
