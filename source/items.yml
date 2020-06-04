@@ -17,7 +17,7 @@ aleph_beis_gimmel_english_audio:
     endpoints: https://www.alephbeisgimmel.com/audio
     languages: [en]
     main_category: learning
-    tags: [learning]
+    tags: [shiurim, shaar_habitachon]
 aleph_beis_gimmel_english_video:
     title: Shaar Habitachon shiurim - R' S. M. Rubashkin - video
     related_ids:
@@ -28,7 +28,7 @@ aleph_beis_gimmel_english_video:
     endpoints: https://www.alephbeisgimmel.com/shaar-habiitachon-in-english
     languages: [en]
     main_category: learning
-    tags: [learning]
+    tags: [shiurim, shaar_habitachon]
 ascent_of_safed:
     title: Ascent of Tzfat
     endpoints:
@@ -47,7 +47,7 @@ ascent_of_safed_stories:
     endpoints: http://ascentofsafed.com/cgi-bin/ascent.cgi?Name=Stories
     media_type: text
     main_category: entertainment
-    tags: [entertainment]
+    tags: [stories]
 ashreinu_app:
     related_ids:
         jem: [producer, brand]
@@ -113,6 +113,7 @@ chabad_org:
         twitter: Chabad
         pinterest: chabad
         instagram: chabadorg
+        wikidata: Q942400
         youtube_channel: UCc0y_E87EUnOW2m2mGJU9Gg
 chabad_org_inspiration_entertainment:
     related_ids:
@@ -171,7 +172,7 @@ chabad_org_radio:
     announcements:
         - https://crownheights.info/something-jewish/607420/chabad-org-launches-internet-radio-station/
     main_category: learning
-    tags: [learning]
+    tags: [shiurim]
 chabad_org_stories_section:
     related_ids:
         chabad_org_inspiration_entertainment: subitem_of
@@ -184,11 +185,11 @@ chabad_org_stories_section:
         web: https://www.chabad.org/library/article_cdo/aid/109851/jewish/Jewish-Stories.htm
         chabad_org_aid: "109851"
     main_category: entertainment
-    tags: [entertainment]
+    tags: [stories]
 chabadtalk_podcast:
     title: ChabadTalk Podcast
     related_ids:
-        chabad_org: host
+        chabad_org: [host, brand]
         tzvi_freeman: author
     media_type: audio
     content_type: series
@@ -213,7 +214,7 @@ chaim_the_storyteller:
     content_type: group
     target_audience: [young children, children]
     main_category: entertainment
-    tags: [entertainment, stories]
+    tags: [stories]
 chayenu:
     title: Chayenu
     endpoints:
@@ -238,10 +239,9 @@ chayenu_app:
         - https://collive.com/chayenu-releases-slick-new-app/
         - https://gorinsystems.com/portfolio-item/chayenu/
     main_category: learning
-    tags: [learning]
+    tags: [learning, chitas]
 chitas_for_kids:
     title: Chitas for Kids
-    content_type: series
     endpoints:
         web:
             - https://kidschitas.org/
@@ -252,7 +252,7 @@ chitas_for_kids:
     #    - https://anash.org/learn-chitas-play-and-win/
     target_audience: [children, adults]
     main_category: learning
-    tags: [learning]
+    tags: [learning, shiurim, chitas]
 chitas_for_kids_app:
     related_ids:
         chitas_for_kids: [content, producer]
@@ -265,7 +265,7 @@ chitas_for_kids_app:
         ios: "1346381806"
     target_audience: [children, adults]
     main_category: learning
-    tags: [learning]
+    tags: [learning, shiurim, chitas]
 chitas_for_kids_audio:
     related_ids:
         chitas_for_kids: subitem_of
@@ -280,7 +280,7 @@ chitas_for_kids_audio:
         apple_podcast: "1473205884"
     target_audience: [children, adults]
     main_category: learning
-    tags: [learning]
+    tags: [learning, shiurim, chitas]
 derher:
     title: A Chassidisher Derher
     related_ids:
@@ -311,18 +311,17 @@ derher_monthly:
     content_type: series
     main_category: learning
     tags: [Rebbe, learning]
-dovid_taub:
-    title: Dovid Taub
+gate_of_trust:
+    title: Gateoftrust.org
+    related_ids:
+        chayenu: producer
     endpoints:
-        blog: https://thedovid-blog.tumblr.com/
-        chabad_org_kid: "8703"
-        facebook: thedovid
-        goodreads_author: "18494767"
-        imdb_name: "2253534"
-        instagram: thedovid
-        linkedin: dovid-taub-819644111
-        #twitter: thedovid
-        youtube: dovidtaub
+        web: https://www.gateoftrust.org/
+        facebook: gateoftrust
+        instagram: gateoftrust
+    announcements:
+        - https://collive.com/chayenu-launches-website-to-gain-trust-in-hashem/
+    tags: [shaar_habitachon]
 hebrewbooks:
     title: HebrewBooks.org
     endpoints:
@@ -348,6 +347,7 @@ hebrewbooks_app:
         android: org.hebrewbooks.mobile
     announcements:
         - https://collive.com/thousands-of-seforim-free/
+    tags: [learning, seforim]
 hebrewbooks_english:
     related_ids:
         hebrewbooks_library: subitem_of
@@ -356,7 +356,7 @@ hebrewbooks_english:
     content_type: group
     endpoints: https://hebrewbooks.org/english
     main_category: more
-    tags: [Rebbe, entertainment]
+    tags: [Rebbe, entertainment, learning, stories]
 hebrewbooks_library:
     related_ids:
         hebrewbooks: host
@@ -379,7 +379,7 @@ heres_my_story_english:
         chabad_org_aid: "2184170"
     source_description: Part of JEM's My Encounter with the Rebbe oral history project, dedicated to documenting the life of the Rebbe.
     main_category: Rebbe
-    tags: [Rebbe]
+    tags: [Rebbe, stories]
 heres_my_story_hebrew:
     related_ids:
         my_encounter: [producer, brand]
@@ -397,10 +397,49 @@ heres_my_story_hebrew:
         chabad_org_aid: "3607191"
     source_description: "חלק מפרוייקט \"הפגישה שלי עם הרבי\", המופק על-ידי חברת JEM, ומטרתו לתעד את חייו של הרבי מליובאוויטש."
     main_category: Rebbe
-    tags: [Rebbe]
+    tags: [Rebbe, stories]
+inside_chassidus:
+    related_ids:
+        rabbi_yossi_paltiel: author
+    title: Inside Chassidus
+    content_type: group
+    media_type: video # FIXME: also audio?
+    endpoints:
+        web: https://insidechassidus.org/
+        apple_podcast: "1448918014"
+        chabad_org_kid: "22846"
+        facebook: insidechassidus.org
+        facebook_group: "6155644075"
+        iheartradio_podcast: "31095182"
+        instagram: insidechassidus
+        linkedin_company: inside-chassidus
+        stitcher: inside-chassidus
+        youtube_channel: UC1GcXRqadrqHwJB9nJFRHvA
+    announcements:
+        - https://collive.com/inside-chassidus-offers-thousands-of-chassidus-classes-free/
+    main_category: learning
+    tags: [shiurim]
+inside_chassidus_app:
+    related_ids:
+        inside_chassidus: [content, brand]
+    title: Inside Chassidus App
+    container_type: app
+    content_type: group
+    media_type: audio
+    endpoints:
+        android: org.insidechassidus.inside_chassidus
+        ios: "1485498089"
+    announcements:
+        - https://anash.org/new-app-offers-chassidus-in-the-palm-of-your-hand/
+        - https://collive.com/app-offers-wealth-of-chassidus/
+        - https://crownheights.info/chabad-news/698881/rabbi-paltiels-inside-chassidus-launches-app/
+    main_category: learning
+    tags: [shiurim]
 itche_kadoozy:
     related_ids:
         chabad_org: host
+        dovid_taub: author
+        jonathan_goorvich: author
     media_type: video
     title: The Itche Kadoozy Show
     endpoints:
@@ -408,6 +447,7 @@ itche_kadoozy:
         chabad_org_aid: "365676"
         facebook: itchekadoozyshow
         imdb_title: "0799878"
+        wikidata: Q83799138
         youtube_channel: UC7iUU1jT4wSgQ71hCgM14yA
     target_audience: [children, children-at-heart]
     source_description: Enter the world of Rabbi Itche Kadoozy, where a normal day is never quite normal, big laughs are to be expected, and Torah lessons can be found around every corner.
@@ -479,7 +519,7 @@ lchaim_weekly:
     announcements:
         - https://collive.com/missing-the-mivtzoim-route-send-the-lchaim/
     main_category: learning
-    tags: [learning, entertainment]
+    tags: [learning, entertainment, stories]
 living_torah:
     related_ids:
         jem: [producer, brand]
@@ -613,24 +653,7 @@ rabbi_perl_stories_content:
         - https://anash.org/master-storyteller-makes-everything-available-online/
         - https://crownheights.info/chabad-news/704146/stories-by-rabbi-sholem-perl-now-online/
     main_category: entertainment
-    tags: [entertainment, stories]
-rabbi_shais_taub:
-    title: Rabbi Shais Taub
-    endpoints:
-        amazon_author: B0041OUKJW
-        chabad_org_kid: "10572"
-        goodreads_author: "7654139"
-        instagram: rabbi_shais_taub
-        torahanytime_speaker: "1042"
-        wikidata: Q7462485
-rabbi_yy_jacobson:
-    title: Rabbi YY Jacobson
-    endpoints:
-        chabad_org_kid: "198"
-        linkedin: yyjacobson
-        torahanytime_speaker: "369"
-        twitter: YYJacobson
-        wikidata: Q8055896
+    tags: [stories]
 Rebbedrive:
     title: RebbeDrive
     languages: [he, en]
@@ -678,10 +701,17 @@ Rebbedrive_video:
         google_drive_folder: 0B_WSU737WJ1ffmpRZHpRaGQ2ZzJFeUdkSEtJYTIzcHE5Njdkb0hpTnZmRW1iLVMzMnZsOHc
     main_category: Rebbe
     tags: [Rebbe]
-reb_sm_rubashkin:
-    title: Reb Sholom Mordechai Rubashkin
-    endpoints:
-        torahanytime_speaker: "1076"
+shaar_habitachon_chayenu_text:
+    related_ids:
+        chayenu: producer
+        gate_of_trust: host
+    title: Shaar HaBitachon
+    languages: [he, en]
+    media_type: text
+    content_type: item
+    endpoints: https://www.gateoftrust.org/gate-of-trust-text
+    main_category: learning
+    tags: [shaar_habitachon]
 sie:
     title: Sichos in English
     endpoints:
@@ -708,7 +738,7 @@ sie_lib_stories_history:
     media_type: text
     endpoints: https://www.sie.org/templates/sie/article_cdo/aid/2346851/jewish/Stories-History.htm
     main_category: entertainment
-    tags: [Rebbe, entertainment]
+    tags: [Rebbe, entertainment, stories]
 simply_chassidus:
     title: Simply Chassidus
     content_type: group
@@ -721,7 +751,7 @@ simply_chassidus:
         - https://anash.org/simply-chassidus-moves-to-next-step/
         - https://anash.org/new-resources-assist-basi-lgani-study/
     main_category: learning
-    tags: [learning]
+    tags: [Rebbe, learning]
 small_wonder_puppets:
     title: Small Wonder Puppet Theatre
     endpoints:
@@ -765,15 +795,21 @@ soulwords_shaar_habitachon:
             -
                 ref: PL1he-JRtnKegzLXc4NPIQhcadCJz6s4pM
                 is_main_url: true
+        web:
+            -
+                ref: https://www.gateoftrust.org/rabbi-shais-taub
+                label: Gateoftrust.org
     media_type: video
     content_type: series
     announcements:
         - https://collive.com/learn-shaar-habitachon-with-rabbi-taub/
     main_category: learning
-    tags: [learning]
+    tags: [shaar_habitachon, shiurim]
 space_rabbi:
     related_ids:
         chabad_org: host
+        dovber_naiditch: author
+        dovid_taub: author
     content_type: series
     title: Space Rabbi
     media_type: video
@@ -789,6 +825,8 @@ space_rabbi:
 stick_figure_vignettes:
     related_ids:
         chabad_org: host
+        dovber_naiditch: author
+        dovid_taub: author
     content_type: series
     title: Stick Figure Vignettes
     media_type: video
@@ -802,7 +840,7 @@ stick_figure_vignettes:
         - https://collive.com/stick-figures-show-returns/
     source_description: 30 second animated shorts using stick figures to explore Jewish philosophy. Bizarre yet intriguing. Oh, and kind of funny.
     main_category: entertainment
-    tags: [entertainment]
+    tags: [entertainment, learning]
 story_time_with_uncle_yossi:
     related_ids:
         chabad_org: host
@@ -815,12 +853,34 @@ story_time_with_uncle_yossi:
         web: https://www.chabad.org/kids/article_cdo/aid/4572067/jewish/Story-Time-with-Uncle-Yossi.htm
         chabad_org_aid: "4572067"
     main_category: entertainment
-    tags: [entertainment, stories]
+    tags: [stories]
+stump_the_rabbi:
+    title: Stump the Rabbi
+    content_type: series
+    media_type: video
+    endpoints:
+        web:
+            - https://stumptherabbi.org/
+            -
+                ref: https://collive.com/category/videos/stump-the-rabbi/
+                label: COLlive.com category
+            -
+                ref: https://chabadinfo.com/tag/stump-the-rabbi/
+                label: Chabadinfo.com tag
+        apple_podcast: "1414621266"
+        facebook: Stumptherabbi
+        iheartradio_podcast: "31052251"
+        instagram: stumptherabbi
+        youtube: stumptherabbi
+        youtube_channel: UCcfX8YHCKthGYzPgrLf8QIQ
+    main_category: learning
+    tags: [shiurim]
 #the_living_archive brand vechulu
 theyeshiva_net:
     related_ids:
         rabbi_yy_jacobson: author
     title: TheYeshiva.net
+    container_type: app
     content_type: group
     media_type: video
     endpoints:
@@ -834,7 +894,7 @@ theyeshiva_net:
         youtube: TheYeshiva
         youtube_channel: UCwiVeBUpUQGOLhEd9DSMMrg
     main_category: learning
-    tags: [learning]
+    tags: [learning, shiurim]
 toveedo:
     title: Toveedo
     endpoints:
@@ -859,19 +919,6 @@ toveedo_content:
     source_description: The Jewish videos your kids love, all in one happy place.
     main_category: entertainment
     tags: [entertainment]
-tzvi_freeman:
-    title: Tzvi Freeman
-    endpoints:
-        amazon_author: B00354ZKE4
-        chabad_org_kid: "193"
-        facebook: TzviFreeman
-        goodreads_author: "59067"
-        imdb_name: "3435739"
-        linkedin:
-            - tzvi-freeman-48a39712
-            - tzvi-freeman-27a60a4a
-        twitter: tzvifreeman
-        wikidata: Q80554081
 vaad_hatmimim: 
     title: Vaad Talmidei Hatmimim
     endpoints:
@@ -891,7 +938,7 @@ weekly_farbrengen:
     media_type: text
     endpoints: http://merkazanash.com/ly
     main_category: learning
-    tags: [learning]
+    tags: [learning, stories]
 wrapp:
     title: Wrapp
     endpoints:
@@ -920,3 +967,75 @@ wrapp_app:
         - http://beismoshiachmagazine.org/articles/mivtza-tefillin-for-a-new-era.html
     main_category: doing
     tags: [doing]
+# authors
+dovber_naiditch:
+    title: DovBer Naiditch
+    endpoints:
+        chabad_org_kid: "17798"
+        goodreads_author: "15234435"
+        #facebook: dovber.naiditch
+        #imdb_name: 10969000
+        #linkedin: dov-naiditch-42b11439
+        #twitter: DovBerNaiditch
+dovid_taub:
+    title: Dovid Taub
+    endpoints:
+        #blog: https://thedovid-blog.tumblr.com/
+        chabad_org_kid: "8703"
+        #facebook: thedovid
+        goodreads_author: "18494767"
+        imdb_name: "2253534"
+        #instagram: thedovid
+        #linkedin: dovid-taub-819644111
+        #twitter: thedovid
+        wikidata: Q83799144
+        #youtube: dovidtaub
+jonathan_goorvich:
+    title: Jonathan Goorvich
+    endpoints:
+        chabad_org_kid: "9420"
+        wikidata: Q83799163
+rabbi_shais_taub:
+    title: Rabbi Shais Taub
+    endpoints:
+        amazon_author: B0041OUKJW
+        chabad_org_kid: "10572"
+        gateoftrust_author: rabbi-shais-taub
+        goodreads_author: "7654139"
+        instagram: rabbi_shais_taub
+        torahanytime_speaker: "1042"
+        torahcafe_scholar: rabbi-shais-taub_0000000680
+        wikidata: Q7462485
+rabbi_yossi_paltiel:
+    title: Rabbi Yossi Paltiel
+    endpoints:
+        chabad_org_kid: "22846"
+        linkedin: yossi-paltiel-43bb1973
+        torahcafe_scholar: rabbi-yossi-paltiel_0000000402
+rabbi_yy_jacobson:
+    title: Rabbi YY Jacobson
+    endpoints:
+        chabad_org_kid: "198"
+        linkedin: yyjacobson
+        torahanytime_speaker: "369"
+        torahcafe_scholar: rabbi-yy-jacobson_0000000249
+        twitter: YYJacobson
+        wikidata: Q8055896
+reb_sm_rubashkin:
+    title: Reb Sholom Mordechai Rubashkin
+    endpoints:
+        torahanytime_speaker: "1076"
+tzvi_freeman:
+    title: Tzvi Freeman
+    endpoints:
+        amazon_author: B00354ZKE4
+        chabad_org_kid: "193"
+        facebook: TzviFreeman
+        goodreads_author: "59067"
+        imdb_name: "3435739"
+        linkedin:
+            - tzvi-freeman-48a39712
+            - tzvi-freeman-27a60a4a
+        torahcafe_scholar: rabbi-tzvi-freeman_0000000224
+        twitter: tzvifreeman
+        wikidata: Q80554081
