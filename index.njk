@@ -5,10 +5,7 @@ eleventyNavigation:
     title: Home
 ---
 {%- extends "page.njk" %}
-{%- from "util.njk" import more_info_link %}
-{% macro info_type(type, flow=true) -%}
-, <span class="sr-only">, </span><span class="ml-1"><span>{{ type }}</span>{% if not flow %}:</span>{% endif %}{{ caller() }}
-{%- endmacro %}
+{%- import "util.njk" as util %}
 {%- block head_extra %}
 <link rel="canonical" href="{{ defs.main_address }}">
 {%- for profile in defs.external_profiles %}
@@ -28,22 +25,7 @@ eleventyNavigation:
     <li>{{ category.title }}
     <ul>
       {%- for item in items %}
-        <li>
-          <span>
-          {%- if "main_url" in item %}
-            <a href="{{ item.main_url }}">{{ item.title }}</a>
-          {%- else %}
-            {{ item.title }}
-          {% endif %}
-          </span>
-          {{ more_info_link(item.id) }}
-          {%- if "target_audience" in item -%}{%- call info_type("For", flow=false) -%}
-          {% set comma = joiner(", ") %}{% for audience in item.target_audience -%}<span class="sr-only">{{ " and " if loop.last and not loop.first else comma() }}</span><span class="badge badge-pill badge-light">{{ types.target_audiences[audience].title }}</span>{% endfor %}
-          {%- endcall -%}{%- endif %}
-          {%- if "fee" in item -%}{%- call info_type("Fee", flow=false) -%}
-            <span class="badge badge-pill badge-light">{{ "yes" if item.fee[0].has_fee else "no" }}</span>{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}
-          {%- endcall -%}{%- endif %}
-        </li>
+        <li>{{ util.item_entry(item, types, hide_fields=["media_type", "main_category", "tags"]) }}</li>
       {%- endfor %}
     </ul>
     </li>

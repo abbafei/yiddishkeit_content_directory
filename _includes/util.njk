@@ -2,3 +2,28 @@
 {%- macro more_info_link(item_id) -%}
 (<a href="/item/{{ item_id | slug }}">More info</a>)
 {%- endmacro -%}
+
+{% macro _info_type(type, flow=true) -%}
+, </span><span class="ml-1">{{ type }}{% if not flow %}:</span><span class="sr-only"> </span>{% endif %}{{ caller() }}
+{%- endmacro %}
+
+{% macro _info_list(list_elements, type_defs) -%}
+{% for list_element in list_elements -%}{% if loop.last and not loop.first %}<span class="sr-only"> and </span>{% elif not loop.first %}<span class="sr-only">, </span>{% endif %}<span class="badge badge-pill badge-light">{{ type_defs[list_element].title }}</span>{% endfor %}
+{%- endmacro %}
+
+{%- macro item_entry(item, types, hide_fields) -%}
+{%- if "main_url" in item -%}
+<a href="{{ item.main_url }}">{{ item.title }}</a>
+{%- else %}
+{{- item.title }}
+{%- endif %} {{ more_info_link(item.id) -}}
+{%- if "target_audience" in item and "target_audience" not in hide_fields -%}{%- call _info_type("For", flow=false) -%}
+{{- _info_list(item.target_audience, types.target_audiences) }}
+{%- endcall -%}{%- endif -%}
+{%- if "fee" in item and "fee" not in hide_fields -%}{%- call _info_type("Fee", flow=false) -%}
+<span class="badge badge-pill badge-light">{{ "yes" if item.fee[0].has_fee else "no" }}</span>{%- if "description" in item.fee[0] %} ({{ item.fee[0].description }}){%- endif -%}
+{%- endcall %}{%- endif -%}
+{%- if "tags" in item and "tags" not in hide_fields -%}{%- call _info_type("Tags", flow=false) -%}
+{{- _info_list(item.tags, types.categories) }}
+{%- endcall -%}{%- endif -%}
+{%- endmacro -%}

@@ -127,6 +127,7 @@ TODO
 			- use "log" filter to debug?
 	- rendering etc.
 		- media type icons - maybe from bootstrap icons
+		- microdata on item pages?
 		- blog posts - english dates too?
 		- item links and more macros/functions in templating vechulu
 			- eleventyConfig.addFilter("item_id_to_info_link", function(value) { return `items/${this.slug(value)}`; });
