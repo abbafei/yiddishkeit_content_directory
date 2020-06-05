@@ -15,8 +15,6 @@ categories:
         parent: entertainment
     learning:
         title: Learning
-    more:
-        title: More
     # subcategories
     chitas:
         title: Chitas

@@ -373,7 +373,7 @@ hebrewbooks_english:
     media_type: text
     content_type: group
     endpoints: https://hebrewbooks.org/english
-    main_category: more
+    main_category: learning
     tags: [Rebbe, entertainment, learning, stories]
 hebrewbooks_library:
     related_ids:

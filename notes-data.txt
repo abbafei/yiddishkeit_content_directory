@@ -60,8 +60,7 @@ TODO
 		- add items in this list to gitlab issue tracker :-)
 	- schemas etc.
 		- make a schema for for unprocessed/input objects too?
-		- add possible values from types and items in schema
-			- maybe with JSON patch.
+		- deduplicate and share content between types and items schemas
 		- types.yml schema
 			- additionalProperties no for most zachin?
 			- categories json patch injection?
@@ -96,7 +95,9 @@ TODO
 		- content types
 			- for series content type, make a data field for how often items in series are released, if applicable? (daily, weekly, monthly, etc.)
 		- media types
-			- allow multiple? if so make processing and rendering zachin handle it
+			- allow multiple?
+				- if so make processing and rendering zachin handle it
+				- can remove "more" media type if so
 		- source_{description,subtitle}
 			- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 				- add remaining keys (description etc. at present) to item info pages
