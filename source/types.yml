@@ -37,6 +37,8 @@ container_types:
         title: Podcast
     stream:
         title: Stream
+    virtual_assistant:
+        title: Virtual assistant
 content_types:
     channel: # TODO rename to station?
         title: Channel
@@ -52,6 +54,9 @@ content_types:
         description: an ordered collection of items
 endpoints:
     # TODO: pull from wikidata properties? example https://www.wikidata.org/wiki/Property:P3418 formatter url for play store
+    alexa_skill:
+        formatter: https://www.amazon.com/dp/$1
+        title: Alexa skill
     amazon_author:
         formatter: https://amazon.com/wd/e/$1
         title: Amazon.com author
@@ -83,6 +88,10 @@ endpoints:
     facebook_group:
         formatter: https://www.facebook.com/groups/$1/
         title: Facebook group
+    flickr:
+        formatter: https://www.flickr.com/photos/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3267&oldid=1188884226
+        title: Flickr
+        wikidata: P3267
     gateoftrust_author:
         formatter: https://www.gateoftrust.org/scholars-2/$1
         title: Gateoftrust.com author
@@ -91,6 +100,9 @@ endpoints:
         title: Goodreads author
         third_party_content: true
         wikidata: P2963
+    google_assistant_action:
+        formatter: https://assistant.google.com/services/invoke/uid/$1
+        title: Google Assistant action
     google_drive_folder:
         formatter: https://drive.google.com/drive/folders/$1
         title: Google Drive folder
@@ -114,6 +126,10 @@ endpoints:
         formatter: https://apps.apple.com/us/app/id$1
         title: iTunes Store
         wikidata: P3861
+    ios_dev:
+        formatter: https://apps.apple.com/us/developer/id$1 # via https://www.wikidata.org/w/index.php?title=Property:P5260&oldid=1176513528
+        title: iTunes Store developer
+        wikidata: P5260
     libsyn:
         formatter: https://directory.libsyn.com/shows/view/id/$1
         #formatter (?): https://$1.libsyn.com/
