@@ -107,14 +107,32 @@ chabad_org:
     title: Chabad.org
     # TODO: make item for each language site
     #languages: [he, en, fr, ru, es, de, pt, it]
+    container_type: app
     endpoints:
         web: https://www.chabad.org/
+        android: org.chabad.mobile
         facebook: ChabadOrg
-        twitter: Chabad
-        pinterest: chabad
+        flickr: chabadlubavitch
         instagram: chabadorg
+        ios: "1127567979"
+        ios_dev: "1127567978"
+        pinterest: chabad
+        twitter: Chabad
         wikidata: Q942400
         youtube_channel: UCc0y_E87EUnOW2m2mGJU9Gg
+    announcements:
+        - https://www.chabad.org/library/article_cdo/aid/2462822/jewish/Chabadorg-App.htm
+chabad_org_virtual_assistant:
+    related_ids:
+        chabad_org: [producer, brand]
+    title: Chabad.org virtual assistant
+    container_type: virtual_assistant
+    content_type: item
+    endpoints:
+        alexa_skill: B07N8S2PW9
+        google_assistant_action: 0000007fca539bb3
+    main_category: doing
+    tags: [learning, doing]
 chabad_org_inspiration_entertainment:
     related_ids:
         chabad_org: subitem_of
@@ -1134,11 +1152,15 @@ rabbi_yitzi_hurwitz:
             -
                 ref: http://tefillinforyitzi.com/
                 label: TefillinForYitzi website
+            -
+                ref: https://hurwitzfamilyfund.com/Articles.html
+                label: Articles at Hurwitz Family Fund
     announcements:
         - https://www.wsj.com/articles/the-life-of-a-rabbi-with-als-11567723713
         - https://www.aish.com/sp/so/Rabbi-Yitzi-Hurwitz-is-Lighting-Up-the-World.html
         - https://nypost.com/2019/09/08/incredibly-moving-journey-for-als-stricken-rabbi-from-brooklyn/
         - https://newyork.cbslocal.com/2019/09/09/rabbi-yitzi-hurwitz-als-bar-mitzvah-crown-heights-brooklyn/
+        - http://lubavitch.com/news/article/2080015/Fighting-for-His-Life-Chabad-Rep-Says-ALS-A-Test-of-Faith.html
         - https://collive.com/tefillin-campaign-for-rabbi-yitzis-birthday-aims-even-higher/
         - https://collive.com/watch-live-now-kumzitz-with-rabbi-yitzi-hurwitz/
         - http://www.amimagazine.org/2019/10/02/matchless-memories-2/
