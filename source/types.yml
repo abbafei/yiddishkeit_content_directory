@@ -59,6 +59,9 @@ endpoints:
         formatter: https://amazon.com/wd/e/$1
         title: Amazon.com author
         wikidata: P4862
+    anchor_fm:
+        formatter: https://anchor.fm/$1
+        title: Anchor FM
     android:
         formatter: https://play.google.com/store/apps/details?id=$1
         title: Google Play Store
@@ -72,10 +75,10 @@ endpoints:
         title: Blog
     chabad_org_aid:
         formatter: https://www.chabad.org/$1
-        title: Chabad.org page
+        title: Chabad.org item
     chabad_org_kid:
         formatter: https://www.chabad.org/k$1
-        title: Chabad.org item
+        title: Chabad.org keyword
     donorbox:
         formatter: https://donorbox.org/$1
         title: Donorbox
@@ -104,6 +107,9 @@ endpoints:
     google_drive_folder:
         formatter: https://drive.google.com/drive/folders/$1
         title: Google Drive folder
+    google_podcasts:
+        formatter: https://podcasts.google.com/?feed=$1
+        title: Google Podcasts
     iheartradio_podcast:
         formatter: https://www.iheart.com/podcast/wd-$1/ # via https://www.wikidata.org/w/index.php?title=Property:P7324&oldid=1111858788
         title: iHeartRadio podcast
@@ -140,6 +146,9 @@ endpoints:
         formatter: https://www.linkedin.com/company/$1
         title: LinkedIn company
         wikidata: P4264
+    listennotes:
+        formatter: https://www.listennotes.com/podcasts/$1/
+        title: Listen Notes podcast
     pinterest:
         formatter: https://www.pinterest.com/$1/
         title: Pinterest
@@ -148,8 +157,13 @@ endpoints:
         formatter: https://soundcloud.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3040&oldid=1145191783
         title: SoundCloud
         wikidata: P3040
+    spotify_show:
+        formatter: https://open.spotify.com/show/$1 # via https://www.wikidata.org/w/index.php?title=Property:P5916&oldid=1188889180
+        title: Spotify show or podcast
+        wikidata: P5916
     stitcher:
-        formatter: https://www.stitcher.com/podcast/$1
+        #formatter: https://www.stitcher.com/podcast/$1
+        formatter: https://www.stitcher.com/s?fid=$1
         title: Stitcher
     torahanytime_speaker:
         formatter: https://www.torahanytime.com/#/speaker?l=$1

@@ -216,7 +216,10 @@ chabadtalk_podcast:
         web: https://www.chabad.org/multimedia/audio_cdo/aid/4100607/jewish/ChabadTalk-Podcast.htm
         apple_podcast: "1435079242"
         chabad_org_aid: "4100607"
+        google_podcasts: aHR0cHM6Ly93d3cuY2hhYmFkLm9yZy90b29scy9yc3MvaXR1bmVzL3Nlcmllc3Jzc19jZG8vc2NvcGUvNDEwMDYwNy92YXJpYW50LzIyODc0
         iheartradio_podcast: "31079681"
+        listennotes: tzvi-VpXNI3xmA4F
+        spotify_show: 6IuNMN7NsVLiZe2Ym1EzwW
     main_category: learning
     tags: [learning]
 chaim_the_storyteller:
@@ -249,7 +252,10 @@ chayenu_app:
     container_type: app
     content_type: series
     media_type: text
-    fee: true
+    fee:
+        - 
+            has_fee: true
+            description: subscription is required to access some content
     endpoints:
         android: com.ionicframework.chayenu504086
         ios: "1165498202"
@@ -431,7 +437,7 @@ inside_chassidus:
         iheartradio_podcast: "31095182"
         instagram: insidechassidus
         linkedin_company: inside-chassidus
-        stitcher: inside-chassidus
+        stitcher: "352160"
         youtube_channel: UC1GcXRqadrqHwJB9nJFRHvA
     announcements:
         - https://collive.com/inside-chassidus-offers-thousands-of-chassidus-classes-free/
@@ -440,7 +446,7 @@ inside_chassidus:
 inside_chassidus_app:
     related_ids:
         inside_chassidus: [content, brand]
-    title: Inside Chassidus App
+    title: Inside Chassidus app
     container_type: app
     content_type: group
     media_type: audio
@@ -693,6 +699,17 @@ mitzvah_island:
         - https://collive.com/shows-grew-with-creator/
     main_category: entertainment
     tags: [entertainment]
+meaningful_life_ctr:
+    related_ids:
+        rabbi_simon_jacobson: author
+    title: Meaningful Life Center
+    endpoints:
+        web: https://www.meaningfullife.com/
+        facebook: meaningfullifecenter
+        instagram: meaningful.life.center
+        linkedin_company: meaningful-life
+        youtube: meaningfullifecenter
+        youtube_channel: UCN5KcquYEfTKwniNB_F0sHA
 my_encounter:
     related_ids:
         jem: [producer, brand]
@@ -720,6 +737,39 @@ myjli_videos:
                 label: Facebook
     main_category: learning
     tags: [shiurim]
+mylife_chassidus_applied:
+    related_ids:
+        meaningful_life_ctr: [brand, producer]
+        rabbi_simon_jacobson: author
+    title: MyLife Chassidus Applied
+    endpoints:
+        web: https://www.chassidusapplied.com/
+        youtube_channel: UCX5tj50hTwF_80XQ9JBMDYQ
+        facebook: MyLifeChassidusApplied
+mylife_chassidus_applied_broadcast:
+    related_ids:
+        mylife_chassidus_applied: [brand, producer]
+        rabbi_simon_jacobson: author
+    title: "MyLife: Chassidus Applied Broadcast"
+    container_type: podcast
+    content_type: series
+    media_type: audio # FIXME: also video
+    endpoints:
+        web:
+            - https://www.chassidusapplied.com/mlc-tv/
+            -
+                ref: https://chabadinfo.com/category/video/beis-medrash-video/mylife-chassidus-applied/
+                label: Chabadinfo.com category
+        anchor_fm: mylife-chassidus-applied
+        apple_podcast: "1003768779"
+        google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy8zYTU3N2Y4L3BvZGNhc3QvcnNz
+        iheartradio_podcast: "31124822"
+        listennotes: jacobson-DCY0fg_l2SA
+        spotify_show: 163ezcZTgjmDGa7bTPkzSI
+        stitcher: "172551"
+        tunein: p1132115
+    main_category: learning
+    tags: [learning]
 rabbi_perl_stories:
     title: Rabbi Perl stories
     endpoints: https://www.rabbiperlstories.com/
@@ -811,7 +861,7 @@ shaar_habitachon_chayenu_text:
     related_ids:
         chayenu: producer
         gate_of_trust: host
-    title: Shaar HaBitachon
+    title: Shaar HaBitachon - Text
     languages: [he, en]
     media_type: text
     content_type: item
@@ -845,6 +895,22 @@ sie_lib_stories_history:
     endpoints: https://www.sie.org/templates/sie/article_cdo/aid/2346851/jewish/Stories-History.htm
     main_category: entertainment
     tags: [Rebbe, entertainment, stories]
+sie_podcast:
+    related_ids:
+        sie: producer
+    title: SIE Podcast
+    container_type: podcast
+    content_type: series
+    media_type: audio
+    endpoints:
+        anchor_fm:
+            -
+                ref: sichosinenglish
+                is_main_url: true
+        google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy8yMDllOTY2NC9wb2RjYXN0L3Jzcw%3D%3D
+        spotify_show: 4iXDZCgWF9u0wsHkhjd9Rm
+    main_category: learning
+    tags: [shiurim]
 simply_chassidus:
     title: Simply Chassidus
     content_type: group
@@ -881,15 +947,20 @@ small_wonder_puppets_videos:
     main_category: entertainment
     tags: [entertainment]
 soulwords:
+    related_ids:
+        rabbi_shais_taub: author
     title: SoulWords
     endpoints:
         web: https://soulwords.org/
+        apple_podcast: "1450892501"
+        google_podcasts: aHR0cHM6Ly9zb3Vsd29yZHMub3JnL2ZlZWQvcG9kY2FzdC8
+        iheartradio_podcast: "31124815"
+        listennotes: taub-z0n-AOvWFgy
+        spotify_show: 51E7XHWFDbZCGJQz7CoAZP
+        stitcher: "363356"
+        vimeo: "soulwords"
         youtube: SoulWords
         youtube_channel: UCUdm4q0z1AoH5O5DuhZabzw
-        apple_podcast: "1450892501"
-        vimeo: "soulwords"
-        stitcher: soulwords
-        iheartradio_podcast: "31124815"
 soulwords_shaar_habitachon:
     title: SoulWords - Shaar HaBitachon
     related_ids:
@@ -1132,6 +1203,15 @@ rabbi_shais_taub:
         torahanytime_speaker: "1042"
         torahcafe_scholar: rabbi-shais-taub_0000000680
         wikidata: Q7462485
+rabbi_simon_jacobson:
+    title: Rabbi Simon Jacobson
+    endpoints:
+        amazon_author: B001HCZECO
+        chabad_org_kid: "197"
+        goodreads_author: "171399"
+        linkedin: simonjacobson1
+        torahcafe_scholar: rabbi-simon-jacobson_0000000223
+        wikidata: Q7519049
 rabbi_yitzi_hurwitz:
     title: Rabbi Yitzi Hurwitz
     endpoints:

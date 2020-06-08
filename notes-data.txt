@@ -78,6 +78,8 @@ TODO
 				- add section on contact form?
 				- crawl for broken links?
 			- check for working https on http uris, announcements, and endpoint formatters etc.?
+			- (optionally) percent-encode aka urlencode refs?
+				- if so, correct google podcasts urls
 			- coalesce similar endpoint types (youtube for example)? if so, what if there are duplicates or endpoints that contain others (e.g. youtube channel that has playlist from endpoint)
 			- main link:
 				- use parent item web/main link sometimes? or maybe if indicated specifically?
@@ -98,6 +100,7 @@ TODO
 			- allow multiple?
 				- if so make processing and rendering zachin handle it
 				- can remove "more" media type if so
+			- automatically derive media_type and/or content_type from container_type=podcast? or maybe it might also have video.
 		- source_{description,subtitle}
 			- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 				- add remaining keys (description etc. at present) to item info pages
