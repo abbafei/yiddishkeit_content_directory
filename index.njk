@@ -19,10 +19,10 @@ eleventyNavigation:
 <br />
 <ul>
 {%- for media_type, categories in items.grouped %}
-  <li>{{ media_type.title }}
+  <li>{{ types.media_types[media_type].title }}
   <ul>
   {%- for category, items in categories %}
-    <li>{{ category.title }}
+    <li>{{ types.categories[category].title }}
     <ul>
       {%- for item in items %}
         <li>{{ util.item_entry(item, types, hide_fields=["media_type", "main_category", "tags"]) }}</li>

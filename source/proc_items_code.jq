@@ -8,8 +8,8 @@ def grouped_array_items(key; $defs):
         # select keys that have a definition in type defs and that have a title in their type def entry
         select($key_id | (has_def($defs) and ($defs[$key_id] | has("title")))) |
         # adds type information based on id of a group
-        [{id: $key_id, title: $defs[$key_id].title}, .]
-    ) | sort_by($defs[.[0].id].sort_num)
+        [$key_id, .]
+    ) | sort_by($defs[.[0]].sort_num)
 ;
 def item_select_key_title_array($key; $type_defs):
     if has($key) then
