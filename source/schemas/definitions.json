@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://yiddishkeit.info/schemas/definitions.json",
+	"$defs": {
+        "item_identifier": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "language_code": {
+            "type": "string"
+        },
+		"types": {
+			"$defs": {
+				"categories": {
+					"type": "string"
+				},
+				"container_types": {
+					"type": "string"
+				},
+				"content_types": {
+					"type": "string"
+				},
+				"endpoints": {
+					"type": "string"
+				},
+				"media_types": {
+					"type": "string"
+				},
+				"related_id_types": {
+					"type": "string"
+				},
+				"target_audiences": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

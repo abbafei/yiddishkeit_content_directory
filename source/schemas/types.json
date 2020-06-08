@@ -1,11 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://yiddishkeit.info/schemas/items.schema.json",
-    "definitions": {
-		"category_identifier": {
-			"type": "string"
-		}
-    },
+    "$id": "https://yiddishkeit.info/schemas/types.json",
     "type": "object",
     "properties": {
         "endpoints": {
@@ -39,12 +34,12 @@
         },
 		"categories": {
             "type": "object",
+			"propertyNames": {
+				"$ref": "definitions.json#/$defs/types/$defs/categories"
+			},
             "additionalProperties": {
 				"type": "object",
 				"additionalProperties": false,
-				"propertyNames": {
-					"$ref": "#/definitions/category_identifier"
-				},
 				"properties": {
 					"title": {
 						"type": "string"
@@ -53,8 +48,20 @@
 						"type": "string"
 					},
 					"parent": {
-						"$ref": "#/definitions/category_identifier",
+						"$ref": "definitions.json#/$defs/types/$defs/categories",
 						"description": "category that this category is a subcategory (a.k.a. child, or part) of"
+					}
+				}
+			}
+		},
+		"media_types": {
+            "type": "object",
+            "additionalProperties": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"title": {
+						"type": "string"
 					}
 				}
 			}
