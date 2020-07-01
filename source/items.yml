@@ -101,6 +101,7 @@ blood_brothers:
         - https://collive.com/live-taub-brothers-discuss-interesting-subjects/
         - https://collive.com/live-taub-brothers-episode-2/
         - https://collive.com/live-taub-brothers-discuss-interesting-subjects-2/
+    target_audience: [adults]
     main_category: entertainment
     tags: [entertainment]
 chabad_org:
@@ -346,6 +347,20 @@ gate_of_trust:
     announcements:
         - https://collive.com/chayenu-launches-website-to-gain-trust-in-hashem/
     tags: [shaar_habitachon]
+gezintahait_street:
+    related_ids:
+        the_wellsprings: [producer]
+    title: Gezintahait Street
+    content_type: series
+    media_type: video
+    endpoints:
+        web:
+            -
+                ref: https://www.facebook.com/thewellspringsorg/videos/
+                label: Facebook videos page
+    target_audience: [adults]
+    main_category: entertainment
+    tags: [entertainment]
 hebrewbooks:
     title: HebrewBooks.org
     endpoints:
@@ -1053,6 +1068,26 @@ stump_the_rabbi:
     main_category: learning
     tags: [shiurim]
 #the_living_archive brand vechulu
+the_wellsprings:
+    title: TheWellsprings.org
+    endpoints:
+        web: https://thewellsprings.org/
+        facebook: thewellspringsorg
+        youtube_channel: UCfW3ykTQL0wHnxANIQaD5Ng
+the_wellsprings_kids:
+    related_ids:
+        the_wellsprings: [author, brand, producer]
+    title: TheWellsprings.org Kids Specials
+    content_type: group
+    media_type: video
+    endpoints:
+        youtube_playlist:
+            -
+                ref: PLxzl5r1C5bjzEwsz6Hhqzc57LQz2WrKC-
+                is_main_url: true
+    target_audience: [children, children-at-heart]
+    main_category: entertainment
+    tags: [entertainment]
 theyeshiva_net:
     related_ids:
         rabbi_yy_jacobson: author
