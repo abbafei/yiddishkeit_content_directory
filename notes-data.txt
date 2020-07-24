@@ -60,10 +60,8 @@ TODO
 		- add items in this list to gitlab issue tracker :-)
 	- schemas etc.
 		- make a schema for for unprocessed/input objects too?
-		- deduplicate and share content between types and items schemas
 		- types.yml schema
 			- additionalProperties no for most zachin?
-			- categories json patch injection?
 			- endpoints wikidata checking?
 		- validate endpoint refs with regexes (from wikidata maybe)?
 	- item info
@@ -89,7 +87,8 @@ TODO
 				- third-party -- i.e. content does not necessarily originate from the same ppl as control site
 				- verify using rel=me links? what if a site doesnt support/use them though?
 				- can then filter out third-party endpoints, instead of (or in addition to) filtering out everything without a title
-			- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
+			- values
+				- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
 		- announcements
 			- add optional title field, to use for announcement link title (often can be title of blog post etc)?
 				- can pull from html metadata perhaps, maybe make whitelist for article sources which do this?
@@ -98,6 +97,7 @@ TODO
 			- for series content type, make a data field for how often items in series are released, if applicable? (daily, weekly, monthly, etc.)
 		- media types
 			- allow multiple?
+				- maybe have main media type and media type list, similar to categories?
 				- if so make processing and rendering zachin handle it
 				- can remove "more" media type if so
 			- automatically derive media_type and/or content_type from container_type=podcast? or maybe it might also have video.
@@ -138,3 +138,4 @@ TODO
 				- or shortcode?
 		- sitemap?
 		- add previous page and next page links to individual blog posts?
+		- add language info for items and endpoints

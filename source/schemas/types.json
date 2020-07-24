@@ -62,6 +62,19 @@
 				"properties": {
 					"title": {
 						"type": "string"
+					},
+					"icon": {
+						"type": "array",
+						"additionalItems": false,
+						"minItems": 2,
+						"items": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "string"
+							}
+						]
 					}
 				}
 			}

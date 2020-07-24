@@ -19,6 +19,13 @@ categories:
     chitas:
         title: Chitas
         parent: learning
+    chumash:
+        title: Chumash
+        parent: seforim
+    daily_rambam:
+        title: Daily Rambam
+        parent: shiurim
+        #parent: [shiurim, rambam]
     seforim:
         title: Seforim
         parent: learning
@@ -28,6 +35,24 @@ categories:
     shiurim:
         title: Shiurim
         parent: learning
+    rambam:
+        title: Rambam
+        parent: seforim
+    rambam_3_chapters:
+        title: Rambam - 3 chapters a day
+        parent: daily_rambam
+    rambam_1_chapter:
+        title: Rambam - 1 chapter a day
+        parent: daily_rambam
+    rambam_sefer_hamitzvos:
+        title: Sefer Hamitzvos of the Rambam
+        parent: daily_rambam
+    tanya:
+        title: Tanya
+        parent: seforim
+    text_based_shiurim:
+        title: Text-based Shiurim
+        parent: shiurim
 container_types:
     app:
         title: App
@@ -153,6 +178,12 @@ endpoints:
         formatter: https://www.pinterest.com/$1/
         title: Pinterest
         wikidata: P3836
+    sefaria:
+        formatter: https://www.sefaria.org/$1
+        title: Sefaria
+        wikidata: P4320
+    sefaria_person:
+        formatter: https://www.sefaria.org/person/$1
     soundcloud:
         formatter: https://soundcloud.com/$1 # via https://www.wikidata.org/w/index.php?title=Property:P3040&oldid=1145191783
         title: SoundCloud
@@ -165,6 +196,9 @@ endpoints:
         #formatter: https://www.stitcher.com/podcast/$1
         formatter: https://www.stitcher.com/s?fid=$1
         title: Stitcher
+    theyeshiva_net:
+        formatter: https://www.theyeshiva.net/search//$1/
+        title: TheYeshiva.net
     torahanytime_speaker:
         formatter: https://www.torahanytime.com/#/speaker?l=$1
         title: TorahAnytime.com speaker
@@ -197,6 +231,9 @@ endpoints:
         formatter: https://www.wikidata.org/wiki/$1
         title: Wikidata
         third_party_content: true
+    wikisource_hebrew:
+        formatter: https://he.wikisource.org/wiki/$1
+        title: Hebrew Wikisource
     youtube:
         formatter: https://www.youtube.com/$1
         title: YouTube
@@ -236,6 +273,9 @@ related_id_types:
     subitem_of:
         title: Is part of
         description: the content of this item is a sub-item (aka part or contained-by) of
+    topic:
+        title: Topic
+        description: the topic of this item
 target_audiences:
     children:
         title: children

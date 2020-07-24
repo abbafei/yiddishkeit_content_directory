@@ -7,28 +7,25 @@ aleph_beis_gimmel:
         facebook: alephbeisgimmel
         twitter: AlephBeisGimmel
         instagram: alephbeisgimmel
-aleph_beis_gimmel_english_audio:
-    title: Shaar Habitachon shiurim - R' S. M. Rubashkin - audio
+aleph_beis_gimmel_english:
+    title: Shaar Habitachon shiurim - R' S. M. Rubashkin
     related_ids:
         aleph_beis_gimmel: [brand, host]
         reb_sm_rubashkin: author
+        shaar_habitachon: topic
     content_type: series
-    media_type: audio
-    endpoints: https://www.alephbeisgimmel.com/audio
+    media_type: video # TODO: audio too
+    endpoints:
+        web:
+            -
+                ref: https://www.alephbeisgimmel.com/shaar-habiitachon-in-english
+                label: video
+            -
+                ref: https://www.alephbeisgimmel.com/audio
+                label: audio
     languages: [en]
     main_category: learning
-    tags: [shiurim, shaar_habitachon]
-aleph_beis_gimmel_english_video:
-    title: Shaar Habitachon shiurim - R' S. M. Rubashkin - video
-    related_ids:
-        aleph_beis_gimmel: [brand, host]
-        reb_sm_rubashkin: author
-    content_type: series
-    media_type: video
-    endpoints: https://www.alephbeisgimmel.com/shaar-habiitachon-in-english
-    languages: [en]
-    main_category: learning
-    tags: [shiurim, shaar_habitachon]
+    tags: [text_based_shiurim]
 ascent_of_safed:
     title: Ascent of Tzfat
     endpoints:
@@ -123,17 +120,27 @@ chabad_org:
         youtube_channel: UCc0y_E87EUnOW2m2mGJU9Gg
     announcements:
         - https://www.chabad.org/library/article_cdo/aid/2462822/jewish/Chabadorg-App.htm
-chabad_org_virtual_assistant:
+chabad_org_daily_study:
     related_ids:
-        chabad_org: [producer, brand]
-    title: Chabad.org virtual assistant
-    container_type: virtual_assistant
-    content_type: item
+        chabad_org: [host, producer, brand]
+    title: Daily Torah Study - Chabad.org
+    container_type: app
+    content_type: group
+    media_type: text # TODO: also video and audio for shiurim it links to, and (may be?) in app?
     endpoints:
-        alexa_skill: B07N8S2PW9
-        google_assistant_action: 0000007fca539bb3
-    main_category: doing
-    tags: [learning, doing]
+        web:
+            - https://www.chabad.org/dailystudy
+            -
+                ref: https://www.chabad.org/library/article_cdo/aid/2452166/jewish/Daily-Torah-Study-App.htm
+                label: app
+        android: org.chabad.android.DailyStudy
+        chabad_org_aid:
+            -
+                ref: "2452166"
+                label: app
+        ios: "1408133263"
+    main_category: learning
+    tags: [learning, chitas, daily_rambam]
 chabad_org_inspiration_entertainment:
     related_ids:
         chabad_org: subitem_of
@@ -205,6 +212,17 @@ chabad_org_stories_section:
         chabad_org_aid: "109851"
     main_category: entertainment
     tags: [stories]
+chabad_org_virtual_assistant:
+    related_ids:
+        chabad_org: [producer, brand]
+    title: Chabad.org virtual assistant
+    container_type: virtual_assistant
+    content_type: item
+    endpoints:
+        alexa_skill: B07N8S2PW9
+        google_assistant_action: 0000007fca539bb3
+    main_category: doing
+    tags: [learning, doing]
 chabadtalk_podcast:
     title: ChabadTalk Podcast
     related_ids:
@@ -277,7 +295,7 @@ chitas_for_kids:
     #    - https://anash.org/learn-chitas-play-and-win/
     target_audience: [children, adults]
     main_category: learning
-    tags: [learning, shiurim, chitas]
+    tags: [learning, shiurim, chitas] # TODO: is it text_based_shiurim?
 chitas_for_kids_app:
     related_ids:
         chitas_for_kids: [content, producer]
@@ -290,7 +308,7 @@ chitas_for_kids_app:
         ios: "1346381806"
     target_audience: [children, adults]
     main_category: learning
-    tags: [learning, shiurim, chitas]
+    tags: [learning, shiurim, chitas] # TODO: is it text_based_shiurim?
 chitas_for_kids_audio:
     related_ids:
         chitas_for_kids: subitem_of
@@ -305,7 +323,18 @@ chitas_for_kids_audio:
         apple_podcast: "1473205884"
     target_audience: [children, adults]
     main_category: learning
-    tags: [learning, shiurim, chitas]
+    tags: [learning, shiurim, chitas] # TODO: is it text_based_shiurim?
+daily_rambam_org:
+    title: DailyRambam.org
+    #TODO: add phone hotline?
+    #media_type: [audio, video, text]
+    endpoints:
+        web: https://dailyrambam.org/
+    announcements:
+        - https://anash.org/how-a-distant-dream-became-an-immediate-possibility/
+        - https://collive.com/privately-funded-initiative-teaches-daily-rambam/
+    main_category: learning
+    tags: [learning, daily_rambam]
 derher:
     title: A Chassidisher Derher
     related_ids:
@@ -336,17 +365,17 @@ derher_monthly:
     content_type: series
     main_category: learning
     tags: [Rebbe, learning]
-gate_of_trust:
+gate_of_trust_org:
     title: Gateoftrust.org
     related_ids:
         chayenu: producer
+        shaar_habitachon: topic
     endpoints:
         web: https://www.gateoftrust.org/
         facebook: gateoftrust
         instagram: gateoftrust
     announcements:
         - https://collive.com/chayenu-launches-website-to-gain-trust-in-hashem/
-    tags: [shaar_habitachon]
 gezintahait_street:
     related_ids:
         the_wellsprings: [producer]
@@ -785,6 +814,86 @@ mylife_chassidus_applied_broadcast:
         tunein: p1132115
     main_category: learning
     tags: [learning]
+rabbi_gordon_daily_shiurim:
+    related_ids:
+        rabbi_yehoshua_gordon: author
+        chabad_org: host
+    title: Daily Torah Classes with Rabbi Gordon
+    container_type: app
+    content_type: group
+    media_type: video # FIXME: audio also?
+    endpoints:
+        web:
+            - https://www.chabad.org/RabbiGordon
+            - https://www.chabadofthevalley.com/templates/articlecco_cdo/aid/4282625/jewish/Daily-Torah-Classes-with-Rabbi-Gordon.htm
+            -
+                ref: www.chabad.org/RabbiGordonApp
+                label: app
+        chabad_org_aid:
+            - "903523"
+            -
+                ref: "3213396"
+                label: app
+        android: org.chabad.RabbiGordon
+        ios: "1091286955"
+    announcements:
+        - https://www.chabad.org/news/article_cdo/aid/2777566/jewish/For-Thousands-of-Students-Rabbi-Gordon-Is-a-Daily-Delight.htm
+        - https://www.chabad.org/news/article_cdo/aid/2756910/jewish/QA-If-Torah-Is-a-Journey-Then-This-California-Rabbi-Is-an-Ultimate-Tour-Guide.htm
+        - https://www.chabad.org/blogs/blog_cdo/aid/3215029/jewish/Announcing-the-New-Rabbi-Gordon-App.htm
+        - https://collive.com/this-rabbi-has-his-own-app/
+    main_category: learning
+    tags: [learning, text_based_shiurim]
+rabbi_gordon_chumash:
+    related_ids:
+        rabbi_gordon_daily_shiurim: subitem_of
+    title: Daily Chumash - Rabbi Gordon
+    content_type: series
+    media_type: video # TODO: also audio
+    endpoints:
+        web: https://www.chabad.org/multimedia/rabbigordon_cdo/t/c
+        chabad_org_aid:
+            -
+                ref: "935151"
+                label: video archives
+            -
+                ref: "967532"
+                label: audio archives
+    main_category: learning
+    tags: [learning, text_based_shiurim, chitas, chumash]
+rabbi_gordon_rambam:
+    related_ids:
+        rabbi_gordon_daily_shiurim: subitem_of
+    title: Daily Rambam - Rabbi Gordon
+    content_type: series
+    media_type: video # TODO: also audio
+    endpoints:
+        web: https://www.chabad.org/multimedia/rabbigordon_cdo/t/r
+        chabad_org_aid:
+            -
+                ref: "1779405"
+                label: video archives
+            -
+                ref: "1854013"
+                label: audio archives
+    main_category: learning
+    tags: [learning, text_based_shiurim, rambam_1_chapter]
+rabbi_gordon_tanya:
+    related_ids:
+        rabbi_gordon_daily_shiurim: subitem_of
+    title: Daily Tanya - Rabbi Gordon
+    content_type: series
+    media_type: video # TODO: also audio
+    endpoints:
+        web: https://www.chabad.org/multimedia/rabbigordon_cdo/t/t
+        chabad_org_aid:
+            -
+                ref: "935156"
+                label: video archives
+            -
+                ref: "935776"
+                label: audio archives
+    main_category: learning
+    tags: [learning, text_based_shiurim, chitas, tanya]
 rabbi_perl_stories:
     title: Rabbi Perl stories
     endpoints: https://www.rabbiperlstories.com/
@@ -825,6 +934,30 @@ rabbi_yitzis_blog:
                 label: index
     main_category: learning
     tags: [learning]
+rambam_1perek_rabbi_yy:
+    related_ids:
+        chabad_org: host
+        daily_rambam_org: host
+        rabbi_yy_jacobson: author
+    title: Rambam with Rabbi YY Jacobson - 1 chapter daily
+    content_type: series
+    media_type: video
+    endpoints:
+        web:
+            -
+                ref: https://www.chabad.org/RabbiYYJ
+                is_main_url: true
+            -
+                ref: https://www.chabad.org/multimedia/video_cdo/aid/4810503/jewish/Rambam-with-Rabbi-YY-Jacobson.htm
+                label: archive
+        chabad_org_aid: "4810503"
+        theyeshiva_net: "1227"
+        #podcast rss - video: https://www.chabad.org/tools/rss/itunes/dailylessonrss_cdo/lesson/rambam1/variant/23828
+        #podcast rss - audio: https://www.chabad.org/tools/rss/itunes/dailylessonrss_cdo/lesson/rambam1/variant/23829
+    announcements:
+        - https://www.chabad.org/news/article_cdo/aid/4819057/jewish/Acclaimed-Rabbis-Stream-Daily-Study-of-Mishneh-Torah.htm
+    main_category: learning
+    tags: [learning, text_based_shiurim, rambam_1_chapter]
 Rebbedrive:
     title: RebbeDrive
     languages: [he, en]
@@ -875,14 +1008,15 @@ Rebbedrive_video:
 shaar_habitachon_chayenu_text:
     related_ids:
         chayenu: producer
-        gate_of_trust: host
+        gate_of_trust_org: host
+        shaar_habitachon: content
     title: Shaar HaBitachon - Text
     languages: [he, en]
     media_type: text
     content_type: item
     endpoints: https://www.gateoftrust.org/gate-of-trust-text
     main_category: learning
-    tags: [shaar_habitachon]
+    tags: [seforim]
 sie:
     title: Sichos in English
     endpoints:
@@ -980,6 +1114,7 @@ soulwords_shaar_habitachon:
     title: SoulWords - Shaar HaBitachon
     related_ids:
         rabbi_shais_taub: author
+        shaar_habitachon: topic
         soulwords: [producer, brand, host]
     source_description: Text-based class on the classic Shaar HaBitachon (Gate of Trust) from Rabenu Bachaye's Chovos HaLevavos.
     endpoints:
@@ -996,7 +1131,7 @@ soulwords_shaar_habitachon:
     announcements:
         - https://collive.com/learn-shaar-habitachon-with-rabbi-taub/
     main_category: learning
-    tags: [shaar_habitachon, shiurim]
+    tags: [text_based_shiurim]
 space_rabbi:
     related_ids:
         chabad_org: host
@@ -1288,6 +1423,25 @@ rabbi_yitzi_hurwitz:
         - https://crownheights.info/chabad-news/678583/hatzalah-air-transports-rabbi-yitzi-hurwitz-to-new-york/
         - https://matzav.com/watch-this-rabbi-yitzi-hurwitz-travels-for-sons-bar-mitzvah/
         - https://www.timesofisrael.com/als-stricken-chabadnik-writes-hopeful-musical-message/
+rabbi_yehoshua_gordon:
+    title: Rabbi Yehoshua B. Gordon
+    endpoints:
+        chabad_org_kid:
+            -
+                ref: "13568"
+                label: author
+            -
+                ref: "21401"
+                label: about
+    announcements:
+        - https://www.lubavitch.com/chabad-rabbis-online-torah-class-grows-popular/
+        - https://www.chabad.org/news/article_cdo/aid/3222038/jewish/Rabbi-Yehoshua-B-Gordon-66-Teacher-to-Thousands-Passes-Away-in-California.htm
+        - https://www.chabad.org/blogs/blog_cdo/aid/3222677/jewish/Our-Dear-Rabbi-Yehoshua-B-Gordon-of-Blessed-Memory.htm
+        - https://www.lubavitch.com/rabbi-yehoshua-binyomin-gordon-66/
+        - https://www.latimes.com/local/obituaries/la-me-josh-gordon-20160219-story.html
+        - https://collive.com/rabbi-yehoshua-gordon-66-obm/
+        - https://collive.com/rabbi-gordon-was-laid-to-rest/
+        - https://matzav.com/rabbi-yehoshua-b-gordon-ztl/
 rabbi_yossi_paltiel:
     title: Rabbi Yossi Paltiel
     endpoints:
@@ -1303,6 +1457,12 @@ rabbi_yy_jacobson:
         torahcafe_scholar: rabbi-yy-jacobson_0000000249
         twitter: YYJacobson
         wikidata: Q8055896
+rabeinu_bachya:
+    title: Rabeinu Bachya
+    endpoints:
+        chabad_org_kid: "8724"
+        sefaria_person: Bachya ibn Pekuda
+        wikidata: Q762229
 reb_sm_rubashkin:
     title: Reb Sholom Mordechai Rubashkin
     endpoints:
@@ -1321,3 +1481,30 @@ tzvi_freeman:
         torahcafe_scholar: rabbi-tzvi-freeman_0000000224
         twitter: tzvifreeman
         wikidata: Q80554081
+# topics
+chovos_halevavos:
+    related_ids:
+        rabeinu_bachya: author
+    title: Chovos Halevavos
+    endpoints:
+        sefaria: Duties_of_the_Heart
+        wikidata: Q2367130
+shaar_habitachon:
+    related_ids:
+        chovos_halevavos: subitem_of
+    title: Shaar HaBitachon
+    endpoints:
+        web:
+            -
+                # TODO: this endpoint has its own topic - can remove when link (related_ids content) rendered bezH
+                ref: https://www.gateoftrust.org/gate-of-trust-text
+                is_main_url: true
+                languages: [he, en]
+        sefaria:
+            -
+                ref: Duties_of_the_Heart,_Fourth_Treatise_on_Trust
+                languages: [he, en]
+        wikisource_hebrew:
+            -
+                ref: תורת_חובות_הלבבות/שער_הבטחון
+                languages: [he]
