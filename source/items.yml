@@ -814,6 +814,16 @@ mylife_chassidus_applied_broadcast:
         tunein: p1132115
     main_category: learning
     tags: [learning]
+puppetsburgers:
+    title: The Puppetsburgers Show
+    content_type: group
+    media_type: video
+    endpoints:
+        web: https://puppetsburgers.yiddishkeit.info/
+        youtube_channel: UC6P648EQJZX3a6wMM1mbncA
+    target_audience: [children, children-at-heart]
+    main_category: entertainment
+    tags: [entertainment]
 rabbi_gordon_daily_shiurim:
     related_ids:
         rabbi_yehoshua_gordon: author
