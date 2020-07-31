@@ -224,9 +224,9 @@ endpoints:
     web:
         formatter: $1
         title: Web
-    #whatsapp_group:
-    #    formatter: https://chat.whatsapp.com/$1
-    #    title: WhatsApp group invite link
+    whatsapp_group:
+        formatter: https://chat.whatsapp.com/$1
+        title: WhatsApp group link
     wikidata:
         formatter: https://www.wikidata.org/wiki/$1
         title: Wikidata

@@ -83,12 +83,10 @@ blood_brothers:
         dovid_taub: author
         rabbi_shais_taub: author
         soulwords: [brand, producer, host]
-    title: Two Brothers Discussing Interesting Subjects
+    title: Blood Brothers
     endpoints:
-        youtube_playlist:
-            -
-                ref: PL1he-JRtnKeir6RtuooEj5MNJ2ymKaH2P
-                is_main_url: true
+        web: https://www.soulwords.org/videos/blood-brothers/
+        youtube_playlist: PL1he-JRtnKeir6RtuooEj5MNJ2ymKaH2P
     media_type: video
     content_type: series
     announcements:
@@ -820,6 +818,7 @@ puppetsburgers:
     media_type: video
     endpoints:
         web: https://puppetsburgers.yiddishkeit.info/
+        whatsapp_group: DJAiBWSRVKgA2L0FuKDPgP
         youtube_channel: UC6P648EQJZX3a6wMM1mbncA
     target_audience: [children, children-at-heart]
     main_category: entertainment
@@ -980,7 +979,7 @@ Rebbedrive:
             -
                 ref: https://www.rebbedrive.com/blog
                 #rss: https://www.rebbedrive.com/feed.xml
-        #whatsapp_group: IsUJLbfpFYnI8npExLbyzu
+        whatsapp_group: IsUJLbfpFYnI8npExLbyzu
 Rebbedrive_app:
     related_ids:
         Rebbedrive: producer
@@ -1131,11 +1130,12 @@ soulwords_shaar_habitachon:
         youtube_playlist:
             -
                 ref: PL1he-JRtnKegzLXc4NPIQhcadCJz6s4pM
-                is_main_url: true
         web:
             -
+                ref: https://soulwords.org/trust
+                is_main_url: true
+            -
                 ref: https://www.gateoftrust.org/rabbi-shais-taub
-                label: Gateoftrust.org
     media_type: video
     content_type: series
     announcements:
