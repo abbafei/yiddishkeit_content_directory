@@ -23,6 +23,9 @@ aleph_beis_gimmel_english:
             -
                 ref: https://www.alephbeisgimmel.com/audio
                 label: audio
+            -
+                ref: https://www.gateoftrust.org/sholom-mordechai-rubashkin
+                label: video
     languages: [en]
     main_category: learning
     tags: [text_based_shiurim]
