@@ -959,11 +959,15 @@ rabbi_hoffinger_sicha:
     content_type: series
     container_type: podcast
     media_type: video # and audio?
-    # TODO: add video endpoint
+    # TODO: add main and video endpoint etc.
     #endpoints:
-    #    web: http://sichosacademy.com/
+    #    web:
+    #        -
+    #            ref: http://sichosacademy.com/
+    #            is_main_url: false
     #    captivate_fm: rch
     #    google_podcasts: aHR0cHM6Ly9mZWVkcy5jYXB0aXZhdGUuZm0vcmNoLw
+    #    listennotes: chananya-FPVkYC56-yb
     #    spotify_show: 2RWLyLSMex5HRjKpjIY6pt
     announcements:
         - https://anash.org/project-likkutei-sichos-utilizes-popular-anash-org-feature/
