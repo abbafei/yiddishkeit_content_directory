@@ -377,6 +377,27 @@ gate_of_trust_org:
         instagram: gateoftrust
     announcements:
         - https://collive.com/chayenu-launches-website-to-gain-trust-in-hashem/
+gemara_academy:
+    title: Gemara Academy
+    related_ids:
+        rabbi_chananya_hoffinger: author
+    endpoints:
+        web: https://www.gemaraacademy.com/
+        chabad_org_kid: "23840"
+        facebook: gemaraacademy
+        torahcafe_provider: gemara-academy_0000000080
+        youtube_channel: UCBjlyLVdwNIG4AZCMJiLKIg
+    announcements:
+        - https://collive.com/website-helps-bochurim-learn/
+        - https://collive.com/online-gemara-academy-grows/
+        - https://anash.org/gemara-academy-provides-free-classes/
+        - https://www.theyeshivaworld.com/news/headlines-breaking-stories/1299542/video-online-gemara-academy-grows.html
+        - https://collive.com/program-eases-gemara-learning/
+        - https://www.theyeshivaworld.com/news/headlines-breaking-stories/352126/virtual-tour-of-gemara-academy.html
+        - http://www.gruntig.net/2017/07/gemara-academy-where-gemara-is-simple.html
+        - https://chabadinfo.com/beis-medrash/20958/
+        - https://chabadinfo.com/beis-medrash/you-can-finally-learn-sotah/
+    tags: [learning, gemara]
 gezintahait_street:
     related_ids:
         the_wellsprings: [producer]
@@ -610,7 +631,7 @@ kabbala_toons:
     title: KabbalaToons
     media_type: video
     endpoints:
-        web: https://www.chabad.org/multimedia/video_cdo/aid/530191/jewish/KabbalaToons.htm
+        web: https://www.chabad.org/Kabbalatoons
         chabad_org_aid: "530191"
     target_audience: [children, adults]
     source_description: KabbalaToons presents spiritual guidance and mystic insights in fun, fast animation.
@@ -815,6 +836,30 @@ mylife_chassidus_applied_broadcast:
         tunein: p1132115
     main_category: learning
     tags: [learning]
+project_likkutei_sichos:
+    title: Project Likkutei Sichos
+    endpoints:
+        web:
+            -
+                ref: https://projectlikkuteisichos.org/
+            -
+                ref: https://chabadinfo.com/tag/project-likkutei-sichos/
+                label: ChabadInfo.com tag
+        facebook: projectlikkuteisichos
+        instagram: projectlikkuteisichos
+        vimeo: user117784275
+        youtube: PROJECTLIKKUTEISICHOS
+        youtube_channel: UC8X3Vt5Cq6rwldlhfAj3KsQ
+    announcements:
+        - https://collive.com/over-500-join-sichos-learning-initiative-in-48-hours/
+        - https://crownheights.info/crown-heights-news/696809/three-new-project-likutei-sichos-shiurim-in-crown-heights-for-men/
+        - https://collive.com/project-likkutei-sichos-live-online-for-this-week/
+        - https://collive.com/project-likkutei-sichos-seeking-teachers/
+        - https://collive.com/avraham-fried-invites-you-to-join-the-siyum/
+        - https://collive.com/project-likkutei-sichos-in-spanish-to-mark-siyum/
+        - https://collive.com/over-a-dozen-shiurim-recorded-for-likkutei-sichos-this-week/
+        - https://collive.com/thousands-complete-full-volume-of-likkutei-sichos/
+        - https://collive.com/torah-studies-teams-up-with-project-likkutei-sichos/
 puppetsburgers:
     title: The Puppetsburgers Show
     content_type: group
@@ -906,6 +951,24 @@ rabbi_gordon_tanya:
                 label: audio archives
     main_category: learning
     tags: [learning, text_based_shiurim, chitas, tanya]
+rabbi_hoffinger_sicha:
+    related_ids:
+        project_likkutei_sichos: host
+        rabbi_chananya_hoffinger: author
+    title: Sicha Discourse - Rabbi Chananya Hoffinger
+    content_type: series
+    container_type: podcast
+    media_type: video # and audio?
+    # TODO: add video endpoint
+    #endpoints:
+    #    web: http://sichosacademy.com/
+    #    captivate_fm: rch
+    #    google_podcasts: aHR0cHM6Ly9mZWVkcy5jYXB0aXZhdGUuZm0vcmNoLw
+    #    spotify_show: 2RWLyLSMex5HRjKpjIY6pt
+    announcements:
+        - https://anash.org/project-likkutei-sichos-utilizes-popular-anash-org-feature/
+    main_category: learning
+    tags: [learning, likutei_sichos, shiurim]
 rabbi_perl_stories:
     title: Rabbi Perl stories
     endpoints: https://www.rabbiperlstories.com/
@@ -946,6 +1009,26 @@ rabbi_yitzis_blog:
                 label: index
     main_category: learning
     tags: [learning]
+rambam_1perek_rabbi_wolberg:
+    related_ids:
+        rabbi_moshe_wolberg: author
+    title: Rabbi Moshe Wolberg Perek Echod
+    container_type: podcast
+    content_type: series
+    media_type: video # TODO: audio too
+    endpoints:
+        apple_podcast: "1530708052"
+        google_podcasts: aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjg3NzU5NDQ2Mi9zb3VuZHMucnNz
+        listennotes: moshe-AVL0b4Rx19i
+        soundcloud: perek-echod
+        spotify_show: 5hjYsZdybeFFsnAZfyYSin
+        stitcher: "570202"
+        youtube_channel:
+            -
+                ref: UCA3vRiz39VoSvPCEH8fcqHQ
+                is_main_url: true
+    main_category: learning
+    tags: [learning, shiurim, rambam_1_chapter]
 rambam_1perek_rabbi_yy:
     related_ids:
         chabad_org: host
@@ -970,6 +1053,20 @@ rambam_1perek_rabbi_yy:
         - https://www.chabad.org/news/article_cdo/aid/4819057/jewish/Acclaimed-Rabbis-Stream-Daily-Study-of-Mishneh-Torah.htm
     main_category: learning
     tags: [learning, text_based_shiurim, rambam_1_chapter]
+rambam_insights_rabbi_wolberg:
+    related_ids:
+        rabbi_moshe_wolberg: author
+    title: Rambam Insights with Rabbi Moshe Wolberg
+    container_type: podcast
+    content_type: series
+    media_type: audio
+    endpoints:
+        anchor_fm: rambam
+        google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy8yNjc0M2I3MC9wb2RjYXN0L3Jzcw==
+        listennotes: wolberg-cNRX4UfFHiO
+        spotify_show: 1FRtVK1AXVJiGiIeaSDzMW
+    main_category: learning
+    tags: [learning, shiurim, rambam]
 Rebbedrive:
     title: RebbeDrive
     languages: [he, en]
@@ -1029,6 +1126,26 @@ shaar_habitachon_chayenu_text:
     endpoints: https://www.gateoftrust.org/gate-of-trust-text
     main_category: learning
     tags: [seforim]
+sicha_in_depth:
+    related_ids:
+        project_likkutei_sichos: [producer, host, brand]
+    title: Sicha In Depth - Project Likkutei Sichos
+    summary: This is a Shiur focused on specific concepts discussed in the Sicha; it does not go through the Sicha page by page, but dissects central ideas in depth.
+    content_type: series
+    container_type: podcast
+    media_type: audio # and video?
+    endpoints:
+        apple_podcast: "1497012152"
+        captivate_fm: sichaindepth
+        google_podcasts: aHR0cHM6Ly9mZWVkcy5jYXB0aXZhdGUuZm0vc2ljaGFpbmRlcHRo
+        listennotes: sichos-7dPTJ18gCun
+        spotify_show: 5VVDKF6wZekftpWfjzohpa
+        youtube_playlist:
+            -
+                ref: PLuoUAX_ddYQF3mBOPJ0mNr0cPfexBIwED
+                is_main_url: true
+    main_category: learning
+    tags: [learning, likutei_sichos, shiurim]
 sie:
     title: Sichos in English
     endpoints:
@@ -1348,6 +1465,14 @@ wrapp_app:
     main_category: doing
     tags: [doing]
 # authors
+rabbi_chananya_hoffinger:
+    title: Rabbi Chananya Hoffinger
+    endpoints:
+        web:
+            -
+                ref: https://collive.com/tag/chananya-hoffinger/
+                label: COLLive tag
+        vimeo: user18209049
 dovber_naiditch:
     title: DovBer Naiditch
     endpoints:
@@ -1375,6 +1500,10 @@ jonathan_goorvich:
     endpoints:
         chabad_org_kid: "9420"
         wikidata: Q83799163
+rabbi_moshe_wolberg:
+    title: Rabbi Moshe Wolberg
+    endpoints:
+        chabad_org_kid: "18816"
 rabbi_shais_taub:
     title: Rabbi Shais Taub
     endpoints:

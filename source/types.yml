@@ -26,6 +26,12 @@ categories:
         title: Daily Rambam
         parent: shiurim
         #parent: [shiurim, rambam]
+    gemara:
+        title: Gemara
+        parent: seforim
+    likutei_sichos:
+        title: Likutei Sichos
+        parent: seforim
     seforim:
         title: Seforim
         parent: learning
@@ -98,6 +104,9 @@ endpoints:
     blog:
         formatter: $1
         title: Blog
+    captivate_fm:
+        formatter: https://$1.captivate.fm/
+        title: Captivate.fm
     chabad_org_aid:
         formatter: https://www.chabad.org/$1
         title: Chabad.org item
@@ -202,6 +211,9 @@ endpoints:
     torahanytime_speaker:
         formatter: https://www.torahanytime.com/#/speaker?l=$1
         title: TorahAnytime.com speaker
+    torahcafe_provider:
+        formatter: https://www.torahcafe.com/provider/$1.html
+        title: TorahCafe.com provider
     torahcafe_scholar:
         formatter: https://www.torahcafe.com/scholar/$1.html
         title: TorahCafe.com scholar
