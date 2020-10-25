@@ -7,28 +7,6 @@ aleph_beis_gimmel:
         facebook: alephbeisgimmel
         twitter: AlephBeisGimmel
         instagram: alephbeisgimmel
-aleph_beis_gimmel_english:
-    title: Shaar Habitachon shiurim - R' S. M. Rubashkin
-    related_ids:
-        aleph_beis_gimmel: [brand, host]
-        reb_sm_rubashkin: author
-        shaar_habitachon: topic
-    content_type: series
-    media_type: video # TODO: audio too
-    endpoints:
-        web:
-            -
-                ref: https://www.alephbeisgimmel.com/shaar-habiitachon-in-english
-                label: video
-            -
-                ref: https://www.alephbeisgimmel.com/audio
-                label: audio
-            -
-                ref: https://www.gateoftrust.org/sholom-mordechai-rubashkin
-                label: video
-    languages: [en]
-    main_category: learning
-    tags: [text_based_shiurim]
 ascent_of_safed:
     title: Ascent of Tzfat
     endpoints:
@@ -525,6 +503,17 @@ inside_chassidus_app:
         - https://crownheights.info/chabad-news/698881/rabbi-paltiels-inside-chassidus-launches-app/
     main_category: learning
     tags: [shiurim]
+irgun_torah:
+    title: Irgun Torah
+    endpoints:
+        web:
+            -
+                ref: https://irguntorah.org/
+            -
+                ref: https://irguntorah.jewishpodcasts.org/
+                label: jewishpodcasts.org page
+        chabadinfo_tag: irgun-torah
+        youtube_channel: UCrLaRzgIX79oRyzEjBuFXdQ
 itche_kadoozy:
     related_ids:
         chabad_org: host
@@ -825,7 +814,7 @@ mylife_chassidus_applied_broadcast:
             - https://www.chassidusapplied.com/mlc-tv/
             -
                 ref: https://chabadinfo.com/category/video/beis-medrash-video/mylife-chassidus-applied/
-                label: Chabadinfo.com category
+                label: ChabadInfo.com category
         anchor_fm: mylife-chassidus-applied
         apple_podcast: "1003768779"
         google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy8zYTU3N2Y4L3BvZGNhc3QvcnNz
@@ -839,12 +828,8 @@ mylife_chassidus_applied_broadcast:
 project_likkutei_sichos:
     title: Project Likkutei Sichos
     endpoints:
-        web:
-            -
-                ref: https://projectlikkuteisichos.org/
-            -
-                ref: https://chabadinfo.com/tag/project-likkutei-sichos/
-                label: ChabadInfo.com tag
+        web: https://projectlikkuteisichos.org/
+        chabadinfo_tag: project-likkutei-sichos
         facebook: projectlikkuteisichos
         instagram: projectlikkuteisichos
         vimeo: user117784275
@@ -1118,6 +1103,28 @@ Rebbedrive_video:
         google_drive_folder: 0B_WSU737WJ1ffmpRZHpRaGQ2ZzJFeUdkSEtJYTIzcHE5Njdkb0hpTnZmRW1iLVMzMnZsOHc
     main_category: Rebbe
     tags: [Rebbe]
+shaar_habitachon_alephbeisgimmel_english:
+    title: Shaar HaBitachon - R' S. M. Rubashkin - AlephBeisGimmel.com
+    related_ids:
+        aleph_beis_gimmel: [brand, host]
+        reb_sm_rubashkin: author
+        shaar_habitachon: topic
+    content_type: series
+    media_type: video # TODO: audio too
+    endpoints:
+        web:
+            -
+                ref: https://www.alephbeisgimmel.com/shaar-habiitachon-in-english
+                label: video
+            -
+                ref: https://www.alephbeisgimmel.com/audio
+                label: audio
+            -
+                ref: https://www.gateoftrust.org/sholom-mordechai-rubashkin
+                label: video
+    languages: [en]
+    main_category: learning
+    tags: [text_based_shiurim, shaar_habitachon]
 shaar_habitachon_chayenu_text:
     related_ids:
         chayenu: producer
@@ -1130,6 +1137,51 @@ shaar_habitachon_chayenu_text:
     endpoints: https://www.gateoftrust.org/gate-of-trust-text
     main_category: learning
     tags: [seforim]
+shaar_habitachon_r_smr:
+    title: Shaar HaBitachon - R' S. M. Rubashkin - 770
+    related_ids:
+        reb_sm_rubashkin: author
+        irgun_torah: producer
+    container_type: podcast
+    content_type: series
+    media_type: video # TODO: and audio
+    endpoints:
+        web: https://irguntorah.org/reb-sholom-m-rubashkim
+        anchor_fm: shaar-habitachon
+        google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy8zMjY2YWE2Yy9wb2RjYXN0L3Jzcw==
+        listennotes: reb-ltP6-XZDW75
+        spotify_show: 3xJs07gowwDULDh3SFFXSE
+        whatsapp_group: BdgueIRJCl8BVtII93JvpY
+        youtube_playlist: PLd25k3MCcX87xZcMZN0vIvWhjdiO7zyan
+    announcements:
+        - https://anash.org/shaar-habitachon-shiur-with-r-sholom-mordechai/
+        - https://collive.com/live-trust-faith-and-inspiration-with-sholom-mordechai-rubashkin/
+        - https://chabadinfo.com/seven-seventy/watch-live-shaar-habitachon-shiur-in-770-2/
+    main_category: learning
+    tags: [learning, text_based_shiurim, shaar_habitachon]
+shaar_habitachon_soulwords:
+    title: Shaar HaBitachon - Rabbi Shais Taub - SoulWords
+    related_ids:
+        rabbi_shais_taub: author
+        shaar_habitachon: topic
+        soulwords: [producer, brand, host]
+    source_description: Text-based class on the classic Shaar HaBitachon (Gate of Trust) from Rabenu Bachaye's Chovos HaLevavos.
+    endpoints:
+        youtube_playlist:
+            -
+                ref: PL1he-JRtnKegzLXc4NPIQhcadCJz6s4pM
+        web:
+            -
+                ref: https://soulwords.org/trust
+                is_main_url: true
+            -
+                ref: https://www.gateoftrust.org/rabbi-shais-taub
+    media_type: video
+    content_type: series
+    announcements:
+        - https://collive.com/learn-shaar-habitachon-with-rabbi-taub/
+    main_category: learning
+    tags: [text_based_shiurim, shaar_habitachon]
 sicha_in_depth:
     related_ids:
         project_likkutei_sichos: [producer, host, brand]
@@ -1243,29 +1295,6 @@ soulwords:
         vimeo: "soulwords"
         youtube: SoulWords
         youtube_channel: UCUdm4q0z1AoH5O5DuhZabzw
-soulwords_shaar_habitachon:
-    title: SoulWords - Shaar HaBitachon
-    related_ids:
-        rabbi_shais_taub: author
-        shaar_habitachon: topic
-        soulwords: [producer, brand, host]
-    source_description: Text-based class on the classic Shaar HaBitachon (Gate of Trust) from Rabenu Bachaye's Chovos HaLevavos.
-    endpoints:
-        youtube_playlist:
-            -
-                ref: PL1he-JRtnKegzLXc4NPIQhcadCJz6s4pM
-        web:
-            -
-                ref: https://soulwords.org/trust
-                is_main_url: true
-            -
-                ref: https://www.gateoftrust.org/rabbi-shais-taub
-    media_type: video
-    content_type: series
-    announcements:
-        - https://collive.com/learn-shaar-habitachon-with-rabbi-taub/
-    main_category: learning
-    tags: [text_based_shiurim]
 space_rabbi:
     related_ids:
         chabad_org: host
@@ -1325,10 +1354,8 @@ stump_the_rabbi:
             -
                 ref: https://collive.com/category/videos/stump-the-rabbi/
                 label: COLlive.com category
-            -
-                ref: https://chabadinfo.com/tag/stump-the-rabbi/
-                label: Chabadinfo.com tag
         apple_podcast: "1414621266"
+        chabadinfo_tag: stump-the-rabbi
         facebook: Stumptherabbi
         iheartradio_podcast: "31052251"
         instagram: stumptherabbi
@@ -1532,6 +1559,7 @@ rabbi_yitzi_hurwitz:
     title: Rabbi Yitzi Hurwitz
     endpoints:
         chabad_org_kid: "20754"
+        chabadinfo_tag: yitzi-hurwitz
         web: 
             -
                 ref: https://www.chabad.org/library/article_cdo/aid/3592415/jewish/Rabbi-Yitzis-Corner.htm
@@ -1542,9 +1570,6 @@ rabbi_yitzi_hurwitz:
             -
                 ref: https://run4yitzi.com/about-yitzi/
                 label: Run4Yitzi page about Rabbi Yitzi
-            -
-                ref: https://chabadinfo.com/tag/yitzi-hurwitz/
-                label: Rabbi Yitzi Chabadinfo.com tag
             -
                 ref: http://tefillinforyitzi.com/
                 label: TefillinForYitzi website

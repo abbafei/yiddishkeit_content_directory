@@ -113,6 +113,9 @@ endpoints:
     chabad_org_kid:
         formatter: https://www.chabad.org/k$1
         title: Chabad.org keyword
+    chabadinfo_tag:
+        formatter: https://chabadinfo.com/tag/$1/
+        title: ChabadInfo.com tag
     donorbox:
         formatter: https://donorbox.org/$1
         title: Donorbox
