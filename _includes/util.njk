@@ -7,8 +7,12 @@
 , </span><span class="ml-1">{{ type }}{% if not flow %}:</span><span class="sr-only"> </span>{% endif %}{{ caller() }}
 {%- endmacro %}
 
+{% macro _item_badge(content) -%}
+<span class="badge badge-pill badge-light">{{ content }}</span>
+{%- endmacro %}
+
 {% macro _info_list(list_elements, type_defs) -%}
-{% for list_element in list_elements -%}{% if loop.last and not loop.first %}<span class="sr-only"> and </span>{% elif not loop.first %}<span class="sr-only">, </span>{% endif %}<span class="badge badge-pill badge-light">{{ type_defs[list_element].title }}</span>{% endfor %}
+{% for list_element in list_elements -%}{% if loop.last and not loop.first %}<span class="sr-only"> and </span>{% elif not loop.first %}<span class="sr-only">, </span>{% endif %}{{ _item_badge(type_defs[list_element].title) }}{% endfor %}
 {%- endmacro %}
 
 {%- macro item_entry(item, types, hide_fields) -%}
@@ -17,6 +21,10 @@
 {%- else %}
 {{- item.title }}
 {%- endif %} {{ more_info_link(item.id) -}}
+{%- if "media_type" in item and "media_type" not in hide_fields -%}{%- call _info_type("Media type", flow=false) -%}
+{# TODO: replace with _info_list when media_type is a list bezH #}
+{{- _item_badge(item.media_type) }}
+{%- endcall -%}{%- endif -%}
 {%- if "target_audience" in item and "target_audience" not in hide_fields -%}{%- call _info_type("For", flow=false) -%}
 {{- _info_list(item.target_audience, types.target_audiences) }}
 {%- endcall -%}{%- endif -%}

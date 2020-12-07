@@ -82,6 +82,7 @@ TODO
 			- main link:
 				- use parent item web/main link sometimes? or maybe if indicated specifically?
 					- if so, what type of related_id(s) are parent items?
+				- allow is_main_url to be set to false on web links to disable automatically using web link as main link
 			- item and/or endpoint rss feeds - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
 			- third-party endpoint types: add flag instead of removing title?
 				- third-party -- i.e. content does not necessarily originate from the same ppl as control site
@@ -131,6 +132,7 @@ TODO
 			- use "log" filter to debug?
 	- rendering etc.
 		- media type icons - maybe from bootstrap icons
+			- icons by item badges
 		- microdata on item pages?
 		- blog posts - english dates too?
 		- item links and more macros/functions in templating vechulu
