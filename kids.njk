@@ -1,0 +1,13 @@
+---
+eleventyNavigation:
+    key: main
+    order: 2
+    title: Kids
+layout: page
+---
+{%- import "util.njk" as util %}
+<ul>
+{%- for item in items.all | select_zachin("target_audience", ["children", "older children", "young children"]) %}
+  <li>{{ util.item_entry(item, types, hide_fields=["tags"]) }}</li>
+{%- endfor %}
+</ul>

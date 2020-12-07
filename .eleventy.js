@@ -17,4 +17,26 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("as_post_date", function(date_obj) {
         return date_obj.toLocaleDateString("default", {calendar: "hebrew", timeZone: "utc", weekday: "long", year: "numeric", month: "numeric", day: "numeric"});
     });
+    eleventyConfig.addFilter("select_zachin", function(zachin, select_type, selecting) {
+		if (select_type === 'target_audience') {
+			return zachin.filter(zach => {
+				if (zach.hasOwnProperty('target_audience')) {
+					if (Array.isArray(selecting)) {
+						for (select_item of selecting) {
+							if (zach['target_audience'].includes(select_item)) {
+								return true;
+							};
+						};
+						return false;
+					} else if (typeof selecting === 'string') {
+						return zach['target_audience'].includes(select_item);
+					} else {
+						return false;
+					};
+				} else {
+					return false;
+				};
+			});
+		};
+    });
 };
