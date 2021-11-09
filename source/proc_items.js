@@ -5,7 +5,8 @@ const path = require("path");
 
 const jq = require("node-jq");
 const js_yaml = require("js-yaml");
-const ajv = require("ajv");
+const Ajv = require("ajv");
+const addFormats = require("ajv-formats");
 const fast_json_patch = require("fast-json-patch");
 
 function make_schema_patch({types_info, item_ids, definitions_schema}) {
@@ -35,9 +36,9 @@ async function proc_items({prefix_path=""}={}) {
 
     // load data
     const proc_items_code = await util.promisify(fs.readFile)(path.join(__dirname, "proc_items_code.jq"), "utf8");
-    const items_inp = js_yaml.safeLoad(await util.promisify(fs.readFile)(path.join(prefix_path, `${items_name}.yml`)));
+    const items_inp = js_yaml.load(await util.promisify(fs.readFile)(path.join(prefix_path, `${items_name}.yml`)));
     const items_inp_str = JSON.stringify(items_inp);
-    const types_info = js_yaml.safeLoad(await util.promisify(fs.readFile)(path.join(prefix_path, `${types_name}.yml`)));
+    const types_info = js_yaml.load(await util.promisify(fs.readFile)(path.join(prefix_path, `${types_name}.yml`)));
     const types_info_str = JSON.stringify(types_info);
 	const definitions_schema_inp = JSON.parse(await util.promisify(fs.readFile)(path.join(prefix_path, schemas_path, `${definitions_name}.json`)));
     const items_schema = JSON.parse(await util.promisify(fs.readFile)(path.join(prefix_path, schemas_path, `${items_name}.json`)));
@@ -53,7 +54,8 @@ async function proc_items({prefix_path=""}={}) {
 
     // validate output item info
 	const schemas = [definitions_schema_out, items_schema, types_schema];
-	const verifier_obj = ajv({schemas});
+	const verifier_obj = new Ajv({schemas});
+	addFormats(verifier_obj);
     validate_schema({verifier_obj, validating_name: `${schemaid_prefix}${types_name}.json`, data: types_info});
     validate_schema({verifier_obj, validating_name: `${schemaid_prefix}${items_name}.json`, data: items_out["dict"]});
 

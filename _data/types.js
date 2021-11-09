@@ -5,5 +5,5 @@ const fs = require("fs");
 const js_yaml = require("js-yaml");
 
 module.exports = async function() {
-    return js_yaml.safeLoad(await util.promisify(fs.readFile)("source/types.yml"));
+    return js_yaml.load(await util.promisify(fs.readFile)("source/types.yml"));
 };
