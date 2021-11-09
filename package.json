@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "JQ_PATH=jq eleventy"
+    "start": "JQ_PATH=jq eleventy",
+    "serve": "JQ_PATH=jq eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
