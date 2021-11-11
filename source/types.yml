@@ -64,12 +64,12 @@ container_types:
         title: App
     podcast:
         title: Podcast
-    stream:
+    stream: # how differs from content_type channel?
         title: Stream
     virtual_assistant:
         title: Virtual assistant
 content_types:
-    channel: # TODO rename to station?
+    channel: # TODO rename to station or stream or broadcast? also how differ from container_type stream?
         title: Channel
         description: an item that is broadcast live
     group:
@@ -211,6 +211,9 @@ endpoints:
     theyeshiva_net:
         formatter: https://www.theyeshiva.net/search//$1/
         title: TheYeshiva.net
+    torah_printouts:
+        formatter: https://torahprintouts.com/$1
+        title: Torah Printouts
     torahanytime_speaker:
         formatter: https://www.torahanytime.com/#/speaker?l=$1
         title: TorahAnytime.com speaker

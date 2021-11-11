@@ -139,7 +139,9 @@ chabad_org_music_app:
     container_type: [app, stream]
     content_type: channel
     endpoints:
-        web: https://www.chabad.org/multimedia/music_cdo/aid/3963654/jewish/Jewish-Music-App.htm
+        web:
+            - https://www.chabad.org/multimedia/music_cdo/aid/3963654/jewish/Jewish-Music-App.htm
+            - https://chabad.org/listen
         android: com.radioco.m22310aa09
         chabad_org_aid: "3963654"
         ios: "1360236938"
@@ -322,6 +324,7 @@ derher:
         web: https://derher.org/
         facebook: A-Chassidisher-Derher-100579208120780
         youtube_channel: UC2PIqmsLQPeBm9ucYYfizZA
+        torah_printouts: A-Chassidisher-Derher
     announcements:
         - https://collive.com/derher-expanded-for-3-tammuz/
         - https://crownheights.info/something-jewish/422475/derher-magazine-publishes-the-rebbetzins-notes/
@@ -376,6 +379,25 @@ gemara_academy:
         - https://chabadinfo.com/beis-medrash/20958/
         - https://chabadinfo.com/beis-medrash/you-can-finally-learn-sotah/
     tags: [learning, gemara]
+gemara_academy_beis_hamikdash:
+    related_ids:
+        gemara_academy: [producer]
+        rabbi_chananya_hoffinger: author
+        beis_hamikdash: topic
+    title: Gemara Academy Beis Hamikdash videos
+    content_type: series
+    media_type: video
+    endpoints:
+        web:
+            - https://gemaraacademy.ispringlearn.com/view/folder/14739-snHRF-ukHkq-YbAx1
+            - https://www.chabad.org/multimedia/video_cdo/aid/4819067/jewish/The-Structure-and-Details-of-the-Holy-Temple.htm
+        youtube_playlist: PLTkS2XW4Q5zy3WtW800UDGyTWGiYODP_9
+        chabad_org_aid: "4819067"
+    announcements:
+        - https://collive.com/daily-visual-lessons-on-the-bais-hamikdosh/
+        - https://anash.org/watch-daily-powerpoint-lessons-on-beis-hamikdosh/
+    main_category: learning
+    tags: [learning, shiurim]
 gezintahait_street:
     related_ids:
         the_wellsprings: [producer]
@@ -387,6 +409,8 @@ gezintahait_street:
             -
                 ref: https://www.facebook.com/thewellspringsorg/videos/
                 label: Facebook videos page
+                is_main_url: true
+        youtube_channel: UCAFqoJxIDA6VYoYx9IxiQQg
     target_audience: [adults]
     main_category: entertainment
     tags: [entertainment]
@@ -442,9 +466,13 @@ heres_my_story_english:
     content_type: series
     endpoints:
         web:
-            - https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm
-            - http://myencounterblog.com/
+            -
+                ref: http://myencounterblog.com/
+                is_main_url: true
+            -
+                ref: https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm
         chabad_org_aid: "2184170"
+        torah_printouts: Heres-my-story
     source_description: Part of JEM's My Encounter with the Rebbe oral history project, dedicated to documenting the life of the Rebbe.
     main_category: Rebbe
     tags: [Rebbe, stories]
@@ -463,6 +491,7 @@ heres_my_story_hebrew:
                 label: downloads
                 ref: http://myencounterblog.com/
         chabad_org_aid: "3607191"
+        torah_printouts: הסיפור-שלי
     source_description: "חלק מפרוייקט \"הפגישה שלי עם הרבי\", המופק על-ידי חברת JEM, ומטרתו לתעד את חייו של הרבי מליובאוויטש."
     main_category: Rebbe
     tags: [Rebbe, stories]
@@ -562,9 +591,14 @@ jem_tv:
     media_type: video
     content_type: group
     title: Jem.TV
-    source_subtitle: An Island of Calm
+    #source_subtitle: An Island of Calm
     endpoints: https://jem.tv/
-    source_description: Daily content selections of the Rebbe to be featured.
+    #source_description: Daily content selections of the Rebbe to be featured.
+    fee:
+        -
+            has_fee: true
+            #description: subscription is required to access most content
+            # needs login; mark this?
     announcements:
         - https://anash.org/jem-to-stream-free-premium-content/
         - https://jemcentral.org/2020/03/16/island-of-calm/
@@ -637,6 +671,7 @@ lchaim_weekly:
             -
                 ref: http://www.lchaimweekly.org/
                 label: older issues
+        torah_printouts: LChaim
     announcements:
         - https://collive.com/missing-the-mivtzoim-route-send-the-lchaim/
     main_category: learning
@@ -996,6 +1031,7 @@ rabbi_yitzis_blog:
             -
                 ref: http://yitzihurwitz.blogspot.com/p/blog-page_24.html
                 label: index
+        torah_printouts: Rabbi-Yitzi
     main_category: learning
     tags: [learning]
 rambam_1perek_rabbi_wolberg:
@@ -1275,6 +1311,7 @@ small_wonder_puppets_videos:
         -
             has_fee: false
             description: free during coronavirus pandemic
+            until: "2021-06-15T00:00:00"
         - true
     endpoints: https://www.unclepinchey.com/
     source_description: The Small Wonder Puppet Theatre was established in 1978. Since then, more than one million children have sung, laughed and been entertained by our magical mix of music, puppetry and storytelling.
@@ -1464,7 +1501,9 @@ weekly_farbrengen:
     title: The Weekly Farbrengen
     content_type: series
     media_type: text
-    endpoints: http://merkazanash.com/ly
+    endpoints:
+        web: http://merkazanash.com/ly
+        torah_printouts: Merkaz-Anash
     main_category: learning
     tags: [learning, stories]
 wrapp:
@@ -1653,6 +1692,8 @@ tzvi_freeman:
         twitter: tzvifreeman
         wikidata: Q80554081
 # topics
+beis_hamikdash:
+    title: Beis Hamikdash
 chovos_halevavos:
     related_ids:
         rabeinu_bachya: author
@@ -1660,14 +1701,19 @@ chovos_halevavos:
     endpoints:
         sefaria: Duties_of_the_Heart
         wikidata: Q2367130
+bitachon:
+    title: Bitachon
+    endpoints:
+        chabad_org_kid: "1393"
 shaar_habitachon:
     related_ids:
         chovos_halevavos: subitem_of
+        bitachon: topic
     title: Shaar HaBitachon
     endpoints:
         web:
             -
-                # TODO: this endpoint has its own topic - can remove when link (related_ids content) rendered bezH
+                # TODO: this endpoint has its own topic (shaar_habitachon_chayenu_text) - can remove when link (related_ids content) rendered bezH
                 ref: https://www.gateoftrust.org/gate-of-trust-text
                 is_main_url: true
                 languages: [he, en]
