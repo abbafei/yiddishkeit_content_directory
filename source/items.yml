@@ -99,6 +99,17 @@ chabad_org:
         youtube_channel: UCc0y_E87EUnOW2m2mGJU9Gg
     announcements:
         - https://www.chabad.org/library/article_cdo/aid/2462822/jewish/Chabadorg-App.htm
+chabad_org_anash:
+    related_ids:
+        chabad_org: [host, producer]
+    title: Chabad.org Anash
+    endpoints:
+        web:
+            - https://chabad.org/anash
+            - https://www.chabad.org/library/article_cdo/aid/3373721/jewish/Chabadorg-Anash.htm
+        chabad_org_aid: "3373721"
+    main_category: learning
+    tags: [learning]
 chabad_org_daily_study:
     related_ids:
         chabad_org: [host, producer, brand]
@@ -131,6 +142,24 @@ chabad_org_inspiration_entertainment:
         chabad_org_aid: "1675890"
     main_category: entertainment
     tags: [entertainment]
+chabad_org_luach:
+    related_ids:
+        chabad_org: host
+        chabad_org_anash: producer
+    title: Chabad.org Luach
+    media_type: text
+    content_type: series
+    endpoints:
+        web:
+            - https://www.chabad.org/library/article_cdo/aid/3381135/jewish/Chabadorg-Luach.htm
+            - https://chabad.org/luach
+        chabad_org_aid: "3381135"
+        torah_printouts: Chabadorg-Luach
+    announcements:
+        - https://crownheights.info/something-jewish/571555/chabad-org-launches-weekly-luach-laws-customs/
+        - https://collive.com/laws-and-customs-for-nissan/
+    main_category: learning
+    tags: [learning]
 chabad_org_music_app:
     related_ids:
         chabad_org: [producer, host, brand]
