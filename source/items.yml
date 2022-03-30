@@ -144,7 +144,7 @@ chabad_org_inspiration_entertainment:
     tags: [entertainment]
 chabad_org_luach:
     related_ids:
-        chabad_org: host
+        chabad_org: [host, brand]
         chabad_org_anash: producer
     title: Chabad.org Luach
     media_type: text
@@ -368,6 +368,26 @@ derher_archive:
     endpoints: https://derher.org/archive/
     main_category: learning
     tags: [Rebbe, learning]
+derher_audio:
+    title: Derher Audio
+    related_ids:
+        derher: [producer, brand]
+    content_type: series
+    media_type: audio
+    container_type: podcast
+    endpoints:
+        anchor_fm:
+            -
+                ref: derher
+                is_main_url: true
+        apple_podcast: "1549151668"
+        google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy80NjE4NTcyYy9wb2RjYXN0L3Jzcw==
+        listennotes: derher-KNcr7I5UQsx
+        spotify_show: 5xgNlrdtZcFzstaADcK1rk
+    announcements:
+        - https://anash.org/derher-audio-will-make-you-love-traffic/
+    main_category: learning
+    tags: [learning, stories]
 derher_monthly:
     title: A Chassidisher Derher
     related_ids:
@@ -500,6 +520,8 @@ heres_my_story_english:
                 is_main_url: true
             -
                 ref: https://www.chabad.org/library/article_cdo/aid/2184170/jewish/Here%27s-My-Story.htm
+            -
+                ref: https://jemcentral.org/HMS/
         chabad_org_aid: "2184170"
         torah_printouts: Heres-my-story
     source_description: Part of JEM's My Encounter with the Rebbe oral history project, dedicated to documenting the life of the Rebbe.
@@ -1520,6 +1542,7 @@ vaad_hatmimim:
         vimeo: vaadhatmimim
         wikidata: Q18639844
         youtube_channel: UCyM5f8H4cAaRikifKTOQpKQ
+        # another yotube channel link: https://www.youtube.com/c/VaadHatmimim
     announcements:
         - https://collive.com/banner-year-for-vaad-hatmimim/
         - https://anash.org/vaad-hatmimims-shabbos-hachonoh-at-the-ohel/

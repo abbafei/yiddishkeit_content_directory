@@ -92,7 +92,7 @@ endpoints:
         wikidata: P4862
     anchor_fm:
         formatter: https://anchor.fm/$1
-        title: Anchor FM
+        title: Anchor
     android:
         formatter: https://play.google.com/store/apps/details?id=$1
         title: Google Play Store
@@ -216,6 +216,7 @@ endpoints:
         title: Torah Printouts
     torahanytime_speaker:
         formatter: https://www.torahanytime.com/#/speaker?l=$1
+        #TODO: shortlink formatter - formatter: https://mytat.me/s$1
         title: TorahAnytime.com speaker
     torahcafe_provider:
         formatter: https://www.torahcafe.com/provider/$1.html
