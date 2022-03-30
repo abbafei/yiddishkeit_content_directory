@@ -388,6 +388,32 @@ derher_audio:
         - https://anash.org/derher-audio-will-make-you-love-traffic/
     main_category: learning
     tags: [learning, stories]
+derher_kids:
+    title: Derher for Kids
+    related_ids:
+      derher: [producer, brand]
+    target_audience: [children]
+    container_type: podcast
+    content_type: series
+    media_type: audio
+    endpoints:
+      web:
+        -
+          ref: https://kids.derher.org
+        -
+          ref: https://mailchi.mp/derher.org/derher-for-kids
+          label: email updates subscription
+      anchor_fm: derher-for-kids
+      apple_podcast: "1584317596"
+      google_drive_folder: 1ROLBghgLgvNG1fSZ1-f8v-38zWp3wORM
+      google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy82OTU1Yzk2OC9wb2RjYXN0L3Jzcw==
+      listennotes: derher-quQdgNrKmj9
+      spotify_show: 2KUZzcT8VF2wTszz39pWL6
+    announcements:
+      - https://anash.org/new-derher-podcast-brings-chassidishe-content-to-kids/
+      - https://crownheights.info/chabad-news/744790/derher-launches-audio-content-for-kids/
+    main_category: entertainment
+    tags: [Rebbe, entertainment, stories]
 derher_monthly:
     title: A Chassidisher Derher
     related_ids:
