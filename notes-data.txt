@@ -43,11 +43,14 @@ bH
 				#	- TODO: use brand key instead?
 				#- org - an organization or group who produces content, has one or more brands (it can also serve as a brand)
 				- channel - a live (continuous? stream-like thing) with audio or video etc. (not a channel with multiple elements like podcast)
+					- rename this "station" or "broadcast" or something less ambiguous?
+					- how does it differ from stream media_type? maybe consolidate - see stream content_type
 				- series - a group of items with an order (set-like)
 				- group - like series, but unordered, and can have subzachin(?)
 				- item - an individual video/audio/text/etc.
 		- content_type: video, audio, text
 			- TODO: way to indicate if something is content without specifying content type? (perhaps content_type: true?, or see if any items have a content_type, or have it as related_ids subitem or content)
+			- stream: how differs from content_type channel? consolidate? see content_type channel
 		- container_type: how it's accessed
 			- app
 		- fee - array with map. earlier items in array take precedence, if we are before "until" date
@@ -57,7 +60,8 @@ bH
 
 TODO
 	- bichlall
-		- add items in this list to gitlab issue tracker :-)
+		- add items in this list to gitlab issue tracker, and vice versa :-)
+		- consolidate this TODO section with processor types section in this file :-)
 	- schemas etc.
 		- make a schema for for unprocessed/input objects too?
 		- types.yml schema
@@ -71,7 +75,11 @@ TODO
 			- filter languages?
 		- fees
 			- add "from" field to fees? (like "until")
+			- login
+				- add marker or field that shows that login is needed for (some or all) content? maybe separate field from fees?
+				- example: Jem.tv
 		- endpoints
+			- add endpoint refs - e.g. Shaar HaBitachon topic (shaar_habitachon) & Shaar HaBitachon text (shaar_habitachon_chayenu_text), (TheWellsprings.org and Gezintahait Street content?)
 			- broken links
 				- add section on contact form?
 				- crawl for broken links?
@@ -84,24 +92,54 @@ TODO
 					- if so, what type of related_id(s) are parent items?
 				- allow is_main_url to be set to false on web links to disable automatically using web link as main link
 			- item and/or endpoint rss feeds - specify manually? or add to web-type endpoints? or scrape from web sites automatically? or both?
+			- maybe make generic "url" endpoint that can be customized with tags
+				- maybe even use this as a framework for endpoints
 			- third-party endpoint types: add flag instead of removing title?
 				- third-party -- i.e. content does not necessarily originate from the same ppl as control site
 				- verify using rel=me links? what if a site doesnt support/use them though?
 				- can then filter out third-party endpoints, instead of (or in addition to) filtering out everything without a title
+				- has third_party_content boolean
+					- rename third_party_content field to be more general, for hiding stuff from web interface?
+			- technical endpoint types, for example rss feeds: hide from web interface? tag with third_party_content?
 			- values
 				- whatsapp group - include link to whatsapp group? if so, under content item or org item etc.?
+			- add media_types for endpoints? (see media_types)
+			- add tags for endpoints? (e.g. "content" for web links etc. that you can read a book online in)
+			- endpoint type tags? (i.e. third_party_content)
+				- have tags field instead of additional fields?
+				- maybe have endpoint templates being items themselves?
+				- things that are already in labels?
+				- have content_type and media_type for endpoints to cover some of these?
+			- container endpoints shayechus
+				- this would be for when we have a list of items that are containers (e.g. apps, podcast) of a specific type, and endpoints links for each e.g. podcast or app (like google play and apple store links for apps)
+				- have info on endpoint descriptors on which kind of container_types they can be shown for?
+				- have info on individual endpoints (e.g. tags) to indicate that e.g. this web link has the content at it (e.g. for books where can read it at link)
+			- endpoint formatter/url-type references to items instead of host related_ids?
 		- announcements
 			- add optional title field, to use for announcement link title (often can be title of blog post etc)?
 				- can pull from html metadata perhaps, maybe make whitelist for article sources which do this?
 				- also date etc. fields?
 		- content types
-			- for series content type, make a data field for how often items in series are released, if applicable? (daily, weekly, monthly, etc.)
+			- periodicals
+				- for series content type, make a data field for how often items in series are released, if applicable? (daily, weekly, monthly, etc.)
+					- periodical container_type or way to mark periodicals? (e.g. periodical top-level key)
+				- period - how often it's released (weekly/monthly/irregularly/quarterly/etc.) e.g. moshiach times is several times a yr but maybe not every monthly
+				- start and end dates and/or ranges? (e.g. mendy and the golem was in 1980s)
 		- media types
 			- allow multiple?
 				- maybe have main media type and media type list, similar to categories?
 				- if so make processing and rendering zachin handle it
 				- can remove "more" media type if so
+				- derivative media types (e.g. audio of video) - mark on its own?
+				- secondary content e.g. source sheets
+					- maybe highlight endpoints that have this content i.e. the richest content? (usually the original)
+				- examples
+					- how handle something like chabad.org podcasts, where the same content has two video podcasts (one high quality one low) and an audio podcast?
+					- how handle something like soulwords zachin where there is the video, and then podcasts and mp3s with the audio?
+					- aleph bais gimmel shiurim that have both audio and video
+				- have endpoint media_types? (see endpoints)
 			- automatically derive media_type and/or content_type from container_type=podcast? or maybe it might also have video.
+			- add "portal" media type or something for web sites?
 		- source_{description,subtitle}
 			- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
 				- add remaining keys (description etc. at present) to item info pages
@@ -109,19 +147,46 @@ TODO
 			- pull from sources?
 		- related_ids
 			- add "subsidiary" type or something like that (instead of more general and sometimes inaccurate "brand")
+				- brand related_id is hidden right now
+		- verification that references to types in type definitions exist (may be able to do this by templating the schema, and inserting the type values)
+		- automatically generate item_types key? (with values/tags like content, brand, app, container/access_method
+			- automatically derive media_type and/or content_type from container_type=podcast? or maybe it might also have video.
+			- add "portal" media type or something for web sites?
+		- source_{description,subtitle}
+			- distinguish between descriptions and subtitles by the site itself, and descriptions by other peoplesalach
+				- add remaining keys (description etc. at present) to item info pages
+				- perhaps use prefixes like site_ or author_ etc for their keys
+			- add "subsidiary" type or something like that (instead of more general and sometimes inaccurate "brand")
+		- container types
+			- new ones, like album, book?
+			- call it something more descriptive than container_type?
 		- verification that references to types in type definitions exist (may be able to do this by templating the schema, and inserting the type values)
 		- automatically generate item_types key? (with values/tags like content, brand, app, container/access_method
 		- hierarchies
 			- make able to generate hierarchy from related_ids
 				- also can copy relevant data from those items e.g. target audience, categories, etc.
+			- reverse related_ids relations calculated and displayed?
 		- multi-part items (multiple pieces that form a "item" content-type item)
 			- endpoint type? or related_ids type?
 		- make better alternative to "more" categories and media_types?
+		- make category related_ids type instead of categories?
+		- consolidate stream/channel media and content types?
+		- add indicator of whether the contents of an endpoint are full (has all episodes etc. in series) or non-full?
+			- see content_type periodical/series notes and endpoint notes
+		- add marker for whether something (e.g. periodical) can be subscribed (to) by email, and if so, where (the web page or etc.) to sign up to receive emails (if there is one)?
+		- podcasts to email - https://www.subscribebyemail.com/soulwords.org/feed/podcast/
+		- chabad.org switch to video/audio? https://www.chabad.org/multimedia/audio_cdo/aid/3949917/jewish/7-Adar-and-Moshe-Rabbeinu.htm https://www.chabad.org/multimedia/video_cdo/aid/1794748/jewish/7-Adar-and-Moshe-Rabbeinu.htm
 	- compilation
 		- when eleventy is in watch mode, have it delete old _site in between?
 			- and also have it rerun on removed files
-		- maybe more fields autogenerated from item sources metadata
+		- maybe more fields autogenerated/extracted from item sources metadata
+			- podcast / rss feed image and description and date and more metadata?
+			- twitter/facebook image and description fields that are used by those sites (and can be used by others too) to make a box with info and image
 			- chabad.org itemprops
+			- meta info - icon from webapp, description, title, apple-itunes-app tag, etc
+			- opensearch? (chabad.org pages have)
+			- musicbrainz/youtube-playlist-rss/wikidata/other endpoints zachin info
+			- favicon
 			- json-ld
 				- breadcrumbs list for related_ids?
 				- @type for related_id types?
