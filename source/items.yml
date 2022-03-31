@@ -328,9 +328,12 @@ chitas_for_kids_audio:
     media_type: audio
     endpoints:
         web: https://kidschitas.org/listen
-        libsyn: kidschitas
-        tunein: p1234415
         apple_podcast: "1473205884"
+        libsyn: kidschitas
+        listennotes: chitas-G3nziJ_BqDm
+        podcastaddict: "2548693"
+        podcastindex: "345347"
+        tunein: p1234415
     target_audience: [children, adults]
     main_category: learning
     tags: [learning, shiurim, chitas] # TODO: is it text_based_shiurim?
@@ -383,6 +386,8 @@ derher_audio:
         apple_podcast: "1549151668"
         google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy80NjE4NTcyYy9wb2RjYXN0L3Jzcw==
         listennotes: derher-KNcr7I5UQsx
+        podcastaddict: "3211453"
+        podcastindex: "3372372"
         spotify_show: 5xgNlrdtZcFzstaADcK1rk
     announcements:
         - https://anash.org/derher-audio-will-make-you-love-traffic/
@@ -408,6 +413,8 @@ derher_kids:
       google_drive_folder: 1ROLBghgLgvNG1fSZ1-f8v-38zWp3wORM
       google_podcasts: aHR0cHM6Ly9hbmNob3IuZm0vcy82OTU1Yzk2OC9wb2RjYXN0L3Jzcw==
       listennotes: derher-quQdgNrKmj9
+      podcastaddict: "3616511"
+      podcastindex: "4261738"
       spotify_show: 2KUZzcT8VF2wTszz39pWL6
     announcements:
       - https://anash.org/new-derher-podcast-brings-chassidishe-content-to-kids/

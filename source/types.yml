@@ -190,6 +190,13 @@ endpoints:
         formatter: https://www.pinterest.com/$1/
         title: Pinterest
         wikidata: P3836
+    podcastaddict:
+        formatter: https://podcastaddict.com/podcast/$1
+        title: Podcast Addict
+        wikidata: P9007
+    podcastindex:
+        formatter: https://podcastindex.org/podcast/$1
+        title: Podcast Index
     sefaria:
         formatter: https://www.sefaria.org/$1
         title: Sefaria
