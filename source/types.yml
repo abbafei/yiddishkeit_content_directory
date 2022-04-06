@@ -97,6 +97,9 @@ endpoints:
         formatter: https://play.google.com/store/apps/details?id=$1
         title: Google Play Store
         wikidata: P3418
+    app_web:
+        formatter: $1
+        title: Webapp
     apple_podcast:
         formatter: https://podcasts.apple.com/podcast/id$1 # via https://www.wikidata.org/w/index.php?title=Property:P5842&oldid=1111859221
         title: Apple Podcasts

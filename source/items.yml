@@ -33,7 +33,9 @@ ashreinu_app:
     content_type: group
     container_type: app
     media_type: audio
-    endpoints: https://ashreinu.app/
+    endpoints:
+        web: https://ashreinu.app/
+        app_web: https://ashreinu.app/
     main_category: Rebbe
     tags: [Rebbe]
 azoi:
@@ -794,6 +796,7 @@ mafteiach_app:
     content_type: group
     endpoints:
         web: https://www.mafteiach.app/
+        app_web: https://www.mafteiach.app/
         android: app.mafteiach.app
         ios: "1455806077"
     announcements:
@@ -1063,16 +1066,16 @@ rabbi_hoffinger_sicha:
     content_type: series
     container_type: podcast
     media_type: video # and audio?
-    # TODO: add main and video endpoint etc.
-    #endpoints:
-    #    web:
-    #        -
-    #            ref: http://sichosacademy.com/
-    #            is_main_url: false
-    #    captivate_fm: rch
-    #    google_podcasts: aHR0cHM6Ly9mZWVkcy5jYXB0aXZhdGUuZm0vcmNoLw
-    #    listennotes: chananya-FPVkYC56-yb
-    #    spotify_show: 2RWLyLSMex5HRjKpjIY6pt
+    # TODO: split into main and video endpoints etc.
+    endpoints:
+        web:
+            -
+                ref: http://sichosacademy.com/
+                is_main_url: false
+        captivate_fm: rch
+        google_podcasts: aHR0cHM6Ly9mZWVkcy5jYXB0aXZhdGUuZm0vcmNoLw
+        listennotes: chananya-FPVkYC56-yb
+        spotify_show: 2RWLyLSMex5HRjKpjIY6pt
     announcements:
         - https://anash.org/project-likkutei-sichos-utilizes-popular-anash-org-feature/
     main_category: learning
