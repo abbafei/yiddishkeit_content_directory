@@ -1,6 +1,10 @@
 {# B"H. #}
+{%- macro item_info_url(item_id) -%}
+/item/{{ item_id | slug }}
+{%- endmacro -%}
+
 {%- macro more_info_link(item_id) -%}
-(<a href="/item/{{ item_id | slug }}">More info</a>)
+(<a href="{{ item_info_url(item_id) }}">More info</a>)
 {%- endmacro -%}
 
 {% macro _info_type(type, flow=true) -%}
@@ -35,3 +39,18 @@
 {{- _info_list(item.tags, types.categories) }}
 {%- endcall -%}{%- endif -%}
 {%- endmacro -%}
+
+{% macro endpoint_types_entry(item, types, endpoint_types) %}
+  <li><span><a href="{{ item_info_url(item.id) }}">{{ item.title }}</a>: </span>
+    {%- if "endpoints" in item %}
+      {%- set comma = joiner(", ") %}
+      {%- for endpoints_type_id, endpoints_typed in item.endpoints | dictsort %}
+        {%- if endpoints_type_id in endpoint_types %}
+          {%- for endpoint in endpoints_typed %}
+            {{- comma() -}}<a href="{{ endpoint.url }}">{{ types.endpoints[endpoints_type_id].title }}</a>
+          {%- endfor %}
+        {%- endif %}
+      {%- endfor %}
+    {%- endif -%}
+  </li>
+{% endmacro %}

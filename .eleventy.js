@@ -18,21 +18,29 @@ module.exports = function(eleventyConfig) {
         return date_obj.toLocaleDateString("default", {calendar: "hebrew", timeZone: "utc", weekday: "long", year: "numeric", month: "numeric", day: "numeric"});
     });
     eleventyConfig.addFilter("select_zachin", function(zachin, select_type, selecting) {
-		if (select_type === 'target_audience') {
+		if (['target_audience', 'container_type'].includes(select_type)) {
 			return zachin.filter(zach => {
-				if (zach.hasOwnProperty('target_audience')) {
-					if (Array.isArray(selecting)) {
-						for (select_item of selecting) {
-							if (zach['target_audience'].includes(select_item)) {
-								return true;
-							};
+				if (zach.hasOwnProperty(select_type)) {
+					const zach_key_data = zach[select_type];
+					if (Array.isArray(zach_key_data)) {
+						if (Array.isArray(selecting)) {
+							return selecting.some(select_item => zach_key_data.includes(select_item));
+						} else if (typeof selecting === 'string') {
+							return zach_key_data.includes(selecting);
+						} else {
+							return false;
 						};
-						return false;
-					} else if (typeof selecting === 'string') {
-						return zach['target_audience'].includes(select_item);
+					} else if (typeof(zach_key_data) === "string") {
+						if (Array.isArray(selecting)) {
+							return selecting.includes(zach_key_data);
+						} else if (typeof selecting === 'string') {
+							return zach_key_data === selecting;
+						} else {
+							return false;
+						};
 					} else {
 						return false;
-					};
+					}
 				} else {
 					return false;
 				};
