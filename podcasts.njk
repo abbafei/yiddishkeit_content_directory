@@ -1,0 +1,13 @@
+---
+#eleventyNavigation:
+#    key: main
+#    order: 
+#    title: Podcasts
+layout: page
+---
+{%- import "util.njk" as util %}
+<ul>
+{%- for item in items.all | select_zachin("container_type", "podcast") %}
+  {{- util.endpoint_types_entry(item, types, ["anchor_fm", "apple_podcast", "captivate_fm", "google_podcasts", "iheartradio_podcast", "libsyn", "listennotes", "podcastaddict", "podcastindex", "spotify_show", "stitcher", "tunein", "youtube_channel", "youtube_playlist"]) }}
+{%- endfor %}
+</ul>

@@ -1,0 +1,13 @@
+---
+#eleventyNavigation:
+#    key: main
+#    order: 
+#    title: Apps
+layout: page
+---
+{%- import "util.njk" as util %}
+<ul>
+{%- for item in items.all | select_zachin("container_type", "app") %}
+  {{- util.endpoint_types_entry(item, types, ["ios", "android", "app_web"]) }}
+{%- endfor %}
+</ul>
